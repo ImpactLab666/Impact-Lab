@@ -1,42 +1,72 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impact Lab — Alchemical Perfumery Shop</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impact Lab | Alchemical Perfume Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo-magic.png" alt="Impact Lab Logo">
-    </div>
-    <nav class="nav">
-      <a href="#catalog" class="alchemy-link" title="Catalog">&#9763;</a>
-      <a href="#payment" class="alchemy-link" title="Payment">&#9874;</a>
-      <a href="#delivery" class="alchemy-link" title="Delivery">&#9875;</a>
-      <a href="#cart" class="alchemy-link" title="Cart">&#128722;</a>
+    <h1>Impact Lab | Alchemical Perfume Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="https://instagram.com/yourshop" target="_blank">Instagram</a></li>
+        <li><button onclick="switchLanguage()">EN / UA</button></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="home">
     <section class="intro">
-      <h1>Welcome to Impact Lab</h1>
-      <p>Discover the magic of scents and the alchemy of perfumery in our shop.</p>
-      <button class="glow-on-hover" type="button">Unveil the Secrets</button>
+      <h2>Crafted Scents from the Shadows</h2>
+      <p>Explore our unique collection of alchemical perfumes inspired by the arcane.</p>
     </section>
 
-    <section class="potion">
-      <div class="potion-bottle">
-        <div class="steam"></div>
+    <section id="catalog">
+      <h2>Catalog</h2>
+      <div class="product-list">
+        <div class="product">
+          <h3>Elixir of Night</h3>
+          <p>Notes: amber, myrrh, black rose</p>
+          <span>$45</span>
+          <button onclick="addToCart('Elixir of Night', 45)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <h3>Luna Nocturna</h3>
+          <p>Notes: silver musk, lavender, shadow moss</p>
+          <span>$52</span>
+          <button onclick="addToCart('Luna Nocturna', 52)">Add to Cart</button>
+        </div>
       </div>
+    </section>
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review-box">
+        <p><strong>Aurora:</strong> "Truly magical! The scents stay with you like a spell."</p>
+      </div>
+      <div class="review-box">
+        <p><strong>Dmytro:</strong> "Дуже особливі аромати, відчувається, що зроблено з душею."</p>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p>Total: $<span id="total">0</span></p>
+      <button onclick="checkout()">Checkout with Card / PayPal</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Impact Lab. All rights reserved.</p>
+    <p>&copy; 2025 Impact Lab | Crafted in Shadow</p>
   </footer>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
+
