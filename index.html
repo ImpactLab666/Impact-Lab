@@ -1,118 +1,42 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact Lab — Alchemical Perfumery Shop</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>  
-<header style="background-color: #0e0e0e; padding: 30px 0; text-align: center;">
-  <img src="logo-magic.png" alt="Impact Lab Logo" style="
-    width: 60%;
-    max-width: 240px;
-    height: auto;
-    filter: drop-shadow(0 0 12px #7fffd4);
-    transition: transform 0.3s ease;
-  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
-
-  <h1 style="font-family: 'UnifrakturCook', cursive; font-size: 38px; color: #e6e0d4; margin: 10px 0 5px;">
-    IMPACT LAB
-  </h1>
-  <p style="font-family: 'Cinzel', serif; font-size: 14px; color: #c5bfb2; letter-spacing: 1px;">
-    Alchemical Perfume Shop
-  </p>
-</header>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=UnifrakturCook:wght@700&display=swap');
-</style>
-  
-    <nav>
-      <a href="#catalog">Catalog</a>
-      <a href="#reviews">Reviews</a>
-      <a href="https://instagram.com/yourshop" target="_blank">Instagram</a>
-      <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+  <header>
+    <div class="logo">
+      <img src="logo-magic.png" alt="Impact Lab Logo">
+    </div>
+    <nav class="nav">
+      <a href="#catalog" class="alchemy-link" title="Catalog">&#9763;</a>
+      <a href="#payment" class="alchemy-link" title="Payment">&#9874;</a>
+      <a href="#delivery" class="alchemy-link" title="Delivery">&#9875;</a>
+      <a href="#cart" class="alchemy-link" title="Cart">&#128722;</a>
     </nav>
   </header>
-  
-<header style="background-color: #111; padding: 20px 0; text-align: center; position: relative;">
-  <a href="https://www.instagram.com/potion.eu" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
-         alt="Instagram" 
-         width="50" height="50"
-         class="magic-instagram">
-  </a>
-</header>
 
-<style>
-  .magic-instagram {
-    border-radius: 50%;
-    background-color: #1a1a1a;
-    padding: 8px;
-    opacity: 0.75;
-    box-shadow: 0 0 12px #ff5fa2;
-    animation: pulseGlow 2.5s infinite ease-in-out;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+  <main>
+    <section class="intro">
+      <h1>Welcome to Impact Lab</h1>
+      <p>Discover the magic of scents and the alchemy of perfumery in our shop.</p>
+      <button class="glow-on-hover" type="button">Unveil the Secrets</button>
+    </section>
 
-  .magic-instagram:hover {
-    transform: scale(1.15);
-    opacity: 1;
-    box-shadow: 0 0 25px #ff8ccf, 0 0 40px #ff69b4;
-  }
-
-  @keyframes pulseGlow {
-    0% {
-      box-shadow: 0 0 10px #ff5fa2;
-    }
-    50% {
-      box-shadow: 0 0 20px #ff8ccf, 0 0 30px #ff69b4;
-    }
-    100% {
-      box-shadow: 0 0 10px #ff5fa2;
-    }
-  }
-</style>
-
-  <section id="hero">
-    <h2>Crafted Perfumes from the Alchemical Lab</h2>
-    <p>Discover your essence in magical aromas.</p>
-  </section>
-
-  <section id="catalog">
-    <h3>Our Perfumes</h3>
-    <div class="products">
-      <div class="product" data-name="Elixir No. 1">
-        <h4>Elixir No. 1</h4>
-        <p>Deep and mystical blend of amber and oud.</p>
-        <button onclick="addToCart('Elixir No. 1')">Add to Cart</button>
+    <section class="potion">
+      <div class="potion-bottle">
+        <div class="steam"></div>
       </div>
-      <div class="product" data-name="Moonlight Ritual">
-        <h4>Moonlight Ritual</h4>
-        <p>Fresh herbal tones with magical undertones.</p>
-        <button onclick="addToCart('Moonlight Ritual')">Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="cart">
-    <h3>Your Cart</h3>
-    <ul id="cart-items"></ul>
-    <button onclick="checkout()">Checkout</button>
-  </section>
-
-  <section id="reviews">
-    <h3>Customer Reviews</h3>
-    <p>"Absolutely enchanting!" – Mira</p>
-    <p>"I feel like a sorceress." – Lana</p>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Impact Lab | Alchemical Perfume Shop</p>
-  </footer>  
+    <p>&copy; 2025 Impact Lab. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
