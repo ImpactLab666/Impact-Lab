@@ -1,75 +1,149 @@
+/* General Styles */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', serif;
-  background-color: #0f0f0f;
-  color: #f0e6d2;
-}
-header {
-  background: #1a1a1a;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #3a3a3a;
-}
-header h1 {
-  font-size: 2em;
-  margin: 0;
-  letter-spacing: 1px;
-}
-nav a {
-  margin: 0 15px;
-  color: #f0e6d2;
-  text-decoration: none;
-}
-nav a:hover {
-  color: #d4af37;
-}
-#hero {
-  background: linear-gradient(#1f1f1f, #0f0f0f);
-  padding: 60px 20px;
-  text-align: center;
-}
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-.product {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  padding: 15px;
-  width: 250px;
-  border-radius: 8px;
-}
-.product h4 {
-  margin-top: 0;
-  color: #d4af37;
-}
-button {
-  background-color: #d4af37;
-  color: #0f0f0f;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-}
-button:hover {
-  background-color: #c59e2e;
-}
-#cart ul {
-  list-style: none;
-  padding: 0;
-}
-footer {
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #333;
+  font-family: 'Raleway', sans-serif;
   background-color: #1a1a1a;
-  margin-top: 40px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.alchemy-link {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.alchemy-link:hover {
+  transform: scale(1.2);
+}
+
+.intro {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.glow-on-hover {
+  width: 250px;
+  height: 60px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #fff;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.glow-on-hover:before {
+  content: '';
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ff00, #00d4ff, #8b00ff, #ff0000);
+  background-size: 400%;
+  animation: glowing 20s linear infinite;
+  filter: blur(50px);
+}
+
+.glow-on-hover:hover {
+  background-color: #111;
+  box-shadow: 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000;
+}
+
+.glow-on-hover:active {
+  transform: scale(0.95);
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+.potion {
+  margin-top: 50px;
+}
+
+.potion-bottle {
+  width: 100px;
+  height: 200px;
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 0 15px #00ff00;
+  overflow: hidden;
+}
+
+.steam {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: steam 2s infinite ease-in-out;
+}
+
+.steam:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.steam:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.steam:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-80px) scaleX(3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-160px) scaleX(5);
+    opacity: 0;
+  }
+  }
 
 
