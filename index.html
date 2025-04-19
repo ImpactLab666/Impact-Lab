@@ -7,13 +7,22 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a href="https://www.instagram.com/potion.eu" target="_blank" style="position: absolute; top: 20px; right: 20px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" height="40" style="border-radius: 8px;">
-  </a>
 
+<a href="https://www.instagram.com/potion.eu" target="_blank" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
+       alt="Instagram" 
+       width="50" height="50"
+       style="border-radius: 50%; box-shadow: 0 0 15px #d62976; background-color: #1a1a1a; padding: 8px; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.7;">
+</a>
 
-
-  <header>
+<style>
+  a:hover img {
+    transform: scale(1.15);
+    box-shadow: 0 0 25px #ff5fa2;
+    opacity: 1;
+  }
+</style>
+<header>
     <h1>Impact Lab | Alchemical Perfume Shop</h1>
     <nav>
       <a href="#catalog">Catalog</a>
