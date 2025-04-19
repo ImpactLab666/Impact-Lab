@@ -1,30 +1,19 @@
-let cart = [];
+// scripts.js
 
-function addToCart(itemName) {
-  cart.push(itemName);
-  updateCartDisplay();
+// Function to switch language
+function switchLanguage(lang) {
+  const elements = document.querySelectorAll(`.lang-${lang}`);
+  elements.forEach(el => el.style.display = 'block');
+  const otherLang = lang === 'en' ? 'ua' : 'en';
+  const otherElements = document.querySelectorAll(`.lang-${otherLang}`);
+  otherElements.forEach(el => el.style.display = 'none');
 }
 
-function updateCartDisplay() {
-  const cartCount = document.getElementById('cart-count');
-  const cartItems = document.getElementById('cart-items');
-  cartCount.textContent = cart.length;
-  cartItems.innerHTML = '';
+// Initialize with default language
+switchLanguage('en');
 
-  cart.forEach((item) => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    cartItems.appendChild(li);
-  });
-}
-
-function checkout() {
-  if (cart.length === 0) {
-    alert('Your cart is empty!');
-    return;
-  }
-  alert('Redirecting to payment...');
-}
-
+// Example usage
+document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+document.getElementById('ua-btn').addEventListener('click', () => switchLanguage('ua'));
 
 
