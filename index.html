@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impact Lab | Alchemical Perfume Shop</title>
+  <!-- Подключаем Font Awesome для иконок -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <style>
     html, body {
       margin: 0;
@@ -48,12 +51,13 @@
       transform: translate(-50%, -50%) scale(1.05);
     }
 
-    /* Category buttons with rounded icons */
+    /* Category buttons - improved design */
     .category-buttons {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
       padding: 40px 20px;
+      margin-top: 40px;
     }
 
     .category-card {
@@ -61,35 +65,27 @@
       color: #fff;
       text-align: center;
       padding: 20px;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+      border-radius: 12px;
       box-shadow: 0 0 12px rgba(255, 204, 102, 0.5);
       transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
     }
 
     .category-card:hover {
       background-color: #5e472f;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
-    .category-card img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 50%;
+    .category-card i {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     .category-card span {
       margin-top: 10px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #f0e6d2;
       text-transform: uppercase;
-      font-weight: bold;
     }
 
     /* Footer */
@@ -111,26 +107,44 @@
 
   <section class="category-buttons" id="categories">
     <a href="womens.html" class="category-card">
-      <img src="womens_icon.jpg" alt="Women's Perfumes">
+      <i class="fas fa-female"></i> <!-- Иконка для женских парфюмов -->
       <span>Women's Perfumes</span>
     </a>
     <a href="mens.html" class="category-card">
-      <img src="mens_icon.jpg" alt="Men's Perfumes">
+      <i class="fas fa-male"></i> <!-- Иконка для мужских парфюмов -->
       <span>Men's Perfumes</span>
     </a>
     <a href="unisex.html" class="category-card">
-      <img src="unisex_icon.jpg" alt="Unisex Perfumes">
+      <i class="fas fa-genderless"></i> <!-- Иконка для унисекс парфюмов -->
       <span>Unisex Perfumes</span>
     </a>
     <a href="gifts.html" class="category-card">
-      <img src="gifts_icon.jpg" alt="Magical Gifts">
+      <i class="fas fa-gift"></i> <!-- Иконка для магических подарков -->
       <span>Magical Gifts</span>
     </a>
     <a href="jewelry.html" class="category-card">
-      <img src="jewelry_icon.jpg" alt="Jewelry">
+      <i class="fas fa-gem"></i> <!-- Иконка для украшений -->
       <span>Jewelry</span>
     </a>
   </section>
+
+  <main>
+    <div class="product-grid">
+      <div class="product">
+        <img src="perfume1.jpg" alt="Alchemical Perfume 1">
+        <h3>Philosopher's Musk</h3>
+        <p>Crafted with rare botanicals & subtle pheromones.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="perfume2.jpg" alt="Alchemical Perfume 2">
+        <h3>Elixir Nocturne</h3>
+        <p>Dark, enchanting aroma of night and mystery.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 Impact Lab. All rights reserved.
@@ -139,4 +153,3 @@
 </body>
 </html>
 
-            
