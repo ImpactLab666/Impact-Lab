@@ -2,71 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="scripts.js" defer></script>
+  <link rel="icon" href="logomagic.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Impact Lab | Alchemical Perfume Shop</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#catalog">Catalog</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#cart">Cart</a></li>
-        <li><a href="https://instagram.com/yourshop" target="_blank">Instagram</a></li>
-        <li><button onclick="switchLanguage()">EN / UA</button></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
+    <div class="title">
+      <h1 class="gothic">Impact Lab</h1>
+      <p class="subtitle">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</p>
+    </div>
+    <div class="contacts">
+      <p>Phone: +49 123 4567890</p>
+      <p>Email: info@impactlab.com</p>
+    </div>
   </header>
 
-  <main id="home">
-    <section class="intro">
-      <h2>Crafted Scents from the Shadows</h2>
-      <p>Explore our unique collection of alchemical perfumes inspired by the arcane.</p>
-    </section>
+  <div class="language-switcher">
+    <button onclick="switchLanguage('en')">EN</button>
+    <button onclick="switchLanguage('uk')">UA</button>
+    <button onclick="switchLanguage('de')">DE</button>
+  </div>
 
-    <section id="catalog">
-      <h2>Catalog</h2>
-      <div class="product-list">
-        <div class="product">
-          <h3>Elixir of Night</h3>
-          <p>Notes: amber, myrrh, black rose</p>
-          <span>$45</span>
-          <button onclick="addToCart('Elixir of Night', 45)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <h3>Luna Nocturna</h3>
-          <p>Notes: silver musk, lavender, shadow moss</p>
-          <span>$52</span>
-          <button onclick="addToCart('Luna Nocturna', 52)">Add to Cart</button>
-        </div>
-      </div>
-    </section>
+  <nav class="main-nav">
+    <a href="#about">About</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#returns">Returns</a>
+    <a href="#cart">Cart</a>
+  </nav>
 
-    <section id="reviews">
-      <h2>Customer Reviews</h2>
-      <div class="review-box">
-        <p><strong>Aurora:</strong> "Truly magical! The scents stay with you like a spell."</p>
-      </div>
-      <div class="review-box">
-        <p><strong>Dmytro:</strong> "Дуже особливі аромати, відчувається, що зроблено з душею."</p>
-      </div>
-    </section>
+  <section class="slider">
+    <img src="perfume1.jpg" alt="Perfume 1">
+    <img src="perfume2.jpg" alt="Perfume 2">
+    <img src="perfume3.jpg" alt="Perfume 3">
+  </section>
 
-    <section id="cart">
-      <h2>Your Cart</h2>
-      <div id="cart-items"></div>
-      <p>Total: $<span id="total">0</span></p>
-      <button onclick="checkout()">Checkout with Card / PayPal</button>
-    </section>
-  </main>
+  <section id="catalog" class="catalog">
+    <h2 data-en="Catalog" data-uk="Каталог" data-de="Katalog">Catalog</h2>
+    <div class="categories">
+      <button>Women's Perfume</button>
+      <button>Men's Perfume</button>
+      <button>Pheromone Products</button>
+      <button>Magical Gifts & Jewelry</button>
+    </div>
+    <div class="products">
+      <div class="product">Product 1</div>
+      <div class="product">Product 2</div>
+      <div class="product">Product 3</div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2 data-en="Customer Reviews" data-uk="Відгуки клієнтів" data-de="Kundenrezensionen">Customer Reviews</h2>
+    <div class="review">
+      <img src="user1.jpg" alt="Customer 1" class="avatar">
+      <p>"Amazing magical fragrance!"</p>
+    </div>
+    <div class="review">
+      <img src="user2.jpg" alt="Customer 2" class="avatar">
+      <p>"Feels like an alchemical spell."</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Our Shop</h2>
+    <p>Impact Lab is a mystical atelier crafting alchemical perfumes inspired by ancient formulas and magical ingredients.</p>
+  </section>
+
+  <section id="delivery">
+    <h2>Delivery</h2>
+    <p>We deliver worldwide. Delivery within EU takes 3–7 days. Ukraine — 2–5 days.</p>
+  </section>
+
+  <section id="returns">
+    <h2>Returns</h2>
+    <p>You may return unopened items within 14 days. Contact us for return authorization.</p>
+  </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items">Cart is empty.</div>
+    <form id="checkout-form">
+      <label>Currency:
+        <select name="currency">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="uah">UAH</option>
+        </select>
+      </label>
+      <p>Pay with:</p>
+      <ul>
+        <li>Credit/Debit Card</li>
+        <li>PayPal</li>
+        <li>Monobank</li>
+        <li>Payoneer</li>
+        <li>Fondy</li>
+      </ul>
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </section>
+
+  <section class="socials">
+    <a href="https://www.instagram.com/potion.eu" target="_blank">Instagram</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://wa.me/" target="_blank">WhatsApp</a>
+  </section>
+
+  <section class="legal">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#privacy">Privacy Policy</a>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Impact Lab | Crafted in Shadow</p>
+    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
   </footer>
-</body>
-</html>
 
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+  </html>
