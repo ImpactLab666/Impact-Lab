@@ -1,16 +1,29 @@
-body {
-  font-family: 'Cinzel', serif;
-  background: url('alchemy-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
+/* Общие стили */
+* {
   margin: 0;
-  transition: background-color 0.5s ease;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Cinzel', serif;
+  color: #f0f0f0;
+  background: url('impactlabshop.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
 header {
   text-align: center;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .logo-text {
@@ -19,7 +32,7 @@ header {
   color: #e0b0a0;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Glow effect */
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Свечение */
 }
 
 .slogan {
@@ -27,12 +40,15 @@ header {
   color: #a67b5b;
   font-style: italic;
   margin-top: 10px;
+  text-shadow: 0px 0px 8px rgba(255, 165, 0, 0.7); /* Свечение */
 }
 
+/* Навигация */
 nav {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 15px;
+  margin-top: 100px;
 }
 
 nav a {
@@ -49,12 +65,14 @@ nav a:hover {
   color: #a67b5b;
 }
 
+/* Каталог */
 .catalog {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
   padding: 50px;
+  margin-top: 150px;
 }
 
 .product {
@@ -87,7 +105,6 @@ nav a:hover {
   margin-top: 10px;
   font-size: 1.5em;
   color: #e0b0a0;
-  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5); /* Glow effect */
 }
 
 .product p {
@@ -110,11 +127,37 @@ nav a:hover {
   background-color: #e0b0a0;
 }
 
+/* Футер */
 footer {
   text-align: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 0.9em;
   color: #e0e0e0;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 2.5em;
+  }
+
+  .slogan {
+    font-size: 1.2em;
+  }
+
+  .catalog {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .product {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
 }
 
