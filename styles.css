@@ -1,176 +1,136 @@
-  /* styles.css */
 body {
   margin: 0;
-  font-family: 'Cinzel', serif;
-  background-color: #1b1b1b;
-  color: #e5e0dc;
+  font-family: 'Cinzel Decorative', serif;
+  background-color: #0e0b16;
+  color: #e0d2c2;
 }
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #141111;
-  padding: 10px 20px;
-  border-bottom: 2px solid #3a2e2e;
+  align-items: center;
+  padding: 20px;
+  background: #1c1427;
+  border-bottom: 2px solid #6f42c1;
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  height: 80px;
+  margin-right: 20px;
 }
 
-.title {
-  text-align: center;
+.logo-title {
+  display: flex;
+  align-items: center;
 }
 
-.gothic {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 32px;
-  color: #cfb991;
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #ddb892;
 }
 
 .subtitle {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  color: #b7a18e;
-}
-
-.contacts {
-  font-size: 12px;
-  text-align: right;
-}
-
-.language-switcher {
-  text-align: center;
-  padding: 10px;
+  font-size: 1em;
+  color: #c9a0dc;
 }
 
 .language-switcher button {
-  margin: 0 5px;
-  background-color: #2d2323;
-  color: #e5e0dc;
-  border: 1px solid #533d3d;
+  background: #2e193e;
+  border: 1px solid #6f42c1;
+  color: #f0e6f6;
   padding: 5px 10px;
+  margin: 0 2px;
   cursor: pointer;
+  border-radius: 3px;
 }
 
-.main-nav {
-  background-color: #2a1e1e;
-  text-align: center;
+.nav {
+  display: flex;
+  justify-content: center;
+  background: #201329;
   padding: 10px 0;
 }
 
-.main-nav a {
-  color: #cfb991;
-  margin: 0 10px;
+.nav a {
+  margin: 0 15px;
+  color: #d6b4fc;
   text-decoration: none;
   font-weight: bold;
 }
 
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+.hero {
+  position: relative;
+  text-align: center;
 }
 
-.slider img {
+.hero img {
   width: 100%;
-  height: auto;
-  scroll-snap-align: center;
+  height: 300px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f8e6ff;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .catalog {
-  padding: 30px 20px;
-  background-color: #211a1a;
-}
-
-.catalog h2 {
   text-align: center;
-  color: #cfb991;
+  padding: 40px 20px;
 }
 
 .categories button {
-  background: #3b2f2f;
-  color: #e5e0dc;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #3b2645;
+  color: #e3d3ff;
   border: none;
-  padding: 10px;
-  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.products .product {
+  margin: 20px auto;
+  padding: 15px;
+  background: #2d1b3d;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #6f42c1;
 }
 
-.product {
-  background-color: #2f2424;
-  border: 1px solid #533d3d;
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  text-align: center;
-}
-
-.reviews {
-  background-color: #1e1616;
-  padding: 30px 20px;
-  text-align: center;
+.about, .delivery, .returns, .reviews, .cart {
+  padding: 40px 20px;
+  background: #160d21;
 }
 
 .review {
-  margin: 20px auto;
-  max-width: 300px;
+  background: #2a1b3a;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 400px;
+  border-left: 4px solid #a97bd3;
+  font-style: italic;
 }
 
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-section {
-  margin-bottom: 30px;
+.footer {
+  text-align: center;
+  background: #1c1427;
+  padding: 20px;
+  border-top: 2px solid #6f42c1;
 }
 
 .socials a {
   margin: 0 10px;
-  color: #cfb991;
+  color: #bb9eff;
   text-decoration: none;
 }
 
-.legal a {
-  display: block;
-  text-align: center;
-  color: #8b7a6e;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 5px 0;
-}
 
-footer {
-  background-color: #141111;
-  text-align: center;
-  padding: 20px;
-  font-size: 12px;
-  color: #6d5c52;
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .contacts {
-    text-align: center;
-    margin-top: 10px;
-  }
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-  }
+  
