@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,269 +10,222 @@
     body {
       margin: 0;
       font-family: 'Cinzel', serif;
-      color: #e0e0e0; /* светлый цвет для текста */
-      background: url('A_digital_painting_in_the_style_of_dark_fantasy_an.png') no-repeat center center fixed;
+      background: url('alchemy-background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: #f0f0f0;
     }
 
     /* Шапка */
     header {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.85); /* Магически черный */
-      position: relative;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px 0;
     }
 
-    .logo {
-      height: 100px;
-    }
-
+    /* Название */
     .logo-text {
-      font-size: 2.5em;
-      color: #f0c674; /* золотистый оттенок для названия */
+      font-size: 3.5em;
+      font-family: 'Fraktur', serif; /* Используем стиль для алхимической атмосферы */
+      color: #e0b0a0;
       font-weight: bold;
       text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
+    /* Слоган */
     .slogan {
-      font-size: 1.2em;
-      color: #a67b5b; /* тёмный золотистый для слогана */
+      font-size: 1.5em;
+      font-family: 'Serif', sans-serif;
+      color: #a67b5b;
       margin-top: 10px;
+      font-style: italic;
       text-align: center;
     }
 
-    .header-contact {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: #e0e0e0;
-      font-size: 1em;
-      text-align: right;
+    /* Главный баннер */
+    .main-banner {
+      text-align: center;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .languages {
+    .main-banner h1 {
+      font-size: 3em;
+      color: #e0b0a0;
+      margin-bottom: 20px;
+    }
+
+    .main-banner p {
+      font-size: 1.2em;
+      color: #d1c6b1;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    /* Каталог товаров */
+    .catalog {
       display: flex;
-      gap: 5px;
-      position: absolute;
-      top: 20px;
-      left: 30px;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 50px 10px;
     }
 
-    .languages button {
-      background: transparent;
-      border: 1px solid #ccc;
-      color: #f0f0f0;
-      padding: 5px 8px;
-      font-size: 0.8em;
+    .product {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      margin: 20px;
+      width: 300px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin-top: 10px;
+      font-size: 1.5em;
+      color: #e0b0a0;
+    }
+
+    .product p {
+      margin-top: 10px;
+      color: #d1c6b1;
+    }
+
+    .product button {
+      padding: 10px;
+      background-color: #a67b5b;
+      border: none;
+      color: white;
+      font-size: 1em;
+      margin-top: 15px;
       cursor: pointer;
       border-radius: 5px;
     }
 
-    .languages button:hover {
-      background-color: #a67b5b; /* золотистый при наведении */
+    .product button:hover {
+      background-color: #e0b0a0;
     }
 
     /* Навигация */
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(20, 20, 20, 0.8);
-      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
     }
 
     nav a {
       color: #e0e0e0;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #a67b5b; /* золотистый при наведении */
-    }
-
-    /* Основные разделы */
-    section {
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 20px;
-      border-radius: 10px;
-    }
-
-    h2 {
-      border-bottom: 2px solid #a67b5b;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      color: #e0e0e0;
-    }
-
-    /* Каталог товаров */
-    .catalog .product {
-      background: rgba(255, 255, 255, 0.2); /* карточки товаров с прозрачностью */
-      padding: 15px;
-      margin: 10px;
-      border-radius: 8px;
-      display: inline-block;
-      width: 200px;
-      text-align: center;
-      color: #f0f0f0;
-      transition: transform 0.3s ease;
-    }
-
-    .catalog .product:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* эффект увеличения и тени */
-    }
-
-    /* Форма корзины */
-    #checkout-form select, #checkout-form button {
-      padding: 10px;
-      margin-top: 10px;
-      font-size: 1em;
-      color: #333;
-      background-color: #e0b0a0; /* золотистый фон для кнопок */
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #checkout-form select, #checkout-form button:hover {
-      background-color: #a67b5b; /* тёмный золотистый при наведении */
+      color: #a67b5b;
     }
 
     /* Футер */
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #e0e0e0;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #f0f0f0;
     }
 
-    /* Адаптивность для мобильных устройств */
+    /* Адаптивность */
     @media (max-width: 768px) {
-      .catalog .product {
-        width: 45%; /* карточки товаров на мобильных устройствах */
-        margin: 10px 0;
+      .catalog {
+        flex-direction: column;
+        align-items: center;
       }
-      
-      .languages {
-        margin-left: 0;
+
+      .product {
+        width: 90%;
       }
 
       nav a {
-        font-size: 14px;
+        font-size: 1.2em;
         margin: 0 10px;
-      }
-
-      .header-contact {
-        font-size: 0.9em;
       }
     }
 
     @media (max-width: 480px) {
       .logo-text {
-        font-size: 1.5em;
+        font-size: 2.5em;
       }
 
-      header {
-        flex-direction: column;
+      .slogan {
+        font-size: 1.2em;
       }
 
-      .languages {
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 10px 0;
+      .main-banner h1 {
+        font-size: 2.5em;
       }
     }
   </style>
+  <!-- Подключение шрифтов -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraktur&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
-    <div class="logo-text">Impact Lab</div>
-    <div class="slogan">Alchemical Perfume Shop</div>
-
-    <div class="header-contact">
-      <p>Phone: +123 456 7890</p>
-      <p>Email: info@impactlab.com</p>
-    </div>
-
-    <div class="languages">
-      <button>EN</button>
-      <button>UA</button>
-      <button>DE</button>
-      <button>TR</button>
-      <button>RU</button>
-    </div>
+    <div class="logo-text">𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</div>
+    <div class="slogan">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</div>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#catalog">Catalog</a>
-    <a href="#delivery">Delivery</a>
-    <a href="#returns">Returns</a>
-    <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <h2>About Impact Lab</h2>
-    <p>A magical alchemical perfume atelier blending ancient wisdom with modern mysticism.</p>
-  </section>
+  <div class="main-banner">
+    <h1>Discover the Magic of Alchemical Perfumes</h1>
+    <p>Crafted with the finest ingredients and infused with pheromones, our perfumes are designed to captivate and enchant.</p>
+  </div>
 
   <section id="catalog" class="catalog">
-    <h2>Catalog</h2>
-    <div class="product">Potion 1</div>
-    <div class="product">Elixir 2</div>
-    <div class="product">Mystic Oil 3</div>
-  </section>
-
-  <section id="delivery">
-    <h2>Delivery</h2>
-    <p>Worldwide shipping available. EU: 3-7 days. Ukraine: 2-5 days.</p>
-  </section>
-
-  <section id="returns">
-    <h2>Returns</h2>
-    <p>Returns accepted within 14 days on unopened items.</p>
-  </section>
-
-  <section id="cart">
-    <h2>Cart</h2>
-    <div id="cart-items">Cart is empty.</div>
-    <form id="checkout-form">
-      <label for="currency">Currency:</label>
-      <select id="currency" name="currency">
-        <option value="eur">EUR</option>
-        <option value="usd">USD</option>
-        <option value="uah">UAH</option>
-      </select>
-
-      <p>Payment Methods:</p>
-      <ul>
-        <li>Bank Card</li>
-        <li>PayPal</li>
-        <li>Monobank</li>
-        <li>Payoneer</li>
-        <li>Fondy</li>
-      </ul>
-
-      <button type="submit">Proceed to Payment</button>
-    </form>
+    <div class="product">
+      <img src="perfume1.jpg" alt="Perfume 1">
+      <h3>Enchanting Elixir</h3>
+      <p>Perfume with pheromones, designed to attract and captivate. A perfect balance of mystical spices and floral notes.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="perfume2.jpg" alt="Perfume 2">
+      <h3>Phantom Essence</h3>
+      <p>An otherworldly scent with a combination of exotic woods and sensual musk. Unveil your inner mystery.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="perfume3.jpg" alt="Perfume 3">
+      <h3>Moonlit Potion</h3>
+      <p>A delicate blend of lavender and amber, enriched with subtle pheromones for an unforgettable presence.</p>
+      <button>Add to Cart</button>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Impact Lab
+    <p>&copy; 2025 Impact Lab | All rights reserved</p>
+  </footer>
 
-      
+</body>
+</html>
