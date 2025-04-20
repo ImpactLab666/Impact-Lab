@@ -11,8 +11,15 @@
 
   <!-- Header with logo and slogan -->
   <header>
-    <div class="logo-text">𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</div>
-    <div class="slogan">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</div>
+    <div class="logo-container">
+      <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
+      <div class="logo-text">𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</div>
+      <div class="slogan">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</div>
+    </div>
+    <div class="contact-info">
+      <span>📞 +123456789</span>
+      <span>📧 contact@impactlab.com</span>
+    </div>
   </header>
 
   <!-- Navigation menu -->
@@ -51,169 +58,4 @@
 
 </body>
 </html>
-
-CSS:
-
-/* Общие стили */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Cinzel', serif;
-  color: #f0f0f0;
-  background: url('impactlabshop.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Шапка */
-header {
-  text-align: center;
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.logo-text {
-  font-size: 3.5em;
-  font-family: 'Fraktur', serif;
-  color: #e0b0a0;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Свечение */
-}
-
-.slogan {
-  font-size: 1.5em;
-  color: #a67b5b;
-  font-style: italic;
-  margin-top: 10px;
-  text-shadow: 0px 0px 8px rgba(255, 165, 0, 0.7); /* Свечение */
-}
-
-/* Навигация */
-nav {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px;
-  margin-top: 100px;
-}
-
-nav a {
-  color: #e0e0e0;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #a67b5b;
-}
-
-/* Каталог */
-.catalog {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 50px;
-  margin-top: 150px;
-}
-
-.product {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
-}
-
-.product img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.product img:hover {
-  transform: rotate(10deg);
-}
-
-.product h3 {
-  margin-top: 10px;
-  font-size: 1.5em;
-  color: #e0b0a0;
-}
-
-.product p {
-  color: #d1c6b1;
-}
-
-.product button {
-  padding: 10px;
-  background-color: #a67b5b;
-  border: none;
-  color: white;
-  font-size: 1em;
-  margin-top: 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.product button:hover {
-  background-color: #e0b0a0;
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  font-size: 0.9em;
-  color: #e0e0e0;
-}
-
-/* Мобильная адаптивность */
-@media (max-width: 768px) {
-  .logo-text {
-    font-size: 2.5em;
-  }
-
-  .slogan {
-    font-size: 1.2em;
-  }
-
-  .catalog {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .product {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  nav a {
-    font-size: 1em;
-  }
-}
 
