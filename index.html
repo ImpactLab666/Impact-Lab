@@ -52,20 +52,22 @@
     /* Category buttons section */
     .category-buttons {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
       padding: 40px 20px;
     }
 
     .category-card {
+      position: relative;
       text-align: center;
       cursor: pointer;
-      padding: 20px;
+      padding: 30px;
       border-radius: 10px;
       background-color: #4c3b2a;
       box-shadow: 0 0 12px rgba(255, 204, 102, 0.5);
       transition: transform 0.3s ease, background-color 0.3s ease;
       text-decoration: none;
+      overflow: hidden;
     }
 
     .category-card:hover {
@@ -74,19 +76,27 @@
     }
 
     .category-card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      box-shadow: 0 0 8px rgba(255, 215, 160, 0.5);
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .category-card:hover img {
+      opacity: 0.8;
     }
 
     .category-card span {
-      display: block;
-      font-size: 1.1rem;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
       color: #f0e6d2;
-      margin-top: 10px;
       text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     /* Main content section */
