@@ -21,32 +21,57 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7); /* темный фон */
+      background-color: rgba(0, 0, 0, 0.85); /* Магически черный */
+      position: relative;
     }
 
     .logo {
       height: 100px;
-      margin-right: 20px;
     }
 
     .logo-text {
-      font-size: 2em;
-      color: #e0b0a0; /* тёплый золотистый оттенок */
+      font-size: 2.5em;
+      color: #f0c674; /* золотистый оттенок для названия */
       font-weight: bold;
+      text-align: center;
+    }
+
+    .slogan {
+      font-size: 1.2em;
+      color: #a67b5b; /* тёмный золотистый для слогана */
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .header-contact {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #e0e0e0;
+      font-size: 1em;
+      text-align: right;
     }
 
     .languages {
       display: flex;
-      gap: 10px;
-      margin-left: auto;
+      gap: 5px;
+      position: absolute;
+      top: 20px;
+      left: 30px;
     }
 
     .languages button {
       background: transparent;
       border: 1px solid #ccc;
       color: #f0f0f0;
-      padding: 5px 10px;
+      padding: 5px 8px;
+      font-size: 0.8em;
       cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .languages button:hover {
+      background-color: #a67b5b; /* золотистый при наведении */
     }
 
     /* Навигация */
@@ -141,6 +166,10 @@
         font-size: 14px;
         margin: 0 10px;
       }
+
+      .header-contact {
+        font-size: 0.9em;
+      }
     }
 
     @media (max-width: 480px) {
@@ -173,6 +202,13 @@
   <header>
     <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
     <div class="logo-text">Impact Lab</div>
+    <div class="slogan">Alchemical Perfume Shop</div>
+
+    <div class="header-contact">
+      <p>Phone: +123 456 7890</p>
+      <p>Email: info@impactlab.com</p>
+    </div>
+
     <div class="languages">
       <button>EN</button>
       <button>UA</button>
@@ -237,9 +273,6 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
-  </footer>
+    <p>&copy; 2025 Impact Lab
 
-</body>
-</html>
-
+      
