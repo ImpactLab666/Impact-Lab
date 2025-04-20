@@ -1,143 +1,169 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
-  <link rel="icon" href="logomagic.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=UnifrakturCook&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel Decorative', cursive;
+      background: url('dark_lab_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4e9d8;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #6a4e77;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    .title h1 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 42px;
+      margin: 0;
+      color: #d6b98c;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #f4e9d8;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-bottom: 2px solid #6a4e77;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #d6b98c;
+      margin-top: 20px;
+    }
+
+    .catalog {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .catalog h2 {
+      color: #d6b98c;
+      font-size: 28px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .product {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border: 1px solid #6a4e77;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #f4e9d8;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #d6b98c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <header class="header magic-header">
-    <div class="overlay">
-      <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
-      <div class="title">
-        <h1 class="gothic">Impact Lab</h1>
-        <p class="subtitle">Alchemical Perfume Shop</p>
-      </div>
-      <div class="contacts">
-        <p>Phone: +380987578027</p>
-        <p>Email: info@impactlab.com</p>
-      </div>
+  <header>
+    <img src="logomagic.png" alt="Logo" class="logo">
+    <div class="title">
+      <h1>Impact Lab</h1>
     </div>
   </header>
 
-  <div class="language-switcher">
-    <button onclick="switchLanguage('en')">EN</button>
-    <button onclick="switchLanguage('uk')">UA</button>
-    <button onclick="switchLanguage('de')">DE</button>
-    <button onclick="switchLanguage('tr')">TR</button>
-    <button onclick="switchLanguage('ru')">RU</button>
-  </div>
-
-  <nav class="main-nav">
-    <a href="#about">About</a>
-    <a href="#delivery">Delivery</a>
+  <nav>
     <a href="#catalog">Catalog</a>
-    <a href="#returns">Returns</a>
-    <a href="#cart">Cart</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="catalog" class="catalog">
-    <h2 data-en="Catalog" data-uk="Каталог" data-de="Katalog" data-tr="Katalog" data-ru="Каталог">Catalog</h2>
-    <div class="categories">
-      <button><img src="img/category_women.jpg" alt="Women's Perfume" width="50"> Elixirs of Charm</button>
-      <button><img src="img/category_men.jpg" alt="Men's Perfume" width="50"> Potions of Power</button>
-      <button><img src="img/category_pheromones.jpg" alt="Pheromones" width="50"> Alchemical Pheromones</button>
-      <button><img src="img/category_gifts.jpg" alt="Magical Gifts" width="50"> Enchanted Gifts</button>
-    </div>
+  <div class="hero">
+    <img src="/mnt/data/A_digital_painting_in_the_style_of_dark_fantasy_an.png" alt="Witchy Lab">
+    <h2>Alchemical Perfumes & Mystical Potions</h2>
+  </div>
+
+  <section class="catalog" id="catalog">
+    <h2>Our Magical Creations</h2>
     <div class="products">
       <div class="product">
+        <img src="img/product1.jpg" alt="Elixir 1">
         <h3>Elixir No. 7</h3>
-        <p>Essence of violet, jasmine & a drop of moonlight.</p>
+        <p>Infused with amber & moon petals</p>
       </div>
       <div class="product">
-        <h3>Fire Ritual</h3>
-        <p>Notes of cinnamon, oud & dragon's breath resin.</p>
+        <img src="img/product2.jpg" alt="Elixir 2">
+        <h3>Witch's Whisper</h3>
+        <p>Dark rose, myrrh, and secrets</p>
       </div>
       <div class="product">
-        <h3>Moon Whisper</h3>
-        <p>Mystical blend of neroli, silver sage & night air.</p>
+        <img src="img/product3.jpg" alt="Elixir 3">
+        <h3>Alchemy Flame</h3>
+        <p>Spiced oud & dragonflower</p>
       </div>
     </div>
-  </section>
-
-  <section id="about">
-    <h2>About Our Shop</h2>
-    <p>Impact Lab is a mystical atelier crafting perfumes inspired by ancient alchemy, witchcraft, and secret botanical knowledge.</p>
-  </section>
-
-  <section id="delivery">
-    <h2>Delivery</h2>
-    <p>We deliver worldwide. EU: 3–7 days. Ukraine: 2–5 days. Magical owls not available (yet).</p>
-  </section>
-
-  <section id="returns">
-    <h2>Returns</h2>
-    <p>Unopened potions can be returned within 14 days. Contact us with your magic order number.</p>
-  </section>
-
-  <section class="reviews">
-    <h2 data-en="Customer Reviews" data-uk="Відгуки клієнтів" data-de="Kundenrezensionen" data-tr="Müşteri Yorumları" data-ru="Отзывы клиентов">Customer Reviews</h2>
-    <div class="review">
-      <img src="img/user1.jpg" alt="Customer 1" class="avatar">
-      <p>"Felt like I cast a charm just wearing it!"</p>
-    </div>
-    <div class="review">
-      <img src="img/user2.jpg" alt="Customer 2" class="avatar">
-      <p>"A scent straight from an ancient grimoire."</p>
-    </div>
-  </section>
-
-  <section id="cart">
-    <h2>Your Cart</h2>
-    <div id="cart-items">Cart is empty.</div>
-    <form id="checkout-form">
-      <label>Currency:
-        <select name="currency">
-          <option value="eur">EUR</option>
-          <option value="usd">USD</option>
-          <option value="uah">UAH</option>
-        </select>
-      </label>
-      <p>Pay with:</p>
-      <ul>
-        <li>Credit/Debit Card</li>
-        <li>PayPal</li>
-        <li>Monobank</li>
-        <li>Payoneer</li>
-        <li>Fondy</li>
-      </ul>
-      <button type="submit">Proceed to Payment</button>
-    </form>
-  </section>
-
-  <section class="socials">
-    <a href="https://www.instagram.com/potion.eu" target="_blank">Instagram</a>
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://wa.me/" target="_blank">WhatsApp</a>
-  </section>
-
-  <section class="legal">
-    <a href="#impressum">Legal Notice</a>
-    <a href="#datenschutz">Privacy Policy</a>
-    <a href="#privacy">Data Protection</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
+    &copy; 2025 Impact Lab | Crafted with Mystery
   </footer>
-
-  <script>
-    function switchLanguage(lang) {
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-      });
-    }
-  </script>
 </body>
 </html>
-
-
