@@ -1,99 +1,140 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
+  <link rel="icon" href="logomagic.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=UnifrakturCook&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="logomagic.png" type="image/png" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="logo-title">
-      <img src="logomagic.png" alt="Impact Lab Logo" class="logo" />
-      <div>
-        <h1>Impact Lab</h1>
-        <p class="subtitle">Alchemical Perfume Laboratory</p>
+  <header class="header magic-header">
+    <div class="overlay">
+      <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
+      <div class="title">
+        <h1 class="gothic">Impact Lab</h1>
+        <p class="subtitle">Alchemical Perfume Shop</p>
       </div>
-    </div>
-    <div class="language-switcher">
-      <button onclick="switchLanguage('en')">EN</button>
-      <button onclick="switchLanguage('uk')">UA</button>
-      <button onclick="switchLanguage('de')">DE</button>
-      <button onclick="switchLanguage('tr')">TR</button>
-      <button onclick="switchLanguage('ru')">RU</button>
+      <div class="contacts">
+        <p>Phone: +380987578027</p>
+        <p>Email: info@impactlab.com</p>
+      </div>
     </div>
   </header>
 
-  <nav class="nav">
+  <div class="language-switcher">
+    <button onclick="switchLanguage('en')">EN</button>
+    <button onclick="switchLanguage('uk')">UA</button>
+    <button onclick="switchLanguage('de')">DE</button>
+    <button onclick="switchLanguage('tr')">TR</button>
+    <button onclick="switchLanguage('ru')">RU</button>
+  </div>
+
+  <nav class="main-nav">
     <a href="#about">About</a>
-    <a href="#catalog">Catalog</a>
     <a href="#delivery">Delivery</a>
+    <a href="#catalog">Catalog</a>
     <a href="#returns">Returns</a>
     <a href="#cart">Cart</a>
   </nav>
 
-  <section class="hero">
-    <img src="lab_bg.jpg" alt="Magical Lab Background" />
-    <div class="overlay">
-      <h2>Crafted by Moonlight & Alchemy</h2>
-      <p>Perfumes born in cauldrons of scent and spell</p>
-    </div>
-  </section>
-
   <section id="catalog" class="catalog">
-    <h2>Catalog</h2>
+    <h2 data-en="Catalog" data-uk="Каталог" data-de="Katalog" data-tr="Katalog" data-ru="Каталог">Catalog</h2>
     <div class="categories">
-      <button>Women's Elixirs</button>
-      <button>Men's Potions</button>
-      <button>Pheromone Spells</button>
-      <button>Gift Sets & Rituals</button>
+      <button><img src="img/category_women.jpg" alt="Women's Perfume" width="50"> Elixirs of Charm</button>
+      <button><img src="img/category_men.jpg" alt="Men's Perfume" width="50"> Potions of Power</button>
+      <button><img src="img/category_pheromones.jpg" alt="Pheromones" width="50"> Alchemical Pheromones</button>
+      <button><img src="img/category_gifts.jpg" alt="Magical Gifts" width="50"> Enchanted Gifts</button>
     </div>
     <div class="products">
-      <div class="product">Mystic Rose Elixir</div>
-      <div class="product">Nocturne Oud Potion</div>
-      <div class="product">Violet Flame Pheromix</div>
+      <div class="product">
+        <h3>Elixir No. 7</h3>
+        <p>Essence of violet, jasmine & a drop of moonlight.</p>
+      </div>
+      <div class="product">
+        <h3>Fire Ritual</h3>
+        <p>Notes of cinnamon, oud & dragon's breath resin.</p>
+      </div>
+      <div class="product">
+        <h3>Moon Whisper</h3>
+        <p>Mystical blend of neroli, silver sage & night air.</p>
+      </div>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Impact Lab</h2>
-    <p>We are a secret atelier of witches, perfumers, and alchemists. Our scents are composed in candlelight from rare botanicals and ancient scrolls. Each bottle is a spell, a portal, a potion.</p>
+  <section id="about">
+    <h2>About Our Shop</h2>
+    <p>Impact Lab is a mystical atelier crafting perfumes inspired by ancient alchemy, witchcraft, and secret botanical knowledge.</p>
   </section>
 
-  <section id="delivery" class="delivery">
+  <section id="delivery">
     <h2>Delivery</h2>
-    <p>Worldwide spell-mail within 3–7 days EU, 2–5 days Ukraine. Tracked and sealed with sigils.</p>
+    <p>We deliver worldwide. EU: 3–7 days. Ukraine: 2–5 days. Magical owls not available (yet).</p>
   </section>
 
-  <section id="returns" class="returns">
+  <section id="returns">
     <h2>Returns</h2>
-    <p>Unopened magical items may be returned within 14 days. Contact our Oracle to begin the ritual.</p>
+    <p>Unopened potions can be returned within 14 days. Contact us with your magic order number.</p>
   </section>
 
   <section class="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="review">"Truly enchanted scent! I felt transformed."</div>
-    <div class="review">"The bottle whispered my name..."</div>
-  </section>
-
-  <section id="cart" class="cart">
-    <h2>Your Cart</h2>
-    <p>No spells selected yet...</p>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Impact Lab | Alchemical Perfume Shop</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/potion.eu" target="_blank">Instagram</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://wa.me/" target="_blank">WhatsApp</a>
+    <h2 data-en="Customer Reviews" data-uk="Відгуки клієнтів" data-de="Kundenrezensionen" data-tr="Müşteri Yorumları" data-ru="Отзывы клиентов">Customer Reviews</h2>
+    <div class="review">
+      <img src="img/user1.jpg" alt="Customer 1" class="avatar">
+      <p>"Felt like I cast a charm just wearing it!"</p>
     </div>
+    <div class="review">
+      <img src="img/user2.jpg" alt="Customer 2" class="avatar">
+      <p>"A scent straight from an ancient grimoire."</p>
+    </div>
+  </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items">Cart is empty.</div>
+    <form id="checkout-form">
+      <label>Currency:
+        <select name="currency">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="uah">UAH</option>
+        </select>
+      </label>
+      <p>Pay with:</p>
+      <ul>
+        <li>Credit/Debit Card</li>
+        <li>PayPal</li>
+        <li>Monobank</li>
+        <li>Payoneer</li>
+        <li>Fondy</li>
+      </ul>
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </section>
+
+  <section class="socials">
+    <a href="https://www.instagram.com/potion.eu" target="_blank">Instagram</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://wa.me/" target="_blank">WhatsApp</a>
+  </section>
+
+  <section class="legal">
+    <a href="#impressum">Legal Notice</a>
+    <a href="#datenschutz">Privacy Policy</a>
+    <a href="#privacy">Data Protection</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
   </footer>
 
   <script>
     function switchLanguage(lang) {
-      alert("Language switching for " + lang + " coming soon!");
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
     }
   </script>
 </body>
