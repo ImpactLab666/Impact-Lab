@@ -1,218 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impact Lab | Alchemical Perfume Shop</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="logomagic.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ℕᴀᴿᴀᵍ ℕᴀᴇ | 𝙰𝚌𝚑𝚋𝚒𝚐𝚊𝚌𝚗 𝙏𝚊𝚑𝚒𝚎𝚌 𝙏𝚐𝚍</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background-color: #0e0d0d;
+      color: #e0d9c4;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      border-bottom: 1px solid #333;
+      background-color: #161616;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .title {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: #1b1b1b;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #222;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background-color: #4c3b2a;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: inherit;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      background-color: #161616;
+    }
+  </style>
 </head>
 <body>
-
-  <header class="header">
-    <div class="language-switcher">
-      <button onclick="switchLanguage('en')">EN</button>
-      <button onclick="switchLanguage('uk')">UA</button>
-      <button onclick="switchLanguage('de')">DE</button>
-      <button onclick="switchLanguage('tr')">TR</button>
-      <button onclick="switchLanguage('ru')">RU</button>
-    </div>
-    <div class="logo-title">
-      <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
-      <h1>Impact Lab</h1>
-      <p class="subtitle">Alchemical Perfume Shop</p>
-    </div>
-    <div class="contacts">
-      <p>Phone: +380987578027</p>
-      <p>Email: info@impactlab.com</p>
+  <header>
+    <img src="logo-no-text.png" alt="Impact Lab Logo" class="logo">
+    <div class="title">
+      𝔴𝔦𝔺𝔠𝔻 𝔬𝔮 | 𝙰𝚌𝚑𝚋𝚒𝚐𝚊𝚌𝚗 𝙏𝚊𝚑𝚒𝚎𝚌 𝙏𝚐𝚍
     </div>
   </header>
 
-  <nav class="main-nav">
-    <a href="#about">About</a>
-    <a href="#delivery">Delivery</a>
-    <a href="#catalog">Catalog</a>
-    <a href="#returns">Returns</a>
-    <a href="#cart">Cart</a>
-  </nav>
+  <main>
+    <div class="product-grid">
+      <div class="product">
+        <img src="perfume1.jpg" alt="Alchemical Perfume 1">
+        <h3>Philosopher's Musk</h3>
+        <p>Crafted with rare botanicals & subtle pheromones.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
 
-  <section id="catalog">
-    <h2>Catalog</h2>
-    <div class="categories">
-      <button>Women's Perfume</button>
-      <button>Men's Perfume</button>
-      <button>Pheromones</button>
-      <button>Magical Gifts</button>
+      <div class="product">
+        <img src="perfume2.jpg" alt="Alchemical Perfume 2">
+        <h3>Elixir Nocturne</h3>
+        <p>Dark, enchanting aroma of night and mystery.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <!-- Add more products here -->
     </div>
-  </section>
+  </main>
 
-  <section id="about">
-    <h2>About Our Shop</h2>
-    <p>Impact Lab is a mystical atelier crafting alchemical perfumes inspired by ancient formulas and magical ingredients.</p>
-  </section>
-
-  <section id="delivery">
-    <h2>Delivery</h2>
-    <p>We deliver worldwide. Delivery within EU takes 3–7 days. Ukraine — 2–5 days.</p>
-  </section>
-
-  <section id="returns">
-    <h2>Returns</h2>
-    <p>You may return unopened items within 14 days. Contact us for return authorization.</p>
-  </section>
-
-  <section id="cart">
-    <h2>Your Cart</h2>
-    <div class="cart-box">
-      <p>Cart is empty</p>
-      <label for="currency">Choose currency:</label>
-      <select id="currency" name="currency">
-        <option value="eur">EUR</option>
-        <option value="usd">USD</option>
-        <option value="uah">UAH</option>
-      </select>
-      <p>Payment methods:</p>
-      <ul>
-        <li>Credit/Debit Card</li>
-        <li>PayPal</li>
-        <li>Monobank</li>
-        <li>Payoneer</li>
-        <li>Fondy</li>
-      </ul>
-      <button>Proceed to Payment</button>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/potion.eu" target="_blank">Instagram</a>
-      <a href="#">Legal Notice</a>
-      <a href="#">Privacy Policy</a>
-    </div>
+  <footer>
+    &copy; 2025 Impact Lab. All rights reserved.
   </footer>
-
-  <script>
-    function switchLanguage(lang) {
-      // simple future localization logic
-    }
-  </script>
-
 </body>
 </html>
 
 
----
-
-styles.css
-
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  color: #f5f0e6;
-  background: url('impactlabshop.png') no-repeat center center fixed;
-  background-size: cover;
-  backdrop-filter: blur(3px);
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(20, 10, 30, 0.6);
-  padding: 10px 20px;
-  flex-wrap: wrap;
-}
-
-.logo-title {
-  text-align: center;
-}
-
-.logo {
-  height: 80px;
-}
-
-h1 {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 40px;
-  margin: 0;
-}
-
-.subtitle {
-  font-style: italic;
-  font-size: 16px;
-}
-
-.language-switcher {
-  margin-left: auto;
-  display: flex;
-  gap: 5px;
-}
-
-.language-switcher button {
-  background: #3c2f2f;
-  color: #f5f0e6;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  background: rgba(20, 10, 30, 0.7);
-  padding: 10px;
-}
-
-.main-nav a {
-  margin: 0 10px;
-  color: #f5f0e6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 30px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 20px;
-  border-radius: 10px;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.categories button {
-  background: #5a3d5c;
-  border: none;
-  padding: 10px 15px;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.cart-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(20, 10, 30, 0.8);
-  margin-top: 30px;
-}
-
-.socials {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
 
 
