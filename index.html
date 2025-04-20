@@ -1,207 +1,28 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impact Lab | Alchemical Perfume Shop</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logomagic.png" type="image/png">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      background: url('alchemy-background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #f0f0f0;
-    }
-
-    /* Шапка */
-    header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 30px 0;
-    }
-
-    /* Название */
-    .logo-text {
-      font-size: 3.5em;
-      font-family: 'Fraktur', serif; /* Используем стиль для алхимической атмосферы */
-      color: #e0b0a0;
-      font-weight: bold;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    /* Слоган */
-    .slogan {
-      font-size: 1.5em;
-      font-family: 'Serif', sans-serif;
-      color: #a67b5b;
-      margin-top: 10px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    /* Главный баннер */
-    .main-banner {
-      text-align: center;
-      padding: 50px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .main-banner h1 {
-      font-size: 3em;
-      color: #e0b0a0;
-      margin-bottom: 20px;
-    }
-
-    .main-banner p {
-      font-size: 1.2em;
-      color: #d1c6b1;
-      max-width: 800px;
-      margin: 0 auto 30px;
-    }
-
-    /* Каталог товаров */
-    .catalog {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 50px 10px;
-    }
-
-    .product {
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 20px;
-      margin: 20px;
-      width: 300px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .product h3 {
-      margin-top: 10px;
-      font-size: 1.5em;
-      color: #e0b0a0;
-    }
-
-    .product p {
-      margin-top: 10px;
-      color: #d1c6b1;
-    }
-
-    .product button {
-      padding: 10px;
-      background-color: #a67b5b;
-      border: none;
-      color: white;
-      font-size: 1em;
-      margin-top: 15px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .product button:hover {
-      background-color: #e0b0a0;
-    }
-
-    /* Навигация */
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 15px;
-    }
-
-    nav a {
-      color: #e0e0e0;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #a67b5b;
-    }
-
-    /* Футер */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #f0f0f0;
-    }
-
-    /* Адаптивность */
-    @media (max-width: 768px) {
-      .catalog {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .product {
-        width: 90%;
-      }
-
-      nav a {
-        font-size: 1.2em;
-        margin: 0 10px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo-text {
-        font-size: 2.5em;
-      }
-
-      .slogan {
-        font-size: 1.2em;
-      }
-
-      .main-banner h1 {
-        font-size: 2.5em;
-      }
-    }
-  </style>
-  <!-- Подключение шрифтов -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraktur&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Header with logo and slogan -->
   <header>
     <div class="logo-text">𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</div>
     <div class="slogan">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</div>
   </header>
 
+  <!-- Navigation menu -->
   <nav>
     <a href="#about">About</a>
     <a href="#catalog">Catalog</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="main-banner">
-    <h1>Discover the Magic of Alchemical Perfumes</h1>
-    <p>Crafted with the finest ingredients and infused with pheromones, our perfumes are designed to captivate and enchant.</p>
-  </div>
-
+  <!-- Catalog section with products -->
   <section id="catalog" class="catalog">
     <div class="product">
       <img src="perfume1.jpg" alt="Perfume 1">
@@ -223,9 +44,176 @@
     </div>
   </section>
 
+  <!-- Footer with copyright -->
   <footer>
     <p>&copy; 2025 Impact Lab | All rights reserved</p>
   </footer>
 
 </body>
 </html>
+
+CSS:
+
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  color: #f0f0f0;
+  background: url('impactlabshop.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+header {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-text {
+  font-size: 3.5em;
+  font-family: 'Fraktur', serif;
+  color: #e0b0a0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Свечение */
+}
+
+.slogan {
+  font-size: 1.5em;
+  color: #a67b5b;
+  font-style: italic;
+  margin-top: 10px;
+  text-shadow: 0px 0px 8px rgba(255, 165, 0, 0.7); /* Свечение */
+}
+
+/* Навигация */
+nav {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  margin-top: 100px;
+}
+
+nav a {
+  color: #e0e0e0;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a67b5b;
+}
+
+/* Каталог */
+.catalog {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin-top: 150px;
+}
+
+.product {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.product img:hover {
+  transform: rotate(10deg);
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #e0b0a0;
+}
+
+.product p {
+  color: #d1c6b1;
+}
+
+.product button {
+  padding: 10px;
+  background-color: #a67b5b;
+  border: none;
+  color: white;
+  font-size: 1em;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #e0b0a0;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 2.5em;
+  }
+
+  .slogan {
+    font-size: 1.2em;
+  }
+
+  .catalog {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .product {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+}
+
