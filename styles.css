@@ -1,136 +1,85 @@
 body {
   margin: 0;
-  font-family: 'Cinzel Decorative', serif;
-  background-color: #0e0b16;
-  color: #e0d2c2;
+  font-family: 'Cinzel', serif;
+  color: #e0e0e0; /* светло-серый для текста */
+  background: url('A_digital_painting_in_the_style_of_dark_fantasy_an.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: #1c1427;
-  border-bottom: 2px solid #6f42c1;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .logo {
   height: 80px;
-  margin-right: 20px;
 }
 
-.logo-title {
+.languages {
   display: flex;
-  align-items: center;
+  gap: 10px;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #ddb892;
-}
-
-.subtitle {
-  font-size: 1em;
-  color: #c9a0dc;
-}
-
-.language-switcher button {
-  background: #2e193e;
-  border: 1px solid #6f42c1;
-  color: #f0e6f6;
+.languages button {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #e0e0e0; /* светло-серый для кнопок */
   padding: 5px 10px;
-  margin: 0 2px;
   cursor: pointer;
-  border-radius: 3px;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: center;
-  background: #201329;
-  padding: 10px 0;
+  background-color: rgba(20, 20, 20, 0.8);
+  padding: 10px;
 }
 
-.nav a {
+nav a {
+  color: #e0e0e0; /* светло-серый для ссылок */
   margin: 0 15px;
-  color: #d6b4fc;
   text-decoration: none;
   font-weight: bold;
 }
 
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #f8e6ff;
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
+section {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px;
   border-radius: 10px;
 }
 
-.catalog {
-  text-align: center;
-  padding: 40px 20px;
+h2 {
+  border-bottom: 1px solid #a67b5b; /* можно заменить на светло-серый или белый */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* белый или светло-серый для заголовков */
 }
 
-.categories button {
+.catalog .product {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
   margin: 10px;
-  padding: 10px 20px;
-  background: #3b2645;
-  color: #e3d3ff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.products .product {
-  margin: 20px auto;
-  padding: 15px;
-  background: #2d1b3d;
-  max-width: 300px;
   border-radius: 8px;
-  box-shadow: 0 0 10px #6f42c1;
+  display: inline-block;
+  width: 200px;
+  color: #e0e0e0; /* цвет текста внутри карточек товаров */
 }
 
-.about, .delivery, .returns, .reviews, .cart {
-  padding: 40px 20px;
-  background: #160d21;
+#checkout-form select, #checkout-form button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333; /* темный цвет текста для удобства ввода */
 }
 
-.review {
-  background: #2a1b3a;
-  margin: 10px auto;
-  padding: 15px;
-  max-width: 400px;
-  border-left: 4px solid #a97bd3;
-  font-style: italic;
-}
-
-.footer {
+footer {
   text-align: center;
-  background: #1c1427;
   padding: 20px;
-  border-top: 2px solid #6f42c1;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #e0e0e0; /* светло-серый для текста футера */
 }
 
-.socials a {
-  margin: 0 10px;
-  color: #bb9eff;
-  text-decoration: none;
-}
-
-
-  
