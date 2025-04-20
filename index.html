@@ -1,169 +1,152 @@
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logomagic.png" type="image/png">
   <style>
     body {
       margin: 0;
-      font-family: 'Cinzel Decorative', cursive;
-      background: url('dark_lab_background.jpg') no-repeat center center fixed;
+      font-family: 'Cinzel', serif;
+      color: #f8f5f2;
+      background: url('A_digital_painting_in_the_style_of_dark_fantasy_an.png') no-repeat center center fixed;
       background-size: cover;
-      color: #f4e9d8;
     }
-
     header {
-      background-color: rgba(0, 0, 0, 0.8);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      border-bottom: 1px solid #6a4e77;
+      padding: 10px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
-
     .logo {
       height: 80px;
     }
-
-    .title h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 42px;
-      margin: 0;
-      color: #d6b98c;
-    }
-
-    nav {
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #f4e9d8;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .hero {
-      position: relative;
-      text-align: center;
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      border-bottom: 2px solid #6a4e77;
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      color: #d6b98c;
-      margin-top: 20px;
-    }
-
-    .catalog {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .catalog h2 {
-      color: #d6b98c;
-      font-size: 28px;
-    }
-
-    .products {
+    .languages {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
+      gap: 10px;
     }
-
-    .product {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border: 1px solid #6a4e77;
+    .languages button {
+      background: transparent;
+      border: 1px solid #ccc;
+      color: #f8f5f2;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(20, 20, 20, 0.8);
+      padding: 10px;
+    }
+    nav a {
+      color: #f8f5f2;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 20px;
       border-radius: 10px;
+    }
+    h2 {
+      border-bottom: 1px solid #a67b5b;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .catalog .product {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      display: inline-block;
       width: 200px;
     }
-
-    .product img {
-      width: 100%;
-      border-radius: 5px;
+    #checkout-form select, #checkout-form button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
     }
-
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-      color: #f4e9d8;
-    }
-
-    .product p {
-      font-size: 14px;
-      color: #d6b98c;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 14px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #aaa;
+      background-color: rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logomagic.png" alt="Logo" class="logo">
-    <div class="title">
-      <h1>Impact Lab</h1>
+    <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
+    <div class="languages">
+      <button>EN</button>
+      <button>UA</button>
+      <button>DE</button>
+      <button>TR</button>
+      <button>RU</button>
     </div>
   </header>
 
   <nav>
-    <a href="#catalog">Catalog</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#returns">Returns</a>
+    <a href="#cart">Cart</a>
   </nav>
 
-  <div class="hero">
-    <img src="/mnt/data/A_digital_painting_in_the_style_of_dark_fantasy_an.png" alt="Witchy Lab">
-    <h2>Alchemical Perfumes & Mystical Potions</h2>
-  </div>
+  <section id="about">
+    <h2>About Impact Lab</h2>
+    <p>A magical alchemical perfume atelier blending ancient wisdom with modern mysticism.</p>
+  </section>
 
-  <section class="catalog" id="catalog">
-    <h2>Our Magical Creations</h2>
-    <div class="products">
-      <div class="product">
-        <img src="img/product1.jpg" alt="Elixir 1">
-        <h3>Elixir No. 7</h3>
-        <p>Infused with amber & moon petals</p>
-      </div>
-      <div class="product">
-        <img src="img/product2.jpg" alt="Elixir 2">
-        <h3>Witch's Whisper</h3>
-        <p>Dark rose, myrrh, and secrets</p>
-      </div>
-      <div class="product">
-        <img src="img/product3.jpg" alt="Elixir 3">
-        <h3>Alchemy Flame</h3>
-        <p>Spiced oud & dragonflower</p>
-      </div>
-    </div>
+  <section id="catalog" class="catalog">
+    <h2>Catalog</h2>
+    <div class="product">Potion 1</div>
+    <div class="product">Elixir 2</div>
+    <div class="product">Mystic Oil 3</div>
+  </section>
+
+  <section id="delivery">
+    <h2>Delivery</h2>
+    <p>Worldwide shipping available. EU: 3-7 days. Ukraine: 2-5 days.</p>
+  </section>
+
+  <section id="returns">
+    <h2>Returns</h2>
+    <p>Returns accepted within 14 days on unopened items.</p>
+  </section>
+
+  <section id="cart">
+    <h2>Cart</h2>
+    <div id="cart-items">Cart is empty.</div>
+    <form id="checkout-form">
+      <label for="currency">Currency:</label>
+      <select id="currency" name="currency">
+        <option value="eur">EUR</option>
+        <option value="usd">USD</option>
+        <option value="uah">UAH</option>
+      </select>
+
+      <p>Payment Methods:</p>
+      <ul>
+        <li>Bank Card</li>
+        <li>PayPal</li>
+        <li>Monobank</li>
+        <li>Payoneer</li>
+        <li>Fondy</li>
+      </ul>
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 Impact Lab | Crafted with Mystery
+    <p>&copy; 2025 Impact Lab | All rights reserved.</p>
   </footer>
 </body>
-</html>
+</html>       
+  
