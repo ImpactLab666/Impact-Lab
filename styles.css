@@ -1,184 +1,109 @@
-/* Общие стили */
-* {
+  body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  color: #f5f0e6;
+  background: url('impactlabshop.png') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px);
 }
 
-body {
-  font-family: 'Cinzel', serif;
-  color: #f0f0f0;
-  background: url('impactlabshop.jpg') no-repeat center center fixed; /* Вставляем фон */
-  background-size: cover; /* Покрытие всего экрана */
-  height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  background: rgba(20, 10, 30, 0.6);
+  padding: 10px 20px;
+  flex-wrap: wrap;
 }
 
-/* Шапка */
-header {
+.logo-title {
   text-align: center;
-  padding: 50px 20px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-}
-
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .logo {
-  height: 120px;
+  height: 80px;
 }
 
-.logo-text {
-  font-size: 3.5em;
-  font-family: 'Fraktur', serif;
-  color: #e0b0a0;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Свечение */
+h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 40px;
+  margin: 0;
 }
 
-.slogan {
-  font-size: 1.5em;
-  color: #a67b5b;
+.subtitle {
   font-style: italic;
-  margin-top: 10px;
-  text-shadow: 0px 0px 8px rgba(255, 165, 0, 0.7); /* Свечение */
+  font-size: 16px;
 }
 
-.contact-info {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #e0e0e0;
+.language-switcher {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
 }
 
-.contact-info span {
-  display: block;
+.language-switcher button {
+  background: #3c2f2f;
+  color: #f5f0e6;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-/* Навигация */
-nav {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px;
-  margin-top: 200px;
-}
-
-nav a {
-  color: #e0e0e0;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #a67b5b;
-}
-
-/* Каталог */
-.catalog {
+.main-nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 50px;
-  margin-top: 150px;
-}
-
-.product {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
-}
-
-.product img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.product img:hover {
-  transform: rotate(10deg);
-}
-
-.product h3 {
-  margin-top: 10px;
-  font-size: 1.5em;
-  color: #e0b0a0;
-}
-
-.product p {
-  color: #d1c6b1;
-}
-
-.product button {
+  background: rgba(20, 10, 30, 0.7);
   padding: 10px;
-  background-color: #a67b5b;
+}
+
+.main-nav a {
+  margin: 0 10px;
+  color: #f5f0e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.categories button {
+  background: #5a3d5c;
   border: none;
-  color: white;
-  font-size: 1em;
-  margin-top: 15px;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.product button:hover {
-  background-color: #e0b0a0;
+.cart-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
 }
 
-/* Футер */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  font-size: 0.9em;
-  color: #e0e0e0;
+  background: rgba(20, 10, 30, 0.8);
+  margin-top: 30px;
 }
 
-/* Мобильная адаптивность */
-@media (max-width: 768px) {
-  .logo-text {
-    font-size: 2.5em;
-  }
-
-  .slogan {
-    font-size: 1.2em;
-  }
-
-  .catalog {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .product {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  nav a {
-    font-size: 1em;
-  }
+.socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
+
+
