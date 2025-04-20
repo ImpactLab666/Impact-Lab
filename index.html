@@ -51,16 +51,15 @@
 
     /* Category buttons section */
     .category-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
       padding: 40px 20px;
     }
 
     .category-card {
       text-align: center;
       cursor: pointer;
-      width: 160px;
       padding: 20px;
       border-radius: 10px;
       background-color: #4c3b2a;
@@ -105,6 +104,47 @@
       border-top: 1px solid #333;
       background-color: #161616;
     }
+
+    /* Product grid styling */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: #1b1b1b;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #222;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background-color: #4c3b2a;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: inherit;
+    }
+
   </style>
 </head>
 <body>
@@ -138,6 +178,7 @@
 
   <main>
     <div class="product-grid">
+      <!-- Reverted back to original products list -->
       <div class="product">
         <img src="perfume1.jpg" alt="Alchemical Perfume 1">
         <h3>Philosopher's Musk</h3>
@@ -151,13 +192,27 @@
         <p>Dark, enchanting aroma of night and mystery.</p>
         <button class="btn">Add to Cart</button>
       </div>
+
+      <div class="product">
+        <img src="perfume3.jpg" alt="Alchemical Perfume 3">
+        <h3>The Philosopher's Stone</h3>
+        <p>Rare and potent blend for the seeker of wisdom.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="perfume4.jpg" alt="Alchemical Perfume 4">
+        <h3>Golden Elixir</h3>
+        <p>A luminous fragrance that channels the power of gold.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
     </div>
   </main>
 
   <footer>
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
-  
+
 </body>
 </html>
 
