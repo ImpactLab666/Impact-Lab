@@ -1,4 +1,4 @@
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,9 +19,6 @@
       width: 100%;
       height: 100vh;
       overflow: hidden;
-      top: 0;
-      left: 0;
-      z-index: 0;
     }
 
     .hero img {
@@ -39,17 +36,83 @@
       z-index: 1;
     }
 
-    .fade-in {
-      animation: fadeIn ease 3s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      position: relative;
-      z-index: 0;
+    .hero-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      background-color: #4c3b2a;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 10px rgba(255, 204, 102, 0.7);
+      transition: all 0.3s ease;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+    .hero-button:hover {
+      background-color: #5e472f;
+      box-shadow: 0 0 20px rgba(255, 204, 102, 1);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .section-icons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #151313;
+    }
+
+    .icon-card {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-card:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(255, 215, 160, 0.5);
+      margin-bottom: 10px;
+    }
+
+    .icon-card span {
+      display: block;
+      font-size: 1rem;
+      color: #f0e6d2;
+    }
+
+    .subcategory {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #100f0f;
+    }
+
+    .subcategory a {
+      color: #d8cbb2;
+      background-color: #2a1f18;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .subcategory a:hover {
+      background-color: #3b2b20;
     }
 
     main {
@@ -109,8 +172,32 @@
 <body>
   <header class="hero">
     <div class="overlay"></div>
-    <img src="impactlabshop.png" alt="Impact Lab Header" class="fade-in">
+    <img src="impactlabshop.png" alt="Impact Lab Header">
+    <button class="hero-button" onclick="document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });">В каталог</button>
   </header>
+
+  <section class="section-icons" id="categories">
+    <div class="icon-card" onclick="document.getElementById('subcategories').scrollIntoView({ behavior: 'smooth' });">
+      <img src="placeholder1.jpg" alt="Eaux de Toilette">
+      <span>Туалетные воды</span>
+    </div>
+    <div class="icon-card" onclick="document.getElementById('subcategories').scrollIntoView({ behavior: 'smooth' });">
+      <img src="placeholder2.jpg" alt="Perfumes">
+      <span>Духи</span>
+    </div>
+    <div class="icon-card" onclick="document.getElementById('subcategories').scrollIntoView({ behavior: 'smooth' });">
+      <img src="placeholder3.jpg" alt="Pheromone Perfumes">
+      <span>Духи с феромонами</span>
+    </div>
+  </section>
+
+  <section class="subcategory" id="subcategories">
+    <a href="#">Женские парфюмы</a>
+    <a href="#">Мужские парфюмы</a>
+    <a href="#">Унисекс парфюмы</a>
+    <a href="#">Магические подарки</a>
+    <a href="#">Украшения</a>
+  </section>
 
   <main>
     <div class="product-grid">
