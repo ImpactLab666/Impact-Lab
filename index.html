@@ -20,6 +20,66 @@
       <p>Email: info@impactlab.com</p>
     </div>
   </header>
+  <section class="catalog">
+  <h2>Catalog</h2>
+  <div class="categories">
+    <button onclick="filterCategory('women')">Women</button>
+    <button onclick="filterCategory('men')">Men</button>
+    <button onclick="filterCategory('pheromones')">Pheromones</button>
+    <button onclick="filterCategory('gifts')">Gifts</button>
+  </div>
+  <div class="products" id="product-list">
+    <div class="product" data-category="women">
+      <img src="img/perfume1.jpg" alt="Mystic Rose">
+      <h4>Mystic Rose</h4>
+      <p>30€</p>
+      <button onclick="addToCart('Mystic Rose - 30€')">Add to cart</button>
+    </div>
+    <div class="product" data-category="men">
+      <img src="img/perfume2.jpg" alt="Shadow Musk">
+      <h4>Shadow Musk</h4>
+      <p>35€</p>
+      <button onclick="addToCart('Shadow Musk - 35€')">Add to cart</button>
+    </div>
+    <div class="product" data-category="pheromones">
+      <img src="img/perfume3.jpg" alt="Eros Pulse">
+      <h4>Eros Pulse</h4>
+      <p>40€</p>
+      <button onclick="addToCart('Eros Pulse - 40€')">Add to cart</button>
+    </div>
+    <div class="product" data-category="gifts">
+      <img src="img/gift1.jpg" alt="Witch's Amulet">
+      <h4>Witch's Amulet</h4>
+      <p>25€</p>
+      <button onclick="addToCart('Witch\'s Amulet - 25€')">Add to cart</button>
+    </div>
+    <div class="product" data-category="women">
+      <img src="img/perfume4.jpg" alt="Moon Elixir">
+      <h4>Moon Elixir</h4>
+      <p>28€</p>
+      <button onclick="addToCart('Moon Elixir - 28€')">Add to cart</button>
+    </div>
+    <div class="product" data-category="men">
+      <img src="img/perfume5.jpg" alt="Nocturne Fire">
+      <h4>Nocturne Fire</h4>
+      <p>32€</p>
+      <button onclick="addToCart('Nocturne Fire - 32€')">Add to cart</button>
+    </div>
+  </div>
+  <div class="cart">
+    <h3>Cart</h3>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+</section>
+
+<script>
+function filterCategory(category) {
+  document.querySelectorAll('.product').forEach(el => {
+    el.style.display = category === 'all' || el.dataset.category === category ? 'block' : 'none';
+  });
+}
+</script>
 
   <div class="language-switcher">
     <button onclick="switchLanguage('en')">EN</button>
