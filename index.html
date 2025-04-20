@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,77 +10,169 @@
     body {
       margin: 0;
       font-family: 'Cinzel', serif;
-      color: #f8f5f2;
+      color: #e0e0e0; /* светлый цвет для текста */
       background: url('A_digital_painting_in_the_style_of_dark_fantasy_an.png') no-repeat center center fixed;
       background-size: cover;
     }
+
+    /* Шапка */
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 10px 30px;
-      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* темный фон */
     }
+
     .logo {
-      height: 80px;
+      height: 100px;
+      margin-right: 20px;
     }
+
+    .logo-text {
+      font-size: 2em;
+      color: #e0b0a0; /* тёплый золотистый оттенок */
+      font-weight: bold;
+    }
+
     .languages {
       display: flex;
       gap: 10px;
+      margin-left: auto;
     }
+
     .languages button {
       background: transparent;
       border: 1px solid #ccc;
-      color: #f8f5f2;
+      color: #f0f0f0;
       padding: 5px 10px;
       cursor: pointer;
     }
+
+    /* Навигация */
     nav {
       display: flex;
       justify-content: center;
       background-color: rgba(20, 20, 20, 0.8);
       padding: 10px;
     }
+
     nav a {
-      color: #f8f5f2;
+      color: #e0e0e0;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #a67b5b; /* золотистый при наведении */
+    }
+
+    /* Основные разделы */
     section {
       padding: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       margin: 20px;
       border-radius: 10px;
     }
+
     h2 {
-      border-bottom: 1px solid #a67b5b;
+      border-bottom: 2px solid #a67b5b;
       padding-bottom: 10px;
       margin-bottom: 20px;
+      color: #e0e0e0;
     }
+
+    /* Каталог товаров */
     .catalog .product {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.2); /* карточки товаров с прозрачностью */
       padding: 15px;
       margin: 10px;
       border-radius: 8px;
       display: inline-block;
       width: 200px;
+      text-align: center;
+      color: #f0f0f0;
+      transition: transform 0.3s ease;
     }
+
+    .catalog .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* эффект увеличения и тени */
+    }
+
+    /* Форма корзины */
     #checkout-form select, #checkout-form button {
       padding: 10px;
       margin-top: 10px;
       font-size: 1em;
+      color: #333;
+      background-color: #e0b0a0; /* золотистый фон для кнопок */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
+
+    #checkout-form select, #checkout-form button:hover {
+      background-color: #a67b5b; /* тёмный золотистый при наведении */
+    }
+
+    /* Футер */
     footer {
       text-align: center;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.8);
+      color: #e0e0e0;
+    }
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+      .catalog .product {
+        width: 45%; /* карточки товаров на мобильных устройствах */
+        margin: 10px 0;
+      }
+      
+      .languages {
+        margin-left: 0;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 1.5em;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      .languages {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
+    <div class="logo-text">Impact Lab</div>
     <div class="languages">
       <button>EN</button>
       <button>UA</button>
@@ -147,6 +239,7 @@
   <footer>
     <p>&copy; 2025 Impact Lab | All rights reserved.</p>
   </footer>
+
 </body>
-</html>       
-  
+</html>
+
