@@ -24,24 +24,36 @@
       text-align: center;
     }
 
-    header h1 {
+    /* Button to enter catalog */
+    .hero-button {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 3rem;
-      color: #f0e6d2;
-      margin: 0;
       z-index: 2;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      background-color: #4c3b2a;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 10px rgba(255, 204, 102, 0.7);
+      transition: all 0.3s ease;
     }
 
-    /* Section for category buttons */
+    .hero-button:hover {
+      background-color: #5e472f;
+      box-shadow: 0 0 20px rgba(255, 204, 102, 1);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    /* Category buttons section */
     .category-buttons {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-around;
       padding: 40px 20px;
     }
 
@@ -98,10 +110,10 @@
 <body>
 
   <header>
-    <h1>Impact Lab</h1>
+    <button class="hero-button" onclick="document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });">Enter Catalog</button>
   </header>
 
-  <section class="category-buttons">
+  <section class="category-buttons" id="categories">
     <a href="womens.html" class="category-card">
       <img src="womens_icon.jpg" alt="Women's Perfumes">
       <span>Women's Perfumes</span>
@@ -148,3 +160,4 @@
   
 </body>
 </html>
+
