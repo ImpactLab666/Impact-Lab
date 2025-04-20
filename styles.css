@@ -1,85 +1,120 @@
 body {
-  margin: 0;
   font-family: 'Cinzel', serif;
-  color: #e0e0e0; /* светло-серый для текста */
-  background: url('A_digital_painting_in_the_style_of_dark_fantasy_an.png') no-repeat center center fixed;
+  background: url('alchemy-background.jpg') no-repeat center center fixed;
   background-size: cover;
+  color: #f0f0f0;
+  margin: 0;
+  transition: background-color 0.5s ease;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.logo {
-  height: 80px;
+.logo-text {
+  font-size: 3.5em;
+  font-family: 'Fraktur', serif;
+  color: #e0b0a0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.7); /* Glow effect */
 }
 
-.languages {
-  display: flex;
-  gap: 10px;
-}
-
-.languages button {
-  background: transparent;
-  border: 1px solid #ccc;
-  color: #e0e0e0; /* светло-серый для кнопок */
-  padding: 5px 10px;
-  cursor: pointer;
+.slogan {
+  font-size: 1.5em;
+  color: #a67b5b;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(20, 20, 20, 0.8);
-  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
 }
 
 nav a {
-  color: #e0e0e0; /* светло-серый для ссылок */
-  margin: 0 15px;
+  color: #e0e0e0;
+  margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transition: color 0.3s;
 }
 
-section {
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+nav a:hover {
+  color: #a67b5b;
+}
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.product {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
   margin: 20px;
+  width: 300px;
   border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-h2 {
-  border-bottom: 1px solid #a67b5b; /* можно заменить на светло-серый или белый */
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  color: #e0e0e0; /* белый или светло-серый для заголовков */
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
 }
 
-.catalog .product {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  margin: 10px;
-  border-radius: 8px;
-  display: inline-block;
-  width: 200px;
-  color: #e0e0e0; /* цвет текста внутри карточек товаров */
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-#checkout-form select, #checkout-form button {
-  padding: 10px;
+.product img:hover {
+  transform: rotate(10deg);
+}
+
+.product h3 {
   margin-top: 10px;
+  font-size: 1.5em;
+  color: #e0b0a0;
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5); /* Glow effect */
+}
+
+.product p {
+  color: #d1c6b1;
+}
+
+.product button {
+  padding: 10px;
+  background-color: #a67b5b;
+  border: none;
+  color: white;
   font-size: 1em;
-  color: #333; /* темный цвет текста для удобства ввода */
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #e0b0a0;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #e0e0e0; /* светло-серый для текста футера */
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9em;
+  color: #e0e0e0;
 }
 
