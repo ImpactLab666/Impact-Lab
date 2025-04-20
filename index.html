@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+          <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,84 +7,40 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="logomagic.png" type="image/png">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <style>
+    .logo { height: 100px; }
+    .header { background: #1a1a1a; color: #f0e6d2; display: flex; justify-content: space-between; align-items: center; padding: 20px; flex-wrap: wrap; }
+    .title h1 { font-family: 'UnifrakturCook', cursive; font-size: 36px; margin: 0; }
+    .title .subtitle { font-size: 16px; font-style: italic; }
+    .contacts p { margin: 2px 0; }
+    .categories button { margin: 5px; padding: 10px; background: #3c2f2f; color: #f0e6d2; border: none; border-radius: 5px; }
+    .categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .products img { width: 100%; max-width: 200px; border-radius: 8px; }
+    .review img.avatar { width: 50px; height: 50px; border-radius: 50%; }
+    .socials, .legal { display: flex; justify-content: center; gap: 15px; margin: 20px 0; }
+    .language-switcher { display: flex; gap: 5px; justify-content: center; margin: 10px 0; }
+    .main-nav a { margin: 0 10px; color: #fff; text-decoration: none; }
+  </style>
 </head>
 <body>
   <header class="header">
     <img src="logomagic.png" alt="Impact Lab Logo" class="logo">
     <div class="title">
-      <h1 class="gothic">Impact Lab</h1>
+      <h1 class="gothic">𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</h1>
       <p class="subtitle">𝙰𝚕𝚌𝚑𝚎𝚖𝚒𝚌𝚊𝚕 𝙿𝚎𝚛𝚏𝚞𝚖𝚎 𝚂𝚑𝚘𝚙</p>
     </div>
     <div class="contacts">
-      <p>Phone: +49 123 4567890</p>
+      <p>Phone: +380987578027</p>
       <p>Email: info@impactlab.com</p>
     </div>
   </header>
-  <section class="catalog">
-  <h2>Catalog</h2>
-  <div class="categories">
-    <button onclick="filterCategory('women')">Women</button>
-    <button onclick="filterCategory('men')">Men</button>
-    <button onclick="filterCategory('pheromones')">Pheromones</button>
-    <button onclick="filterCategory('gifts')">Gifts</button>
-  </div>
-  <div class="products" id="product-list">
-    <div class="product" data-category="women">
-      <img src="img/perfume1.jpg" alt="Mystic Rose">
-      <h4>Mystic Rose</h4>
-      <p>30€</p>
-      <button onclick="addToCart('Mystic Rose - 30€')">Add to cart</button>
-    </div>
-    <div class="product" data-category="men">
-      <img src="img/perfume2.jpg" alt="Shadow Musk">
-      <h4>Shadow Musk</h4>
-      <p>35€</p>
-      <button onclick="addToCart('Shadow Musk - 35€')">Add to cart</button>
-    </div>
-    <div class="product" data-category="pheromones">
-      <img src="img/perfume3.jpg" alt="Eros Pulse">
-      <h4>Eros Pulse</h4>
-      <p>40€</p>
-      <button onclick="addToCart('Eros Pulse - 40€')">Add to cart</button>
-    </div>
-    <div class="product" data-category="gifts">
-      <img src="img/gift1.jpg" alt="Witch's Amulet">
-      <h4>Witch's Amulet</h4>
-      <p>25€</p>
-      <button onclick="addToCart('Witch\'s Amulet - 25€')">Add to cart</button>
-    </div>
-    <div class="product" data-category="women">
-      <img src="img/perfume4.jpg" alt="Moon Elixir">
-      <h4>Moon Elixir</h4>
-      <p>28€</p>
-      <button onclick="addToCart('Moon Elixir - 28€')">Add to cart</button>
-    </div>
-    <div class="product" data-category="men">
-      <img src="img/perfume5.jpg" alt="Nocturne Fire">
-      <h4>Nocturne Fire</h4>
-      <p>32€</p>
-      <button onclick="addToCart('Nocturne Fire - 32€')">Add to cart</button>
-    </div>
-  </div>
-  <div class="cart">
-    <h3>Cart</h3>
-    <ul id="cart-items"></ul>
-    <button onclick="checkout()">Checkout</button>
-  </div>
-</section>
-
-<script>
-function filterCategory(category) {
-  document.querySelectorAll('.product').forEach(el => {
-    el.style.display = category === 'all' || el.dataset.category === category ? 'block' : 'none';
-  });
-}
-</script>
 
   <div class="language-switcher">
     <button onclick="switchLanguage('en')">EN</button>
     <button onclick="switchLanguage('uk')">UA</button>
     <button onclick="switchLanguage('de')">DE</button>
+    <button onclick="switchLanguage('tr')">TR</button>
+    <button onclick="switchLanguage('ru')">RU</button>
   </div>
 
   <nav class="main-nav">
@@ -102,29 +58,17 @@ function filterCategory(category) {
   </section>
 
   <section id="catalog" class="catalog">
-    <h2 data-en="Catalog" data-uk="Каталог" data-de="Katalog">Catalog</h2>
+    <h2 data-en="Catalog" data-uk="Каталог" data-de="Katalog" data-tr="Katalog" data-ru="Каталог">Catalog</h2>
     <div class="categories">
-      <button>Women's Perfume</button>
-      <button>Men's Perfume</button>
-      <button>Pheromone Products</button>
-      <button>Magical Gifts & Jewelry</button>
+      <button><img src="img/category_women.jpg" alt="Women's Perfume" width="50"> Women's Perfume</button>
+      <button><img src="img/category_men.jpg" alt="Men's Perfume" width="50"> Men's Perfume</button>
+      <button><img src="img/category_pheromones.jpg" alt="Pheromones" width="50"> Pheromones</button>
+      <button><img src="img/category_gifts.jpg" alt="Magical Gifts" width="50"> Magical Gifts</button>
     </div>
     <div class="products">
       <div class="product">Product 1</div>
       <div class="product">Product 2</div>
       <div class="product">Product 3</div>
-    </div>
-  </section>
-
-  <section class="reviews">
-    <h2 data-en="Customer Reviews" data-uk="Відгуки клієнтів" data-de="Kundenrezensionen">Customer Reviews</h2>
-    <div class="review">
-      <img src="user1.jpg" alt="Customer 1" class="avatar">
-      <p>"Amazing magical fragrance!"</p>
-    </div>
-    <div class="review">
-      <img src="user2.jpg" alt="Customer 2" class="avatar">
-      <p>"Feels like an alchemical spell."</p>
     </div>
   </section>
 
@@ -141,6 +85,18 @@ function filterCategory(category) {
   <section id="returns">
     <h2>Returns</h2>
     <p>You may return unopened items within 14 days. Contact us for return authorization.</p>
+  </section>
+
+  <section class="reviews">
+    <h2 data-en="Customer Reviews" data-uk="Відгуки клієнтів" data-de="Kundenrezensionen" data-tr="Müşteri Yorumları" data-ru="Отзывы клиентов">Customer Reviews</h2>
+    <div class="review">
+      <img src="img/user1.jpg" alt="Customer 1" class="avatar">
+      <p>"Amazing magical fragrance!"</p>
+    </div>
+    <div class="review">
+      <img src="img/user2.jpg" alt="Customer 2" class="avatar">
+      <p>"Feels like an alchemical spell."</p>
+    </div>
   </section>
 
   <section id="cart">
@@ -173,9 +129,9 @@ function filterCategory(category) {
   </section>
 
   <section class="legal">
-    <a href="#impressum">Impressum</a>
-    <a href="#datenschutz">Datenschutz</a>
-    <a href="#privacy">Privacy Policy</a>
+    <a href="#impressum">Legal Notice</a>
+    <a href="#datenschutz">Privacy Policy</a>
+    <a href="#privacy">Data Protection</a>
   </section>
 
   <footer>
@@ -190,4 +146,8 @@ function filterCategory(category) {
     }
   </script>
 </body>
-  </html>
+</html>
+
+
+
+
