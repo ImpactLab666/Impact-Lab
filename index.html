@@ -1,139 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #0e0d0d;
-      color: #e0d9c4;
-      height: 100%;
-    }
-
-    .top-bar {
-      background-color: #0b0b0b;
-      color: #e0d9c4;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 20px;
-      font-size: 0.9rem;
-      border-bottom: 1px solid #333;
-    }
-
-    .top-bar a {
-      color: #e0d9c4;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .top-bar a:hover {
-      color: #c9b67d;
-    }
-
-    .language-switcher a {
-      margin-left: 12px;
-    }
-
-    .language-switcher img {
-      width: 24px;
-      height: auto;
-      border-radius: 4px;
-      filter: brightness(0.9);
-      transition: transform 0.3s ease;
-    }
-
-    .language-switcher img:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-
-    header {
-      position: relative;
-      width: 100%;
-      height: calc(100vh - 40px); /* adjusted for top-bar height */
-      background: url('impactlabshop.png') no-repeat center center;
-      background-size: cover;
-    }
-
-    header button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #e0d9c4;
-      padding: 14px 28px;
-      border: 2px solid #c9b67d;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s ease;
-    }
-
-    header button:hover {
-      background-color: #c9b67d;
-      color: #0e0d0d;
-    }
-
-    .category-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 20px;
-      background-color: #151313;
-      flex-wrap: wrap;
-    }
-
-    .category-button {
-      display: block;
-      width: 180px;
-      height: 180px;
-      background-color: #4c3b2a;
-      color: #fff;
-      text-align: center;
-      border-radius: 8px;
-      text-decoration: none;
-      padding: 20px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .category-button:hover {
-      background-color: #5e472f;
-      transform: scale(1.05);
-    }
-
-    .category-button img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .category-button span {
-      display: block;
-      margin-top: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-      background-color: #161616;
-      color: #fff;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top bar with email and language switcher -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -146,40 +22,33 @@
     </div>
   </div>
 
-  <!-- Header Section -->
   <header>
     <button onclick="window.location.href='#categories';">Enter Catalog</button>
   </header>
 
-  <!-- Categories Section -->
   <section class="category-section" id="categories">
     <a href="womens.html" class="category-button">
       <img src="womanperfume.png" alt="Women's Perfumes">
       <span>Women's Perfumes</span>
     </a>
-
     <a href="mens.html" class="category-button">
       <img src="menperfume.png" alt="Men's Perfumes">
       <span>Men's Perfumes</span>
     </a>
-
     <a href="unisex.html" class="category-button">
       <img src="unisexperfume.png" alt="Unisex Perfumes">
       <span>Unisex Perfumes</span>
     </a>
-
     <a href="gifts.html" class="category-button">
       <img src="magicgifts.png" alt="Magical Gifts">
       <span>Magical Gifts</span>
     </a>
-
     <a href="jewelry.html" class="category-button">
       <img src="jewellery.png" alt="Jewelry">
       <span>Jewelry</span>
     </a>
   </section>
 
-  <!-- Footer Section -->
   <footer>
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
