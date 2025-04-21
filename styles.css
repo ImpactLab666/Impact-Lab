@@ -7,6 +7,44 @@ body, html {
   height: 100%;
 }
 
+.top-bar {
+  background-color: #0b0b0b;
+  color: #e0d9c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+}
+
+.top-bar a {
+  color: #e0d9c4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+  color: #c9b67d;
+}
+
+.language-switcher a {
+  margin-left: 12px;
+}
+
+.language-switcher img {
+  width: 24px;
+  height: auto;
+  border-radius: 4px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.language-switcher img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
 header {
   position: relative;
   width: 100%;
@@ -84,4 +122,5 @@ footer {
   background-color: #161616;
   color: #fff;
 }
+
 
