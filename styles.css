@@ -5,60 +5,12 @@ body, html {
   background-color: #0e0d0d;
   color: #e0d9c4;
   height: 100%;
-  background: url('impactlabshop.png') no-repeat center center fixed;
-  background-size: cover;
-  backdrop-filter: blur(3px);
-}
-
-.top-bar {
-  background-color: #0b0b0b;
-  color: #e0d9c4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #333;
-  flex-wrap: wrap;
-}
-
-.top-bar .contact {
-  flex: 1;
-}
-
-.language-switcher {
-  display: flex;
-  gap: 12px;
-  margin-left: auto;
-}
-
-.language-switcher img {
-  width: 24px;
-  height: auto;
-  border-radius: 4px;
-  filter: brightness(0.9);
-  transition: transform 0.3s ease;
-}
-
-.language-switcher img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
-.top-bar a {
-  color: #e0d9c4;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.top-bar a:hover {
-  color: #c9b67d;
 }
 
 header {
   position: relative;
   width: 100%;
-  height: calc(100vh - 40px);
+  height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
 }
@@ -132,36 +84,4 @@ footer {
   background-color: #161616;
   color: #fff;
 }
-
-@media screen and (max-width: 600px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .language-switcher {
-    justify-content: flex-start;
-    margin: 10px 0 0 0;
-  }
-
-  header button {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
-
-  .category-section {
-    gap: 20px;
-    padding: 40px 10px;
-  }
-
-  .category-button {
-    width: 140px;
-    height: 140px;
-  }
-
-  .category-button span {
-    font-size: 0.9rem;
-  }
-}
-
 
