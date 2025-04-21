@@ -1,49 +1,58 @@
-// script.js
+const translationsHeader = {
+  en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
+  de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
+  ua: { title: "Імпакт Лаб", subtitle: "Алхімічна Парфумерна Крамниця" },
+  ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
+};
 
-// Language switcher
-const translations = {
+const translationsContent = {
   en: {
-    title: "Impact Lab",
-    subtitle: "Alchemical Perfume Shop"
+    enter: "Enter Catalog",
+    women: "Women's Perfumes",
+    men: "Men's Perfumes",
+    unisex: "Unisex Perfumes",
+    gifts: "Magical Gifts",
+    jewelry: "Jewelry",
+    footer: "© 2025 Impact Lab. All rights reserved."
   },
-  de: {
-    title: "Impact Labor",
-    subtitle: "Alchemistisches Parfümgeschäft"
+  ru: {
+    enter: "Войти в каталог",
+    women: "Женские духи",
+    men: "Мужские духи",
+    unisex: "Унисекс духи",
+    gifts: "Магические подарки",
+    jewelry: "Украшения",
+    footer: "© 2025 Impact Lab. Все права защищены."
   },
   ua: {
-    title: "Імпакт Лаб",
-    subtitle: "Алхімічна Парфумерна Крамниця"
+    enter: "Увійти в каталог",
+    women: "Жіночі парфуми",
+    men: "Чоловічі парфуми",
+    unisex: "Унісекс парфуми",
+    gifts: "Магічні подарунки",
+    jewelry: "Прикраси",
+    footer: "© 2025 Impact Lab. Всі права захищені."
+  },
+  de: {
+    enter: "Katalog betreten",
+    women: "Düfte für Frauen",
+    men: "Düfte für Männer",
+    unisex: "Unisex Düfte",
+    gifts: "Magische Geschenke",
+    jewelry: "Schmuck",
+    footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
   }
 };
 
 function switchLanguage(lang) {
-  document.querySelector('.gothic').innerText = translations[lang].title;
-  document.querySelector('.subtitle').innerText = translations[lang].subtitle;
+  const t = translationsContent[lang];
+  document.getElementById('enterButton').textContent = t.enter;
+  document.querySelectorAll('.cat-name').forEach(span => {
+    const key = span.getAttribute('data-key');
+    span.textContent = t[key];
+  });
+  document.getElementById('footerText').textContent = t.footer;
 }
 
-document.querySelectorAll('.language-switcher button').forEach(btn => {
-  btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
-});
+document.querySelectorAll('.language-switcher a').forEach(btn => {
 
-// Cart logic
-let cart = [];
-
-function addToCart(product) {
-  cart.push(product);
-  updateCartDisplay();
-}
-
-function updateCartDisplay() {
-  const cartList = document.getElementById('cart-items');
-  cartList.innerHTML = cart.map(item => `<li>${item}</li>`).join('');
-}
-
-// Fake checkout
-function checkout() {
-  alert("Checkout is currently a demo. Payments: PayPal, Pionir, Monobank coming soon.");
-}
-
-// Social buttons
-function openLink(url) {
-  window.open(url, '_blank');
-}
