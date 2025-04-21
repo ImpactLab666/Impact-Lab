@@ -1,18 +1,13 @@
-  body {
+body, html {
   margin: 0;
-  font-family: 'Georgia', serif;
-  color: #f5f0e6;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0e0d0d;
+  color: #e0d9c4;
+  height: 100%;
   background: url('impactlabshop.png') no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: blur(3px);
-}
-
-header {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 40px); /* Учёт высоты верхнего бара */
-  background: url('impactlabshop.png') no-repeat center center;
-  background-size: cover;
 }
 
 .top-bar {
@@ -24,20 +19,17 @@ header {
   padding: 8px 20px;
   font-size: 0.9rem;
   border-bottom: 1px solid #333;
+  flex-wrap: wrap;
 }
 
-.top-bar a {
-  color: #e0d9c4;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.top-bar .contact {
+  flex: 1;
 }
 
-.top-bar a:hover {
-  color: #c9b67d;
-}
-
-.language-switcher a {
-  margin-left: 12px;
+.language-switcher {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
 }
 
 .language-switcher img {
@@ -53,94 +45,123 @@ header {
   filter: brightness(1.2);
 }
 
-.logo-title {
-  text-align: center;
-}
-
-.logo {
-  height: 80px;
-}
-
-h1 {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 40px;
-  margin: 0;
-}
-
-.subtitle {
-  font-style: italic;
-  font-size: 16px;
-}
-
-.language-switcher {
-  margin-left: auto;
-  display: flex;
-  gap: 5px;
-}
-
-.language-switcher button {
-  background: #3c2f2f;
-  color: #f5f0e6;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  background: rgba(20, 10, 30, 0.7);
-  padding: 10px;
-}
-
-.main-nav a {
-  margin: 0 10px;
-  color: #f5f0e6;
+.top-bar a {
+  color: #e0d9c4;
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-section {
-  padding: 30px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 20px;
-  border-radius: 10px;
+.top-bar a:hover {
+  color: #c9b67d;
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+header {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: url('impactlabshop.png') no-repeat center center;
+  background-size: cover;
 }
 
-.categories button {
-  background: #5a3d5c;
-  border: none;
-  padding: 10px 15px;
-  color: #fff;
+header button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e0d9c4;
+  padding: 14px 28px;
+  border: 2px solid #c9b67d;
+  font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
 }
 
-.cart-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
+header button:hover {
+  background-color: #c9b67d;
+  color: #0e0d0d;
+}
+
+.category-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #151313;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  display: block;
+  width: 180px;
+  height: 180px;
+  background-color: #4c3b2a;
+  color: #fff;
+  text-align: center;
   border-radius: 8px;
+  text-decoration: none;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #5e472f;
+  transform: scale(1.05);
+}
+
+.category-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-button span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(20, 10, 30, 0.8);
-  margin-top: 30px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  background-color: #161616;
+  color: #fff;
 }
 
-.socials {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+@media screen and (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .language-switcher {
+    justify-content: flex-start;
+    margin: 10px 0 0 0;
+  }
+
+  header button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .category-section {
+    gap: 20px;
+    padding: 40px 10px;
+  }
+
+  .category-button {
+    width: 140px;
+    height: 140px;
+  }
+
+  .category-button span {
+    font-size: 0.9rem;
+  }
 }
 
 
