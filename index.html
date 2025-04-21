@@ -7,13 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Оригинальные стили для твоего дизайна */
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Cinzel', serif;
       background-color: #0e0d0d;
       color: #e0d9c4;
-      height: 100%;
     }
 
     .top-bar {
@@ -54,20 +54,19 @@
       filter: brightness(1.2);
     }
 
-    /* Styles for the updated slider */
+    /* Новый слайдер */
     .slider {
       position: relative;
-      width: 80%;
+      width: 100%;
       max-width: 1000px;
       margin: 50px auto;
       overflow: hidden;
-      border-radius: 10px; 
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+      border-radius: 10px;
     }
 
     .slider-images {
       display: flex;
-      transition: transform 1s ease-in-out; 
+      transition: transform 1s ease-in-out;
     }
 
     .slider-images img {
@@ -76,7 +75,7 @@
       border-radius: 10px;
     }
 
-    /* Buttons for navigation */
+    /* Кнопки для переключения */
     .slider-button {
       position: absolute;
       top: 50%;
@@ -103,7 +102,7 @@
       right: 10px;
     }
 
-    /* Tooltip for product names */
+    /* Стиль для всплывающих подсказок */
     .tooltip {
       position: absolute;
       bottom: 10px;
@@ -117,7 +116,6 @@
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease;
-      font-family: 'Cinzel', serif;
     }
 
     .slider-images .perfume-slide:hover .tooltip {
@@ -133,7 +131,7 @@
       color: #fff;
     }
 
-    /* Responsive for mobile */
+    /* Мобильные стили */
     @media (max-width: 768px) {
       .slider {
         width: 95%;
@@ -147,7 +145,7 @@
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- Верхний бар с языковыми переключателями -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -160,10 +158,11 @@
     </div>
   </div>
 
-  <!-- Best Sellers Section -->
+  <!-- Раздел с лучшими продажами -->
   <div class="best-sellers">
     <h2>Best Sellers</h2>
 
+    <!-- Слайдер -->
     <div class="slider">
       <div class="slider-images" id="sliderContainer">
         <div class="perfume-slide">
@@ -184,7 +183,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Футер -->
   <footer id="footerText">
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
@@ -198,7 +197,7 @@
       document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
     }
 
-    setInterval(() => moveSlide(1), 5000); // Auto slide every 5 seconds
+    setInterval(() => moveSlide(1), 5000); // Автопереключение слайдов каждые 5 секунд
   </script>
 
 </body>
