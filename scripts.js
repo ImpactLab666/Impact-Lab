@@ -56,3 +56,16 @@ function switchLanguage(lang) {
 
 document.querySelectorAll('.language-switcher a').forEach(btn => {
 
+<script>
+  let slideIndex = 0;
+
+  function moveSlide(step) {
+    let slides = document.querySelectorAll('.slider-images .perfume-slide');
+    slideIndex = (slideIndex + step + slides.length) % slides.length;
+    document.querySelector('.slider-images').style.transform =
+      'translateX(' + (-slideIndex * 370) + 'px)';
+  }
+
+  setInterval(() => moveSlide(1), 3000);
+</script>
+
