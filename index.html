@@ -5,206 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Cinzel', serif;
-      background-color: #0e0d0d;
-      color: #e0d9c4;
-      height: 100%;
+      background-color: #fffaf4;
     }
 
     .top-bar {
-      background-color: #0b0b0b;
-      color: #e0d9c4;
+      background-color: #e6dbcd;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 20px;
-      font-size: 0.9rem;
-      border-bottom: 1px solid #333;
     }
 
-    .top-bar a {
-      color: #e0d9c4;
+    .contact a {
       text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .top-bar a:hover {
-      color: #c9b67d;
-    }
-
-    .language-switcher a {
-      margin-left: 12px;
-    }
-
-    .language-switcher img {
-      width: 24px;
-      height: auto;
-      border-radius: 4px;
-      filter: brightness(0.9);
-      transition: transform 0.3s ease;
-    }
-
-    .language-switcher img:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-
-    .middle-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-      background-color: #0b0b0b;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-      padding: 12px 20px;
-      flex-wrap: wrap;
-    }
-
-    .middle-bar .nav-item img {
-      width: 28px;
-      height: 28px;
-      filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
-      opacity: 0.85;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .middle-bar .nav-item img:hover {
-      transform: scale(1.15);
-      opacity: 1;
-    }
-
-    .catalog-button {
-      font-family: 'Cinzel', serif;
-      color: #e0d9c4;
-      background-color: transparent;
-      border: 2px solid #c9b67d;
-      padding: 6px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-
-    .catalog-button:hover {
-      background-color: #c9b67d;
-      color: #0e0d0d;
-    }
-
-    header {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('impactlabshop.png') no-repeat center center;
-      background-size: cover;
-    }
-
-    header button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #e0d9c4;
-      padding: 14px 28px;
-      border: 2px solid #c9b67d;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s ease;
-    }
-
-    header button:hover {
-      background-color: #c9b67d;
-      color: #0e0d0d;
-    }
-
-    .category-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 20px;
-      background-color: #151313;
-      flex-wrap: wrap;
-    }
-
-    .category-button {
-      display: block;
-      width: 180px;
-      height: 180px;
-      background-color: #4c3b2a;
-      color: #fff;
-      text-align: center;
-      border-radius: 8px;
-      text-decoration: none;
-      padding: 20px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .category-button:hover {
-      background-color: #5e472f;
-      transform: scale(1.05);
-    }
-
-    .category-button img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .category-button span {
-      display: block;
-      margin-top: 10px;
-      font-size: 1rem;
+      color: #3d2b1f;
       font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-      background-color: #161616;
-      color: #fff;
+    .language-switcher img {
+      width: 25px;
+      margin-left: 10px;
+      vertical-align: middle;
     }
 
-    /* Top Alchemy Parfums Block */
+    .middle-bar {
+      background-color: #d4c2aa;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .nav-item img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .catalog-button {
+      text-decoration: none;
+      color: #3d2b1f;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    header {
+      height: 250px;
+      background-image: url('your-header-image.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+    }
+
     .best-sellers {
       text-align: center;
-      padding: 60px 20px;
-      background-color: #151313;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
+      padding: 60px 0;
+      background: linear-gradient(to bottom, #f3e9d2, #d4c2aa);
+      font-family: 'Cinzel', serif;
+      color: #3d2b1f;
+      border-top: 2px solid #b28c5b;
+      border-bottom: 2px solid #b28c5b;
     }
 
-    .animated-title {
-      font-size: 2.2rem;
-      color: #c9b67d;
-      margin-bottom: 40px;
-      animation: fadeInGlow 2s ease-in-out forwards;
-      opacity: 0;
-      text-shadow: 0 0 10px rgba(201, 182, 125, 0.4);
-    }
-
-    @keyframes fadeInGlow {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .best-sellers h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #5c4128;
     }
 
     .slider {
       position: relative;
+      width: 90%;
       max-width: 1200px;
       margin: 0 auto;
       overflow: hidden;
@@ -212,91 +87,45 @@
 
     .slider-images {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s ease;
     }
 
-    .perfume-slide {
-      position: relative;
-      margin-right: 20px;
-      flex: 0 0 auto;
-      max-width: 280px;
-    }
-
-    .perfume-slide img {
+    .slider-images img {
       width: 100%;
+      max-width: 400px;
+      margin-right: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .perfume-slide:hover img {
-      transform: scale(1.05);
-    }
-
-    .tooltip {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(26, 20, 13, 0.9);
-      color: #e0d9c4;
-      padding: 8px 14px;
-      font-size: 0.9rem;
-      border-radius: 6px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      white-space: nowrap;
-      font-family: 'Cinzel', serif;
-    }
-
-    .perfume-slide:hover .tooltip {
-      opacity: 1;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .slider-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #c9b67d;
-      font-size: 2rem;
-      padding: 8px 14px;
+      background-color: rgba(60, 45, 25, 0.6);
+      color: white;
+      font-size: 28px;
+      padding: 10px 15px;
       border: none;
       cursor: pointer;
-      z-index: 1;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+      z-index: 10;
+      border-radius: 5px;
     }
 
-    .slider-button:hover {
-      background-color: rgba(201, 182, 125, 0.9);
-      color: #151313;
-    }
-
-    .slider-button.prev {
+    .prev {
       left: 10px;
     }
 
-    .slider-button.next {
+    .next {
       right: 10px;
     }
 
-    @media (max-width: 768px) {
-      .middle-bar {
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      .middle-bar .nav-item img {
-        width: 32px;
-        height: 32px;
-      }
-
-      .catalog-button {
-        padding: 8px 16px;
-        font-size: 1rem;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e6dbcd;
+      color: #3d2b1f;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -312,6 +141,59 @@
       <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
       <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
       <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
-    </div
+    </div>
+  </div>
 
-  
+  <!-- Navigation Bar -->
+  <div class="middle-bar">
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
+  </div>
+
+  <!-- Header -->
+  <header></header>
+
+  <!-- Top Alchemy Parfums Section -->
+  <div class="best-sellers">
+    <h2>Top Alchemy Parfums</h2>
+
+    <div class="slider">
+      <div class="slider-images">
+        <img src="perfume1.jpg" alt="Perfume 1">
+        <img src="perfume2.jpg" alt="Perfume 2">
+        <img src="perfume3.jpg" alt="Perfume 3">
+        <img src="perfume4.jpg" alt="Perfume 4">
+      </div>
+      <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Impact Lab. All rights reserved.
+  </footer>
+
+  <!-- Slider JavaScript -->
+  <script>
+    let slideIndex = 0;
+
+    function moveSlide(step) {
+      const slideWidth = 420;
+      const slides = document.querySelectorAll('.slider-images img');
+      slideIndex = (slideIndex + step + slides.length) % slides.length;
+      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * slideWidth) + 'px)';
+    }
+
+    setInterval(() => moveSlide(1), 4000);
+  </script>
+
+</body>
+</html>
+
+
