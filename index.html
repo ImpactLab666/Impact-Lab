@@ -13,28 +13,49 @@
       color: #e0d9c4;
       height: 100%;
     }
- 
- <!-- Top bar with email and language switcher -->
-  <div class="top-bar">
-    <div class="contact">
-      <a href="mailto:impactlab666@gmail.com">Send a message</a>
-    </div>
-    <div class="language-switcher">
-      <a href="#" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-      <a href="#" title="Ukrainian"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
-      <a href="#" title="Russian"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
-      <a href="#" title="German"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
-    </div>
-  </div>
 
-  <header>
-    ...
-  </header>
+    .top-bar {
+      background-color: #0b0b0b;
+      color: #e0d9c4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #333;
+    }
 
-header {
+    .top-bar a {
+      color: #e0d9c4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      color: #c9b67d;
+    }
+
+    .language-switcher a {
+      margin-left: 12px;
+    }
+
+    .language-switcher img {
+      width: 24px;
+      height: auto;
+      border-radius: 4px;
+      filter: brightness(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .language-switcher img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+
+    header {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 40px); /* adjusted for top-bar height */
       background: url('impactlabshop.png') no-repeat center center;
       background-size: cover;
     }
@@ -112,6 +133,19 @@ header {
 </head>
 <body>
 
+  <!-- Top bar with email and language switcher -->
+  <div class="top-bar">
+    <div class="contact">
+      <a href="mailto:impactlab666@gmail.com">Send a message</a>
+    </div>
+    <div class="language-switcher">
+      <a href="#" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
+      <a href="#" title="Ukrainian"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
+      <a href="#" title="Russian"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
+      <a href="#" title="German"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
+    </div>
+  </div>
+
   <!-- Header Section -->
   <header>
     <button onclick="window.location.href='#categories';">Enter Catalog</button>
@@ -152,4 +186,5 @@ header {
 
 </body>
 </html>
+
 
