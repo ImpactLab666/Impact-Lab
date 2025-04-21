@@ -6,202 +6,60 @@
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Original styles for your design */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #0e0d0d;
-      color: #e0d9c4;
-    }
-
-    .top-bar {
-      background-color: #0b0b0b;
-      color: #e0d9c4;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 20px;
-      font-size: 0.9rem;
-      border-bottom: 1px solid #333;
-    }
-
-    .top-bar a {
-      color: #e0d9c4;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .top-bar a:hover {
-      color: #c9b67d;
-    }
-
-    .language-switcher a {
-      margin-left: 12px;
-    }
-
-    .language-switcher img {
-      width: 24px;
-      height: auto;
-      border-radius: 4px;
-      filter: brightness(0.9);
-      transition: transform 0.3s ease;
-    }
-
-    .language-switcher img:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-
-    /* Catalog section */
-    .catalog {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .catalog h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .catalog .category {
-      margin-bottom: 20px;
-    }
-
-    .catalog .category h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-
-    .catalog .category .cat-name {
-      font-size: 1.2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-      background-color: #161616;
-      color: #fff;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .catalog h1 {
-        font-size: 2rem;
-      }
-
-      .catalog .category h2 {
-        font-size: 1.5rem;
-      }
-
-      .catalog .category .cat-name {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Top bar with language switchers -->
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
     </div>
     <div class="language-switcher">
-      <a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-      <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
-      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
-      <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
+      <a href="#" data-lang="en"><img src="https://flagcdn.com/16x12/gb.png" alt="EN"></a>
+      <a href="#" data-lang="ua"><img src="https://flagcdn.com/16x12/ua.png" alt="UA"></a>
+      <a href="#" data-lang="ru"><img src="https://flagcdn.com/16x12/ru.png" alt="RU"></a>
+      <a href="#" data-lang="de"><img src="https://flagcdn.com/16x12/de.png" alt="DE"></a>
     </div>
   </div>
 
-  <!-- Catalog section -->
-  <div class="catalog">
-    <h1 id="catalogTitle">Welcome to Impact Lab</h1>
+  <!-- Header Section -->
+  <header>
+    <button id="enterButton" onclick="window.location.href='#categories';">Enter Catalog</button>
+  </header>
 
-    <div class="category">
-      <h2><span class="cat-name" data-key="women">Women's Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="men">Men's Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="unisex">Unisex Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="gifts">Magical Gifts</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="jewelry">Jewelry</span></h2>
-    </div>
-  </div>
+  <!-- Categories Section -->
+  <section class="category-section" id="categories">
+    <a href="womens.html" class="category-button">
+      <img src="womanperfume.png" alt="Women's Perfumes">
+      <span class="cat-name" data-key="women">Women's Perfumes</span>
+    </a>
 
-  <!-- Footer -->
+    <a href="mens.html" class="category-button">
+      <img src="menperfume.png" alt="Men's Perfumes">
+      <span class="cat-name" data-key="men">Men's Perfumes</span>
+    </a>
+
+    <a href="unisex.html" class="category-button">
+      <img src="unisexperfume.png" alt="Unisex Perfumes">
+      <span class="cat-name" data-key="unisex">Unisex Perfumes</span>
+    </a>
+
+    <a href="gifts.html" class="category-button">
+      <img src="magicgifts.png" alt="Magical Gifts">
+      <span class="cat-name" data-key="gifts">Magical Gifts</span>
+    </a>
+
+    <a href="jewelry.html" class="category-button">
+      <img src="jewellery.png" alt="Jewelry">
+      <span class="cat-name" data-key="jewelry">Jewelry</span>
+    </a>
+  </section>
+
+  <!-- Footer Section -->
   <footer id="footerText">
-    © 2025 Impact Lab. All rights reserved.
+    &copy; 2025 Impact Lab. All rights reserved.
   </footer>
 
-  <script>
-    const translationsContent = {
-      en: {
-        enter: "Enter Catalog",
-        women: "Women's Perfumes",
-        men: "Men's Perfumes",
-        unisex: "Unisex Perfumes",
-        gifts: "Magical Gifts",
-        jewelry: "Jewelry",
-        footer: "© 2025 Impact Lab. All rights reserved."
-      },
-      ru: {
-        enter: "Войти в каталог",
-        women: "Женские духи",
-        men: "Мужские духи",
-        unisex: "Унисекс духи",
-        gifts: "Магические подарки",
-        jewelry: "Украшения",
-        footer: "© 2025 Impact Lab. Все права защищены."
-      },
-      ua: {
-        enter: "Увійти в каталог",
-        women: "Жіночі парфуми",
-        men: "Чоловічі парфуми",
-        unisex: "Унісекс парфуми",
-        gifts: "Магічні подарунки",
-        jewelry: "Прикраси",
-        footer: "© 2025 Impact Lab. Всі права захищені."
-      },
-      de: {
-        enter: "Katalog betreten",
-        women: "Düfte für Frauen",
-        men: "Düfte für Männer",
-        unisex: "Unisex Düfte",
-        gifts: "Magische Geschenke",
-        jewelry: "Schmuck",
-        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
-      }
-    };
-
-    function switchLanguage(lang) {
-      const t = translationsContent[lang];
-      document.getElementById('catalogTitle').textContent = t.enter;
-      document.querySelectorAll('.cat-name').forEach(span => {
-        const key = span.getAttribute('data-key');
-        span.textContent = t[key];
-      });
-      document.getElementById('footerText').textContent = t.footer;
-    }
-
-    document.querySelectorAll('.language-switcher a').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const lang = e.target.getAttribute('data-lang');
-        switchLanguage(lang);
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
