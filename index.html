@@ -5,108 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #fff8f0;
-      color: #2c1e1e;
-    }
-
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #e9dfd1;
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-
-    .top-bar a {
-      text-decoration: none;
-      color: #2c1e1e;
-    }
-
-    .language-switcher img {
-      width: 24px;
-      margin-left: 10px;
-    }
-
-    .middle-bar {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 0;
-      background-color: #f0e6d2;
-    }
-
-    .middle-bar a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px;
-    }
-
-    .middle-bar img {
-      width: 22px;
-      height: 22px;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: #fff3e6;
-    }
-
-    #enterButton {
-      padding: 12px 24px;
-      font-family: 'Cinzel', serif;
-      font-size: 16px;
-      background-color: #2c1e1e;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    #enterButton:hover {
-      background-color: #4a3b3b;
-    }
-
-    .category-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-      background: #fffaf5;
-    }
-
-    .category-button {
-      text-align: center;
-      text-decoration: none;
-      color: #2c1e1e;
-    }
-
-    .category-button img {
-      width: 130px;
-      border-radius: 6px;
-    }
-
-    .cat-name {
-      display: block;
-      margin-top: 8px;
-      font-size: 16px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #e9dfd1;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -125,13 +24,13 @@
 
   <!-- Navigation Bar -->
   <div class="middle-bar">
-    <a href="index.html" title="Home"><img src="icons/home.svg" alt="Home"></a>
-    <a href="#categories" title="Catalog"><img src="icons/seo.svg" alt="Catalog"></a>
-    <a href="#" title="Search"><img src="icons/search.svg" alt="Search"></a>
-    <a href="#" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
-    <a href="register.html" title="Account"><img src="icons/user.svg" alt="User"></a>
-    <a href="tel:+1234567890" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
-    <a href="cart.html" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
   </div>
 
   <!-- Header Section -->
@@ -168,7 +67,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer id="footerText">
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
 
