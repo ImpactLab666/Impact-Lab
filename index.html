@@ -5,111 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #fffaf4;
-    }
-
-    .top-bar {
-      background-color: #e6dbcd;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .contact a {
-      text-decoration: none;
-      color: #3d2b1f;
-      font-weight: bold;
-    }
-
-    .language-switcher img {
-      width: 25px;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    .middle-bar {
-      background-color: #d4c2aa;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-    }
-
-    .nav-item img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .catalog-button {
-      text-decoration: none;
-      color: #3d2b1f;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    header {
-      height: 250px;
-      background-image: url('your-header-image.jpg'); /* Replace with your image */
-      background-size: cover;
-      background-position: center;
-    }
-
+    /* Style for the "Best Sellers" block */
     .best-sellers {
       text-align: center;
-      padding: 60px 0;
-      background: linear-gradient(to bottom, #f3e9d2, #d4c2aa);
+      padding: 50px 0;
+      background-color: #f8f0e3; /* Magical, warm color */
       font-family: 'Cinzel', serif;
-      color: #3d2b1f;
-      border-top: 2px solid #b28c5b;
-      border-bottom: 2px solid #b28c5b;
     }
 
     .best-sellers h2 {
-      font-size: 40px;
-      margin-bottom: 30px;
+      font-size: 36px;
+      color: #3d2b1f; /* Dark color for the heading */
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #5c4128;
     }
 
+    /* Styles for the slider */
     .slider {
       position: relative;
-      width: 90%;
-      max-width: 1200px;
+      width: 80%;
+      max-width: 1000px;
       margin: 0 auto;
       overflow: hidden;
     }
 
     .slider-images {
       display: flex;
-      transition: transform 0.6s ease;
+      transition: transform 0.5s ease;
     }
 
     .slider-images img {
       width: 100%;
-      max-width: 400px;
-      margin-right: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+      margin-right: 10px;
+      border-radius: 10px;
     }
 
+    /* Buttons for navigation */
     .slider-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(60, 45, 25, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
       color: white;
-      font-size: 28px;
-      padding: 10px 15px;
+      font-size: 24px;
+      padding: 10px;
       border: none;
       cursor: pointer;
       z-index: 10;
-      border-radius: 5px;
     }
 
     .prev {
@@ -120,18 +66,11 @@
       right: 10px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #e6dbcd;
-      color: #3d2b1f;
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Top Bar -->
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -155,13 +94,16 @@
     <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
   </div>
 
-  <!-- Header -->
-  <header></header>
+  <!-- Header Section -->
+  <header>
+    <!-- Removing text with the site name, leaving only the background -->
+  </header>
 
-  <!-- Top Alchemy Parfums Section -->
+  <!-- Best Sellers Section -->
   <div class="best-sellers">
-    <h2>Top Alchemy Parfums</h2>
+    <h2>Best Sellers</h2>
 
+    <!-- Slider -->
     <div class="slider">
       <div class="slider-images">
         <img src="perfume1.jpg" alt="Perfume 1">
@@ -174,26 +116,52 @@
     </div>
   </div>
 
+  <!-- Categories Section -->
+  <section class="category-section" id="categories">
+    <a href="womens.html" class="category-button">
+      <img src="womanperfume.png" alt="Women's Perfumes">
+      <span class="cat-name">Women's Perfumes</span>
+    </a>
+
+    <a href="mens.html" class="category-button">
+      <img src="menperfume.png" alt="Men's Perfumes">
+      <span class="cat-name">Men's Perfumes</span>
+    </a>
+
+    <a href="unisex.html" class="category-button">
+      <img src="unisexperfume.png" alt="Unisex Perfumes">
+      <span class="cat-name">Unisex Perfumes</span>
+    </a>
+
+    <a href="gifts.html" class="category-button">
+      <img src="magicgifts.png" alt="Magical Gifts">
+      <span class="cat-name">Magical Gifts</span>
+    </a>
+
+    <a href="jewelry.html" class="category-button">
+      <img src="jewellery.png" alt="Jewelry">
+      <span class="cat-name">Jewelry</span>
+    </a>
+  </section>
+
   <!-- Footer -->
-  <footer>
+  <footer id="footerText">
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
 
-  <!-- Slider JavaScript -->
   <script>
     let slideIndex = 0;
 
     function moveSlide(step) {
-      const slideWidth = 420;
-      const slides = document.querySelectorAll('.slider-images img');
+      let slides = document.querySelectorAll('.slider-images img');
       slideIndex = (slideIndex + step + slides.length) % slides.length;
-      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * slideWidth) + 'px)';
+      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 320) + 'px)';
     }
 
-    setInterval(() => moveSlide(1), 4000);
+    // Auto move the slide every 3 seconds
+    setInterval(() => moveSlide(1), 3000);
   </script>
 
 </body>
 </html>
-
 
