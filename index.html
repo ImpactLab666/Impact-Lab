@@ -11,25 +11,27 @@
     .best-sellers {
       text-align: center;
       padding: 50px 0;
-      background-color: #f8f0e3; /* Magical, warm color */
+      background-color: #f8f0e3; /* Original background color */
       font-family: 'Cinzel', serif;
     }
 
     .best-sellers h2 {
       font-size: 36px;
-      color: #3d2b1f; /* Dark color for the heading */
+      color: #3d2b1f; /* Original heading color */
       margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
 
-    /* Styles for the slider */
+    /* Styles for the updated slider */
     .slider {
       position: relative;
       width: 80%;
       max-width: 1000px;
       margin: 0 auto;
       overflow: hidden;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     }
 
     .slider-images {
@@ -39,8 +41,8 @@
 
     .slider-images img {
       width: 100%;
-      max-width: 300px;
-      margin-right: 10px;
+      max-width: 350px; /* Medium image size */
+      margin-right: 20px;
       border-radius: 10px;
     }
 
@@ -56,6 +58,11 @@
       border: none;
       cursor: pointer;
       z-index: 10;
+      border-radius: 4px;
+    }
+
+    .slider-button:hover {
+      background-color: rgba(201, 182, 125, 0.8); /* Gold highlight on hover */
     }
 
     .prev {
@@ -66,6 +73,26 @@
       right: 10px;
     }
 
+    /* Tooltip for product names */
+    .tooltip {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(26, 20, 13, 0.8);
+      color: #e0d9c4;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      font-family: 'Cinzel', serif;
+    }
+
+    .slider-images .perfume-slide:hover .tooltip {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -106,10 +133,22 @@
     <!-- Slider -->
     <div class="slider">
       <div class="slider-images">
-        <img src="perfume1.jpg" alt="Perfume 1">
-        <img src="perfume2.jpg" alt="Perfume 2">
-        <img src="perfume3.jpg" alt="Perfume 3">
-        <img src="perfume4.jpg" alt="Perfume 4">
+        <div class="perfume-slide">
+          <img src="perfume1.jpg" alt="Perfume 1">
+          <div class="tooltip">Alchemy Essence</div>
+        </div>
+        <div class="perfume-slide">
+          <img src="perfume2.jpg" alt="Perfume 2">
+          <div class="tooltip">Mystic Elixir</div>
+        </div>
+        <div class="perfume-slide">
+          <img src="perfume3.jpg" alt="Perfume 3">
+          <div class="tooltip">Golden Potion</div>
+        </div>
+        <div class="perfume-slide">
+          <img src="perfume4.jpg" alt="Perfume 4">
+          <div class="tooltip">Moonlight Fragrance</div>
+        </div>
       </div>
       <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
       <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -153,9 +192,9 @@
     let slideIndex = 0;
 
     function moveSlide(step) {
-      let slides = document.querySelectorAll('.slider-images img');
+      let slides = document.querySelectorAll('.slider-images .perfume-slide');
       slideIndex = (slideIndex + step + slides.length) % slides.length;
-      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 320) + 'px)';
+      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 370) + 'px)';
     }
 
     // Auto move the slide every 3 seconds
