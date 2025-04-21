@@ -6,6 +6,67 @@
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Style for the "Best Sellers" block */
+    .best-sellers {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f8f0e3; /* Magical, warm color */
+      font-family: 'Cinzel', serif;
+    }
+
+    .best-sellers h2 {
+      font-size: 36px;
+      color: #3d2b1f; /* Dark color for the heading */
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Styles for the slider */
+    .slider {
+      position: relative;
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slider-images {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slider-images img {
+      width: 100%;
+      max-width: 300px;
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+
+    /* Buttons for navigation */
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -35,9 +96,25 @@
 
   <!-- Header Section -->
   <header>
-    <!-- Убираем текст с названием сайта, оставляем только фон -->
-    <!-- Например, можно установить картинку фона через CSS -->
+    <!-- Removing text with the site name, leaving only the background -->
   </header>
+
+  <!-- Best Sellers Section -->
+  <div class="best-sellers">
+    <h2>Best Sellers</h2>
+
+    <!-- Slider -->
+    <div class="slider">
+      <div class="slider-images">
+        <img src="perfume1.jpg" alt="Perfume 1">
+        <img src="perfume2.jpg" alt="Perfume 2">
+        <img src="perfume3.jpg" alt="Perfume 3">
+        <img src="perfume4.jpg" alt="Perfume 4">
+      </div>
+      <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
 
   <!-- Categories Section -->
   <section class="category-section" id="categories">
@@ -71,6 +148,19 @@
   <footer id="footerText">
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
+
+  <script>
+    let slideIndex = 0;
+
+    function moveSlide(step) {
+      let slides = document.querySelectorAll('.slider-images img');
+      slideIndex = (slideIndex + step + slides.length) % slides.length;
+      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 320) + 'px)';
+    }
+
+    // Auto move the slide every 3 seconds
+    setInterval(() => moveSlide(1), 3000);
+  </script>
 
 </body>
 </html>
