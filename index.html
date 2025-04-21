@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Original styles for your design */
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Cinzel', serif;
       background-color: #0e0d0d;
       color: #e0d9c4;
+      height: 100%;
     }
 
     .top-bar {
@@ -54,28 +53,185 @@
       filter: brightness(1.2);
     }
 
-    /* Catalog section */
-    .catalog {
+    .middle-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      background-color: #0b0b0b;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+    }
+
+    .middle-bar .nav-item img {
+      width: 28px;
+      height: 28px;
+      filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
+      opacity: 0.85;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .middle-bar .nav-item img:hover {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+
+    .catalog-button {
+      font-family: 'Cinzel', serif;
+      color: #e0d9c4;
+      background-color: transparent;
+      border: 2px solid #c9b67d;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .catalog-button:hover {
+      background-color: #c9b67d;
+      color: #0e0d0d;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('impactlabshop.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Best Sellers Section */
+    .best-sellers {
       text-align: center;
-      margin-top: 40px;
+      padding: 50px 0;
+      background-color: #f8f0e3;
+      font-family: 'Cinzel', serif;
     }
 
-    .catalog h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .best-sellers h2 {
+      font-size: 36px;
+      color: #3d2b1f;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    .catalog .category {
-      margin-bottom: 20px;
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
-    .catalog .category h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
+    .slider-images {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
     }
 
-    .catalog .category .cat-name {
-      font-size: 1.2rem;
+    .perfume-slide {
+      min-width: 100%;
+      position: relative;
+      text-align: center;
+    }
+
+    .perfume-slide img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(26, 20, 13, 0.8);
+      color: #e0d9c4;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      font-family: 'Cinzel', serif;
+    }
+
+    .perfume-slide:hover .tooltip {
+      opacity: 1;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 4px;
+    }
+
+    .slider-button:hover {
+      background-color: rgba(201, 182, 125, 0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .category-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #151313;
+      flex-wrap: wrap;
+    }
+
+    .category-button {
+      display: block;
+      width: 180px;
+      height: 180px;
+      background-color: #4c3b2a;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .category-button:hover {
+      background-color: #5e472f;
+      transform: scale(1.05);
+    }
+
+    .category-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .category-button span {
+      display: block;
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
     }
 
     footer {
@@ -86,26 +242,11 @@
       background-color: #161616;
       color: #fff;
     }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .catalog h1 {
-        font-size: 2rem;
-      }
-
-      .catalog .category h2 {
-        font-size: 1.5rem;
-      }
-
-      .catalog .category .cat-name {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Top bar with language switchers -->
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -118,90 +259,25 @@
     </div>
   </div>
 
-  <!-- Catalog section -->
-  <div class="catalog">
-    <h1 id="catalogTitle">Welcome to Impact Lab</h1>
-
-    <div class="category">
-      <h2><span class="cat-name" data-key="women">Women's Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="men">Men's Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="unisex">Unisex Perfumes</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="gifts">Magical Gifts</span></h2>
-    </div>
-    <div class="category">
-      <h2><span class="cat-name" data-key="jewelry">Jewelry</span></h2>
-    </div>
+  <!-- Navigation Bar -->
+  <div class="middle-bar">
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
   </div>
 
-  <!-- Footer -->
-  <footer id="footerText">
-    © 2025 Impact Lab. All rights reserved.
-  </footer>
+  <!-- Header Section -->
+  <header></header>
 
-  <script>
-    const translationsContent = {
-      en: {
-        enter: "Enter Catalog",
-        women: "Women's Perfumes",
-        men: "Men's Perfumes",
-        unisex: "Unisex Perfumes",
-        gifts: "Magical Gifts",
-        jewelry: "Jewelry",
-        footer: "© 2025 Impact Lab. All rights reserved."
-      },
-      ru: {
-        enter: "Войти в каталог",
-        women: "Женские духи",
-        men: "Мужские духи",
-        unisex: "Унисекс духи",
-        gifts: "Магические подарки",
-        jewelry: "Украшения",
-        footer: "© 2025 Impact Lab. Все права защищены."
-      },
-      ua: {
-        enter: "Увійти в каталог",
-        women: "Жіночі парфуми",
-        men: "Чоловічі парфуми",
-        unisex: "Унісекс парфуми",
-        gifts: "Магічні подарунки",
-        jewelry: "Прикраси",
-        footer: "© 2025 Impact Lab. Всі права захищені."
-      },
-      de: {
-        enter: "Katalog betreten",
-        women: "Düfte für Frauen",
-        men: "Düfte für Männer",
-        unisex: "Unisex Düfte",
-        gifts: "Magische Geschenke",
-        jewelry: "Schmuck",
-        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
-      }
-    };
+  <!-- Best Sellers Section -->
+  <div class="best-sellers">
+    <h2>Best Sellers</h2>
 
-    function switchLanguage(lang) {
-      const t = translationsContent[lang];
-      document.getElementById('catalogTitle').textContent = t.enter;
-      document.querySelectorAll('.cat-name').forEach(span => {
-        const key = span.getAttribute('data-key');
-        span.textContent = t[key];
-      });
-      document.getElementById('footerText').textContent = t.footer;
-    }
+    <div class="slider">
+      <
 
-    document.querySelectorAll('.language-switcher a').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const lang = e.target.getAttribute('data-lang');
-        switchLanguage(lang);
-      });
-    });
-  </script>
-
-</body>
-</html>
-
+  
