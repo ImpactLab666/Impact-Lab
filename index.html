@@ -9,26 +9,26 @@
     body {
       margin: 0;
       font-family: 'Cinzel', serif;
-      background-color: #f3f0ea;
-      color: #3a2c2a;
+      background-color: #fff8f0;
+      color: #2c1e1e;
     }
 
     .top-bar {
       display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
-      background-color: #d8cbb0;
+      align-items: center;
+      background-color: #e9dfd1;
+      padding: 8px 16px;
       font-size: 14px;
     }
 
     .top-bar a {
       text-decoration: none;
-      color: #3a2c2a;
+      color: #2c1e1e;
     }
 
     .language-switcher img {
       width: 24px;
-      height: auto;
       margin-left: 10px;
     }
 
@@ -36,73 +36,61 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 12px 0;
-      background-color: #b9a37d;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      background-color: #f0e6d2;
     }
 
     .middle-bar a {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      text-decoration: none;
-      color: #fff;
+      justify-content: center;
+      padding: 6px;
     }
 
     .middle-bar img {
       width: 22px;
       height: 22px;
-      transition: transform 0.2s ease;
-    }
-
-    .middle-bar img:hover {
-      transform: scale(1.2);
     }
 
     header {
       text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #e4dcc9, #c5b7a0);
+      padding: 60px 20px;
+      background: #fff3e6;
     }
 
     #enterButton {
-      padding: 12px 28px;
-      background-color: #3a2c2a;
-      color: white;
-      border: none;
+      padding: 12px 24px;
       font-family: 'Cinzel', serif;
       font-size: 16px;
-      cursor: pointer;
+      background-color: #2c1e1e;
+      color: #fff;
+      border: none;
       border-radius: 4px;
-      transition: background 0.3s ease;
+      cursor: pointer;
     }
 
     #enterButton:hover {
-      background-color: #5a423e;
+      background-color: #4a3b3b;
     }
 
     .category-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
       padding: 40px 20px;
+      background: #fffaf5;
     }
 
     .category-button {
       text-align: center;
-      margin: 10px;
       text-decoration: none;
-      color: #3a2c2a;
+      color: #2c1e1e;
     }
 
     .category-button img {
-      width: 120px;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .category-button:hover img {
-      transform: scale(1.05);
+      width: 130px;
+      border-radius: 6px;
     }
 
     .cat-name {
@@ -114,8 +102,8 @@
     footer {
       text-align: center;
       padding: 20px;
+      background-color: #e9dfd1;
       font-size: 14px;
-      background-color: #d8cbb0;
       margin-top: 40px;
     }
   </style>
