@@ -5,29 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Style for the "Best Sellers" block */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cinzel', serif;
+      background-color: #0e0d0d;
+      color: #e0d9c4;
+      height: 100%;
+    }
+
+    .top-bar {
+      background-color: #0b0b0b;
+      color: #e0d9c4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .top-bar a {
+      color: #e0d9c4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      color: #c9b67d;
+    }
+
+    .language-switcher a {
+      margin-left: 12px;
+    }
+
+    .language-switcher img {
+      width: 24px;
+      height: auto;
+      border-radius: 4px;
+      filter: brightness(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .language-switcher img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+
+    .middle-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      background-color: #0b0b0b;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+    }
+
+    .middle-bar .nav-item img {
+      width: 28px;
+      height: 28px;
+      filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
+      opacity: 0.85;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .middle-bar .nav-item img:hover {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+
+    .catalog-button {
+      font-family: 'Cinzel', serif;
+      color: #e0d9c4;
+      background-color: transparent;
+      border: 2px solid #c9b67d;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .catalog-button:hover {
+      background-color: #c9b67d;
+      color: #0e0d0d;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('impactlabshop.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .category-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #151313;
+      flex-wrap: wrap;
+    }
+
+    .category-button {
+      display: block;
+      width: 180px;
+      height: 180px;
+      background-color: #4c3b2a;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      padding: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .category-button:hover {
+      background-color: #5e472f;
+      transform: scale(1.05);
+    }
+
+    .category-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .category-button span {
+      display: block;
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      background-color: #161616;
+      color: #fff;
+    }
+
+    /* Top Alchemy Parfums Block */
     .best-sellers {
       text-align: center;
-      padding: 50px 0;
-      background-color: #f8f0e3; /* Magical, warm color */
-      font-family: 'Cinzel', serif;
+      padding: 60px 20px;
+      background-color: #151313;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
     }
 
-    .best-sellers h2 {
-      font-size: 36px;
-      color: #3d2b1f; /* Dark color for the heading */
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .animated-title {
+      font-size: 2.2rem;
+      color: #c9b67d;
+      margin-bottom: 40px;
+      animation: fadeInGlow 2s ease-in-out forwards;
+      opacity: 0;
+      text-shadow: 0 0 10px rgba(201, 182, 125, 0.4);
     }
 
-    /* Styles for the slider */
+    @keyframes fadeInGlow {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .slider {
       position: relative;
-      width: 80%;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       overflow: hidden;
     }
@@ -37,40 +194,94 @@
       transition: transform 0.5s ease;
     }
 
-    .slider-images img {
-      width: 100%;
-      max-width: 300px;
-      margin-right: 10px;
-      border-radius: 10px;
+    .perfume-slide {
+      position: relative;
+      margin-right: 20px;
+      flex: 0 0 auto;
+      max-width: 280px;
     }
 
-    /* Buttons for navigation */
+    .perfume-slide img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .perfume-slide:hover img {
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(26, 20, 13, 0.9);
+      color: #e0d9c4;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+      font-family: 'Cinzel', serif;
+    }
+
+    .perfume-slide:hover .tooltip {
+      opacity: 1;
+    }
+
     .slider-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      font-size: 24px;
-      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #c9b67d;
+      font-size: 2rem;
+      padding: 8px 14px;
       border: none;
       cursor: pointer;
-      z-index: 10;
+      z-index: 1;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
 
-    .prev {
+    .slider-button:hover {
+      background-color: rgba(201, 182, 125, 0.9);
+      color: #151313;
+    }
+
+    .slider-button.prev {
       left: 10px;
     }
 
-    .next {
+    .slider-button.next {
       right: 10px;
     }
 
+    @media (max-width: 768px) {
+      .middle-bar {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .middle-bar .nav-item img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .catalog-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Top bar -->
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -78,90 +289,6 @@
     <div class="language-switcher">
       <a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
       <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
-      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
-      <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
-    </div>
-  </div>
+      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU
 
-  <!-- Navigation Bar -->
-  <div class="middle-bar">
-    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
-    <a href="#categories" class="catalog-button">Catalog</a>
-    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
-    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
-    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
-    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
-    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
-  </div>
-
-  <!-- Header Section -->
-  <header>
-    <!-- Removing text with the site name, leaving only the background -->
-  </header>
-
-  <!-- Best Sellers Section -->
-  <div class="best-sellers">
-    <h2>Best Sellers</h2>
-
-    <!-- Slider -->
-    <div class="slider">
-      <div class="slider-images">
-        <img src="perfume1.jpg" alt="Perfume 1">
-        <img src="perfume2.jpg" alt="Perfume 2">
-        <img src="perfume3.jpg" alt="Perfume 3">
-        <img src="perfume4.jpg" alt="Perfume 4">
-      </div>
-      <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- Categories Section -->
-  <section class="category-section" id="categories">
-    <a href="womens.html" class="category-button">
-      <img src="womanperfume.png" alt="Women's Perfumes">
-      <span class="cat-name">Women's Perfumes</span>
-    </a>
-
-    <a href="mens.html" class="category-button">
-      <img src="menperfume.png" alt="Men's Perfumes">
-      <span class="cat-name">Men's Perfumes</span>
-    </a>
-
-    <a href="unisex.html" class="category-button">
-      <img src="unisexperfume.png" alt="Unisex Perfumes">
-      <span class="cat-name">Unisex Perfumes</span>
-    </a>
-
-    <a href="gifts.html" class="category-button">
-      <img src="magicgifts.png" alt="Magical Gifts">
-      <span class="cat-name">Magical Gifts</span>
-    </a>
-
-    <a href="jewelry.html" class="category-button">
-      <img src="jewellery.png" alt="Jewelry">
-      <span class="cat-name">Jewelry</span>
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer id="footerText">
-    &copy; 2025 Impact Lab. All rights reserved.
-  </footer>
-
-  <script>
-    let slideIndex = 0;
-
-    function moveSlide(step) {
-      let slides = document.querySelectorAll('.slider-images img');
-      slideIndex = (slideIndex + step + slides.length) % slides.length;
-      document.querySelector('.slider-images').style.transform = 'translateX(' + (-slideIndex * 320) + 'px)';
-    }
-
-    // Auto move the slide every 3 seconds
-    setInterval(() => moveSlide(1), 3000);
-  </script>
-
-</body>
-</html>
-
+                                   
