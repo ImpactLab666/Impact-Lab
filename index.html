@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Top Bar -->
+
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="contact">
       <a href="mailto:impactlab666@gmail.com">Send a message</a>
@@ -21,67 +22,54 @@
     </div>
   </div>
 
-  <!-- Menu -->
+  <!-- Navigation Bar -->
   <div class="middle-bar">
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
     <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
   </div>
 
-  <!-- Background -->
+  <!-- Header Section -->
   <header></header>
 
-  <!-- Best Sellers -->
-  <div class="best-sellers">
-    <h2 id="bestSellersTitle">Best Sellers</h2>
-    <div class="slider">
-      <div class="slider-images" id="sliderContainer">
-        <div class="perfume-slide">
-          <img src="parfum1.jpg" alt="Parfum 1">
-          <div class="tooltip">Mystical Bloom</div>
-        </div>
-        <div class="perfume-slide">
-          <img src="parfum2.jpg" alt="Parfum 2">
-          <div class="tooltip">Golden Flame</div>
-        </div>
-        <div class="perfume-slide">
-          <img src="parfum3.jpg" alt="Parfum 3">
-          <div class="tooltip">Velvet Alchemy</div>
-        </div>
-      </div>
-      <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- Categories -->
+  <!-- Categories Section -->
   <section class="category-section" id="categories">
-    <a href="#" class="category-button">
+    <a href="womens.html" class="category-button">
       <img src="womanperfume.png" alt="Women's Perfumes">
-      <span class="cat-name" data-key="women">Women's Perfumes</span>
+      <span class="cat-name">Women's Perfumes</span>
     </a>
-    <a href="#" class="category-button">
+
+    <a href="mens.html" class="category-button">
       <img src="menperfume.png" alt="Men's Perfumes">
-      <span class="cat-name" data-key="men">Men's Perfumes</span>
+      <span class="cat-name">Men's Perfumes</span>
     </a>
-    <a href="#" class="category-button">
+
+    <a href="unisex.html" class="category-button">
       <img src="unisexperfume.png" alt="Unisex Perfumes">
-      <span class="cat-name" data-key="unisex">Unisex Perfumes</span>
+      <span class="cat-name">Unisex Perfumes</span>
     </a>
-    <a href="#" class="category-button">
+
+    <a href="gifts.html" class="category-button">
       <img src="magicgifts.png" alt="Magical Gifts">
-      <span class="cat-name" data-key="gifts">Magical Gifts</span>
+      <span class="cat-name">Magical Gifts</span>
     </a>
-    <a href="#" class="category-button">
+
+    <a href="jewelry.html" class="category-button">
       <img src="jewellery.png" alt="Jewelry">
-      <span class="cat-name" data-key="jewelry">Jewelry</span>
+      <span class="cat-name">Jewelry</span>
     </a>
   </section>
 
   <!-- Footer -->
-  <footer id="footerText">© 2025 Impact Lab. All rights reserved.</footer>
+  <footer id="footerText">
+    © 2025 Impact Lab. All rights reserved.
+  </footer>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
 
 
-    
