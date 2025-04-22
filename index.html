@@ -4,90 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Crimson Pro', serif;
-      background-color: #0e0c0b;
-      color: #e0d2b8;
-      line-height: 1.6;
-    }
-
-    header {
-      background-image: url('your-original-header-image.jpg'); /* Replace with your image path */
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .about h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #e0d2b8;
-    }
-
-    .about h3 {
-      font-size: 1.8rem;
-      color: #a06c2b; /* Title color similar to the logo in the image */
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      color: #e0d2b8;
-      margin-bottom: 20px;
-    }
-
-    .about span.highlight {
-      color: #a06c2b; /* Highlight matching the logo title */
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #1a1715;
-      text-align: center;
-      padding: 20px;
-      color: #999;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <div class="top-bar">
+    <div>Impact Lab</div>
+    <div class="language-switcher">
+      <a href="#"><img src="en.png" alt="English" /></a>
+      <a href="#"><img src="ua.png" alt="Ukrainian" /></a>
+    </div>
+  </div>
+
+  <div class="middle-bar">
+    <a href="#" class="nav-item"><img src="icon1.png" alt="icon1"></a>
+    <a href="#" class="nav-item"><img src="icon2.png" alt="icon2"></a>
+    <a href="#" class="catalog-button">To Catalog</a>
+    <a href="#" class="nav-item"><img src="icon3.png" alt="icon3"></a>
+    <a href="#" class="nav-item"><img src="icon4.png" alt="icon4"></a>
+  </div>
+
   <header>
-    <!-- Image background already contains the title -->
+    <button>Enter the Lab</button>
   </header>
 
-  <section class="about">
+  <section class="category-section">
+    <a href="#" class="category-button">
+      <img src="women.jpg" alt="Women's Perfumes">
+      <span>Women's Perfumes</span>
+    </a>
+    <a href="#" class="category-button">
+      <img src="men.jpg" alt="Men's Perfumes">
+      <span>Men's Perfumes</span>
+    </a>
+    <a href="#" class="category-button">
+      <img src="unisex.jpg" alt="Unisex Perfumes">
+      <span>Unisex Perfumes</span>
+    </a>
+    <a href="#" class="category-button">
+      <img src="gifts.jpg" alt="Magical Gifts">
+      <span>Magical Gifts</span>
+    </a>
+  </section>
+
+  <section class="shop-description">
     <h2>About the Shop</h2>
-    <h3>Welcome to <span class="highlight">Impact Lab</span></h3>
+    <h3>Welcome to <span class="logo-font">Impact Lab</span></h3>
     <p>
-      Step into a world of alchemical wonders and handcrafted fragrances. At <span class="highlight">Impact Lab</span>,
-      we blend ancient secrets with modern artistry to create unique perfumes that captivate the senses.
+      Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
+      Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
+      Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
+      Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
+      perfect for those who want to leave a lasting impression. Experience our enchanting fragrances and feel the power
+      of attraction like never before.
     </p>
   </section>
 
   <footer>
     &copy; 2025 Impact Lab. All rights reserved.
   </footer>
+
 </body>
 </html>
-
-
-
