@@ -2,67 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impact Lab | Alchemical Perfume Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Top bar -->
   <div class="top-bar">
-    <div>Impact Lab</div>
+    <div class="contact">
+      <a href="mailto:impactlab666@gmail.com">Send a message</a>
+    </div>
     <div class="language-switcher">
-      <a href="#"><img src="en.png" alt="English" /></a>
-      <a href="#"><img src="ua.png" alt="Ukrainian" /></a>
+      <a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
+      <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
+      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
+      <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
     </div>
   </div>
 
+  <!-- Navigation Bar -->
   <div class="middle-bar">
-    <a href="#" class="nav-item"><img src="icon1.png" alt="icon1"></a>
-    <a href="#" class="nav-item"><img src="icon2.png" alt="icon2"></a>
-    <a href="#" class="catalog-button">To Catalog</a>
-    <a href="#" class="nav-item"><img src="icon3.png" alt="icon3"></a>
-    <a href="#" class="nav-item"><img src="icon4.png" alt="icon4"></a>
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
   </div>
 
-  <header>
-    <button>Enter the Lab</button>
-  </header>
+  <!-- Header Section -->
+  <header></header>
 
-  <section class="category-section">
-    <a href="#" class="category-button">
-      <img src="women.jpg" alt="Women's Perfumes">
-      <span>Women's Perfumes</span>
+  <!-- Categories Section -->
+  <section class="category-section" id="categories">
+    <a href="womens.html" class="category-button">
+      <img src="womanperfume.png" alt="Women's Perfumes">
+      <span class="cat-name">Women's Perfumes</span>
     </a>
-    <a href="#" class="category-button">
-      <img src="men.jpg" alt="Men's Perfumes">
-      <span>Men's Perfumes</span>
+
+    <a href="mens.html" class="category-button">
+      <img src="menperfume.png" alt="Men's Perfumes">
+      <span class="cat-name">Men's Perfumes</span>
     </a>
-    <a href="#" class="category-button">
-      <img src="unisex.jpg" alt="Unisex Perfumes">
-      <span>Unisex Perfumes</span>
+
+    <a href="unisex.html" class="category-button">
+      <img src="unisexperfume.png" alt="Unisex Perfumes">
+      <span class="cat-name">Unisex Perfumes</span>
     </a>
-    <a href="#" class="category-button">
-      <img src="gifts.jpg" alt="Magical Gifts">
-      <span>Magical Gifts</span>
+
+    <a href="gifts.html" class="category-button">
+      <img src="magicgifts.png" alt="Magical Gifts">
+      <span class="cat-name">Magical Gifts</span>
+    </a>
+
+    <a href="jewelry.html" class="category-button">
+      <img src="jewellery.png" alt="Jewelry">
+      <span class="cat-name">Jewelry</span>
     </a>
   </section>
 
+  <!-- Shop Description -->
   <section class="shop-description">
-    <h2>About the Shop</h2>
-    <h3>Welcome to <span class="logo-font">Impact Lab</span></h3>
+    <h2>Welcome to 𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</h2>
     <p>
+      The place where you will find handcrafted alchemical perfumes.<br><br>
       Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
       Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
       Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
       Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
-      perfect for those who want to leave a lasting impression. Experience our enchanting fragrances and feel the power
-      of attraction like never before.
+      perfect for those who want to leave a lasting impression.
+      Experience our enchanting fragrances and feel the power of attraction like never before.
     </p>
   </section>
 
-  <footer>
-    &copy; 2025 Impact Lab. All rights reserved.
+  <!-- Footer -->
+  <footer id="footerText">
+    © 2025 Impact Lab. All rights reserved.
   </footer>
 
 </body>
