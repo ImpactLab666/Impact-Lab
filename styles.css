@@ -6,7 +6,7 @@ body, html {
   color: #e0d9c4;
   height: 100%;
   width: 100%;
-  box-sizing: border-box; /* Ensures box-sizing applies universally */
+  box-sizing: border-box;
 }
 
 .top-bar {
@@ -170,17 +170,18 @@ header button:hover {
   line-height: 1.8;
   font-size: 1rem;
   border-top: 1px solid #333;
-  border: 2px solid #c9b67d; /* Golden border */
+  border: 3px solid #c9b67d; /* Golden border restored */
   border-radius: 8px; /* Rounded corners for the description box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Added shadow for better visibility */
 }
 
 .shop-description h2 {
-  font-family: 'Cinzel Decorative', serif; /* Font for the title */
-  font-size: 26px;
+  font-family: 'Cinzel Decorative', serif; /* Restored decorative font */
+  font-size: 32px; /* Increased size for more prominence */
   margin-bottom: 20px;
   color: #c9b67d; /* Golden color for the heading */
-  letter-spacing: 1px;
-  text-transform: uppercase; /* Capitalized text for the heading */
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .highlighted-text {
@@ -218,4 +219,3 @@ footer {
     font-size: 1rem;
   }
 }
-
