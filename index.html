@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .glow {
+      color: #a0d8ef;
+      text-shadow: 0 0 5px #8be5ff, 0 0 10px #70d0ff, 0 0 20px #5fb4d6;
+    }
+    .about-section {
+      background-color: #151313;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+    .about-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: #e0d9c4;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #e0d9c4;
+      padding: 0 10px;
+      border: 1px solid #3a2e25;
+      border-radius: 8px;
+      background-color: rgba(60, 50, 40, 0.2);
+    }
+    .about-section .highlight {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
@@ -34,7 +67,9 @@
   </div>
 
   <!-- Header Section -->
-  <header></header>
+  <header>
+    <h1 class="glow" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-size: 2.5rem;">Impact Lab</h1>
+  </header>
 
   <!-- Categories Section -->
   <section class="category-section" id="categories">
@@ -42,42 +77,30 @@
       <img src="womanperfume.png" alt="Women's Perfumes">
       <span class="cat-name">Women's Perfumes</span>
     </a>
-
     <a href="mens.html" class="category-button">
       <img src="menperfume.png" alt="Men's Perfumes">
       <span class="cat-name">Men's Perfumes</span>
     </a>
-
     <a href="unisex.html" class="category-button">
       <img src="unisexperfume.png" alt="Unisex Perfumes">
       <span class="cat-name">Unisex Perfumes</span>
     </a>
-
     <a href="gifts.html" class="category-button">
       <img src="magicgifts.png" alt="Magical Gifts">
       <span class="cat-name">Magical Gifts</span>
     </a>
-
     <a href="jewelry.html" class="category-button">
       <img src="jewellery.png" alt="Jewelry">
       <span class="cat-name">Jewelry</span>
     </a>
   </section>
 
-  <!-- Shop Description Section -->
-  <section class="shop-description">
-    <h2>𝕴𝖒𝖕𝖆𝖈𝖙 𝕷𝖆𝖇</h2>
-    <div class="description-box">
-      <p>
-        <strong>Welcome</strong> to the place where you will find handcrafted alchemical perfumes.<br><br>
-        Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
-        Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
-        Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
-        Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
-        perfect for those who want to leave a lasting impression.
-        Experience our enchanting fragrances and feel the power of attraction like never before.
-      </p>
-    </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>About the Shop</h2>
+    <p>
+      Welcome to <span class="glow">Impact Lab</span>, the place where you will find handcrafted alchemical perfumes. Our online shop features: eau de toilette, perfume and influence formulas with pheromones. Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men. Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm. Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion, perfect for those who want to leave a lasting impression. Experience our enchanting fragrances and feel the power of attraction like never before.
+    </p>
   </section>
 
   <!-- Footer -->
@@ -87,3 +110,5 @@
 
 </body>
 </html>
+
+
