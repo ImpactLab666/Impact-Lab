@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #f4f4f4; /* Светлый фон для всего сайта */
+  background-color: #f4f4f4; /* Light background for the body */
   color: #e0d9c4;
 }
 
@@ -97,7 +97,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #f4f4f4; /* Светлый фон для категории */
+  background-color: #151313;
   flex-wrap: wrap;
 }
 
@@ -108,8 +108,8 @@ header {
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
-  border: 3px solid #c9b67d; /* Добавлена рамка вокруг кнопок */
   transition: transform 0.3s ease;
+  border: 3px solid #c9b67d; /* Added border around category buttons */
 }
 
 .category-button:hover {
@@ -132,7 +132,7 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #f4f4f4; /* Светлый фон для описания */
+  background-color: #0e0d0d;
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -141,7 +141,7 @@ header {
 
 .shop-description h2 {
   font-size: 2rem;
-  color: #c9b67d; /* Цвет заголовка */
+  color: #e0d9c4;
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -149,13 +149,13 @@ header {
 
 .shop-description p {
   font-size: 1rem;
-  color: #333;
+  color: #e0d9c4;
 }
 
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #151313; /* Темный фон для блока с методами оплаты */
+  background-color: #151313;
   text-align: center;
 }
 
@@ -186,7 +186,7 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #f4f4f4; /* Светлый фон для блока с информацией */
+  background-color: #0e0d0d;
   padding: 40px 20px;
   text-align: center;
 }
@@ -229,16 +229,11 @@ header {
   text-decoration: none;
 }
 
-/* Social Media Icons */
 .social-media {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-.social-media a {
-  color: #e0d9c4;
 }
 
 .social-media img {
@@ -248,7 +243,7 @@ header {
 }
 
 .social-media img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Magic Phrase & Logo */
@@ -276,5 +271,4 @@ footer {
   background-color: #0b0b0b;
   font-size: 0.9rem;
   border-top: 1px solid #333;
-}
-
+  }
