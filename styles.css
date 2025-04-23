@@ -1,18 +1,10 @@
-/* Global styles */
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
   background-color: #0e0d0d;
   color: #e0d9c4;
-}
-
-h2 {
-  font-size: 1.6rem;
-  color: #c9b67d;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
 }
 
 /* Top Bar */
@@ -75,6 +67,30 @@ h2 {
   opacity: 1;
 }
 
+.catalog-button {
+  color: #e0d9c4;
+  background-color: transparent;
+  border: 2px solid #c9b67d;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: #c9b67d;
+  color: #0e0d0d;
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  height: 100vh;
+  background: url('impactlabshop.png') no-repeat center center;
+  background-size: cover;
+}
+
 /* Category Section */
 .category-section {
   display: flex;
@@ -93,7 +109,6 @@ h2 {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #c9b67d;
 }
 
 .category-button:hover {
@@ -111,5 +126,136 @@ h2 {
   display: block;
   margin-top: 10px;
   font-size: 0.95rem;
-  color: #fff;
-  }
+}
+
+/* Shop Description */
+.shop-description {
+  padding: 40px 20px;
+  background-color: #0e0d0d;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.shop-description h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Payment Section */
+.payment-methods {
+  padding: 40px 20px;
+  background-color: #151313;
+  text-align: center;
+}
+
+.payment-methods h2 {
+  margin-bottom: 20px;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.payment-icons img {
+  width: 60px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.payment-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Info Section */
+.impact-info-section {
+  background-color: #0e0d0d;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.links-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info-link {
+  color: #c9b67d;
+  text-decoration: none;
+  border: 1px solid #c9b67d;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.info-link:hover {
+  background-color: #c9b67d;
+  color: #0e0d0d;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info a {
+  color: #e0d9c4;
+  text-decoration: none;
+}
+
+.social-media {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.2);
+}
+
+/* Magic Phrase & Logo */
+.magic-phrase {
+  margin-top: 40px;
+}
+
+.magic-phrase p {
+  font-style: italic;
+  color: #c9b67d;
+  margin-bottom: 10px;
+}
+
+.magic-logo {
+  width: 80px;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0b0b0b;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+#footerText {
+  color: #c9b67d;
+}
+
