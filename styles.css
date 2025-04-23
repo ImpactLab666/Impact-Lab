@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #0e0d0d;
+  background-color: #f4f4f4; /* Light background for the body */
   color: #e0d9c4;
 }
 
@@ -109,7 +109,7 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #c9b67d;
+  border: 3px solid #c9b67d; /* Added border around category buttons */
 }
 
 .category-button:hover {
@@ -141,7 +141,15 @@ header {
 
 .shop-description h2 {
   font-size: 2rem;
-  color: #c9b67d;
+  color: #e0d9c4;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.shop-description p {
+  font-size: 1rem;
+  color: #e0d9c4;
 }
 
 /* Payment Section */
@@ -153,6 +161,8 @@ header {
 
 .payment-methods h2 {
   margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #e0d9c4;
 }
 
 .payment-icons {
@@ -179,6 +189,12 @@ header {
   background-color: #0e0d0d;
   padding: 40px 20px;
   text-align: center;
+}
+
+.impact-info-section h2 {
+  font-size: 1.5rem;
+  color: #e0d9c4;
+  margin-bottom: 20px;
 }
 
 .links-section {
@@ -245,6 +261,7 @@ header {
   width: 80px;
   height: auto;
   opacity: 0.85;
+  filter: brightness(0.8);
 }
 
 /* Footer */
@@ -255,4 +272,3 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #333;
 }
-
