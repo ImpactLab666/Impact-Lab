@@ -1,3 +1,4 @@
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -5,10 +6,9 @@ body, html {
   background-color: #0e0d0d;
   color: #e0d9c4;
   height: 100%;
-  width: 100%;
-  box-sizing: border-box; /* Ensures box-sizing applies universally */
 }
 
+/* Top bar */
 .top-bar {
   background-color: #0b0b0b;
   color: #e0d9c4;
@@ -90,6 +90,7 @@ body, html {
   color: #0e0d0d;
 }
 
+/* Header Section */
 header {
   position: relative;
   width: 100%;
@@ -98,26 +99,7 @@ header {
   background-size: cover;
 }
 
-header button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #e0d9c4;
-  padding: 14px 28px;
-  border: 2px solid #c9b67d;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-}
-
-header button:hover {
-  background-color: #c9b67d;
-  color: #0e0d0d;
-}
-
+/* Category Section */
 .category-section {
   display: flex;
   justify-content: center;
@@ -159,6 +141,7 @@ header button:hover {
   font-weight: bold;
 }
 
+/* Shop Description Section */
 .shop-description {
   background-color: #0e0d0d;
   color: #e0d9c4;
@@ -170,51 +153,15 @@ header button:hover {
   line-height: 1.8;
   font-size: 1rem;
   border-top: 1px solid #333;
-  border: 2px solid #c9b67d; /* Golden border */
-  border-radius: 8px; /* Rounded corners for the description box */
 }
 
 .shop-description h2 {
-  font-family: 'Cinzel Decorative', serif; /* Font for the title */
   font-size: 26px;
   margin-bottom: 20px;
-  color: #c9b67d; /* Golden color for the heading */
+  color: #d1b67d;
   letter-spacing: 1px;
-  text-transform: uppercase; /* Capitalized text for the heading */
 }
 
-.highlighted-text {
-  font-family: 'Cinzel Decorative', serif; /* Font for the highlighted part */
-  color: #c9b67d; /* Golden color for the text */
-  font-size: 32px; /* Slightly larger font size */
-  font-weight: bold;
-  border-bottom: 2px solid #c9b67d; /* Bottom border to highlight the text */
-  padding-bottom: 4px; /* Add some space below the highlighted text */
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  border-top: 1px solid #333;
-  background-color: #161616;
-  color: #fff;
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .middle-bar {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .middle-bar .nav-item img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .catalog-button {
-    padding: 8px 16px;
-    font-size: 1rem;
-  }
-  }
+/* Payment Methods Section */
+.payment-methods {
+  
