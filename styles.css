@@ -109,7 +109,7 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 3px solid #c9b67d; /* Added border around category items */
+  border: 2px solid #c9b67d;
 }
 
 .category-button:hover {
@@ -137,10 +137,14 @@ header {
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
-  font-size: 1rem;
 }
 
-/* Payment Methods Section */
+.shop-description h2 {
+  font-size: 2rem;
+  color: #c9b67d;
+}
+
+/* Payment Section */
 .payment-methods {
   padding: 40px 20px;
   background-color: #151313;
@@ -217,26 +221,13 @@ header {
 }
 
 .social-media img {
-  width: 32px;
-  height: 32px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
 }
 
 .social-media img:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  animation: glow 1.5s infinite alternate;
-}
-
-/* Glow effect for social media icons */
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(255, 165, 0, 0.9); /* Orange glow effect */
-  }
+  transform: scale(1.2);
 }
 
 /* Magic Phrase & Logo */
@@ -263,19 +254,5 @@ footer {
   background-color: #0b0b0b;
   font-size: 0.9rem;
   border-top: 1px solid #333;
-}
-
-/* Section Above Footer (matching color with background image) */
-.footer-block {
-  background-color: #151313; /* Ensures the background color matches the image */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-block img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
 }
 
