@@ -136,6 +136,7 @@ header {
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
+  font-size: 1rem;
 }
 
 /* Payment Section */
@@ -215,13 +216,26 @@ header {
 }
 
 .social-media img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .social-media img:hover {
-  transform: scale(1.2);
+  opacity: 1;
+  transform: scale(1.1);
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Glow animation for social media icons */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.9); /* orange glow */
+  }
 }
 
 /* Magic Phrase & Logo */
@@ -249,5 +263,4 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #333;
 }
-
 
