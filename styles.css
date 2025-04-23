@@ -1,17 +1,23 @@
-/* General Styles */
+/* Global styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
   background-color: #0e0d0d;
   color: #e0d9c4;
-  height: 100%;
 }
 
-/* Top bar */
+h2 {
+  font-size: 1.6rem;
+  color: #c9b67d;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Top Bar */
 .top-bar {
   background-color: #0b0b0b;
-  color: #e0d9c4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +29,6 @@ body, html {
 .top-bar a {
   color: #e0d9c4;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .top-bar a:hover {
@@ -36,15 +41,12 @@ body, html {
 
 .language-switcher img {
   width: 24px;
-  height: auto;
   border-radius: 4px;
-  filter: brightness(0.9);
   transition: transform 0.3s ease;
 }
 
 .language-switcher img:hover {
   transform: scale(1.1);
-  filter: brightness(1.2);
 }
 
 /* Navigation Bar */
@@ -73,32 +75,6 @@ body, html {
   opacity: 1;
 }
 
-.catalog-button {
-  font-family: 'Cinzel', serif;
-  color: #e0d9c4;
-  background-color: transparent;
-  border: 2px solid #c9b67d;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.catalog-button:hover {
-  background-color: #c9b67d;
-  color: #0e0d0d;
-}
-
-/* Header Section */
-header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('impactlabshop.png') no-repeat center center;
-  background-size: cover;
-}
-
 /* Category Section */
 .category-section {
   display: flex;
@@ -112,39 +88,28 @@ header {
 .category-button {
   display: block;
   width: 180px;
-  height: 180px;
-  background-color: #4c3b2a;
-  color: #fff;
   text-align: center;
   border-radius: 8px;
   text-decoration: none;
-  padding: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #fff;
+  transition: transform 0.3s ease;
+  border: 2px solid #c9b67d;
 }
 
 .category-button:hover {
-  background-color: #5e472f;
   transform: scale(1.05);
 }
 
 .category-button img {
   width: 100%;
-  height: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.category-button span {
+.cat-name {
   display: block;
   margin-top: 10px;
-  font-size: 1rem;
-}
-
-/* Footer */
-#footerText {
-  text-align: center;
-  background-color: #0b0b0b;
-  padding: 15px;
-  color: #e0d9c4;
-  font-size: 0.9rem;
-}
+  font-size: 0.95rem;
+  color: #fff;
+  }
