@@ -98,7 +98,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #1a1410; /* Dark chocolate brown */
+  background-color: #2e1f17; /* Slightly lighter dark brown to make the categories stand out */
   flex-wrap: wrap;
 }
 
@@ -110,7 +110,6 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #d1b27f; /* Subtle golden border */
   padding: 8px;
   background-color: #0e0b08; /* Dark brown background */
 }
@@ -140,21 +139,14 @@ header {
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
-  border: 1px solid #333; /* Darker, more subtle border */
-  border-radius: 8px;
-}
-
-.shop-description h2 {
-  font-size: 1.3rem;
-  font-weight: bold;
 }
 
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #1a1410; /* Dark chocolate brown */
+  background-color: #2e1f17; /* Slightly lighter dark brown to make the payment section stand out */
   text-align: center;
-  border: 1px solid #333; /* Darker, more subtle border */
+  border: 1px solid #333; /* Dark border for a subtle highlight */
   border-radius: 8px;
 }
 
@@ -183,11 +175,9 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #1a1410; /* Dark chocolate brown */
+  background-color: #2e1f17; /* Slightly lighter dark brown for emphasis */
   padding: 40px 20px;
   text-align: center;
-  border: 1px solid #333; /* Darker, more subtle border */
-  border-radius: 8px;
 }
 
 .impact-info-section h2 {
@@ -202,12 +192,13 @@ header {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
+  background-color: #0e0b08; /* Dark brown background */
+  padding: 20px 0;
 }
 
 .info-link {
   color: #d1b27f; /* Gold */
   text-decoration: none;
-  border: 1px solid #d1b27f;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -279,10 +270,9 @@ footer {
   color: #d1b27f; /* Subtle golden text */
 }
 
-footer img {
-  border: 3px solid #d1b27f; /* Gold border around footer image */
-  padding: 5px;
-  border-radius: 10px;
-}
 
 
+
+
+
+  
