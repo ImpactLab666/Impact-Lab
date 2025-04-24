@@ -3,28 +3,48 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1a1818; /* Dark background */
-  color: #e0d9c4; /* Soft light color for text */
+  background-color: #0e0d0d;
+  color: #e0d9c4;
+  height: 100%;
 }
 
-/* Top Bar */
+/* Top bar */
 .top-bar {
-  background-color: #2b1a1a; /* Dark red-brown */
+  background-color: #0b0b0b;
+  color: #e0d9c4;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.9rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #333;
 }
 
 .top-bar a {
   color: #e0d9c4;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .top-bar a:hover {
-  color: #ffb400; /* Golden hover effect */
+  color: #c9b67d;
+}
+
+.language-switcher a {
+  margin-left: 12px;
+}
+
+.language-switcher img {
+  width: 24px;
+  height: auto;
+  border-radius: 4px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.language-switcher img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Navigation Bar */
@@ -33,10 +53,11 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #2a1c1c; /* Dark brown */
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
+  background-color: #0b0b0b;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
 .middle-bar .nav-item img {
@@ -52,13 +73,30 @@ body, html {
   opacity: 1;
 }
 
+.catalog-button {
+  font-family: 'Cinzel', serif;
+  color: #e0d9c4;
+  background-color: transparent;
+  border: 2px solid #c9b67d;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: #c9b67d;
+  color: #0e0d0d;
+}
+
 /* Header Section */
 header {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
 }
 
 /* Category Section */
@@ -67,171 +105,46 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #3f2b1e; /* Dark chocolate */
-  border-radius: 8px;
+  background-color: #151313;
+  flex-wrap: wrap;
 }
 
 .category-button {
   display: block;
   width: 180px;
+  height: 180px;
+  background-color: #4c3b2a;
+  color: #fff;
   text-align: center;
   border-radius: 8px;
   text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-  padding: 8px;
-  background-color: #2b1a1a; /* Dark brown */
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .category-button:hover {
+  background-color: #5e472f;
   transform: scale(1.05);
 }
 
 .category-button img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-.cat-name {
+.category-button span {
   display: block;
   margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-/* Shop Description */
-.shop-description {
-  padding: 40px 20px;
-  background-color: #2b1a1a; /* Dark chocolate */
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.7;
-}
-
-/* Payment Section */
-.payment-methods {
-  padding: 40px 20px;
-  background-color: #3f2b1e; /* Dark brown */
-  text-align: center;
-  border: 2px solid #2b1a1a; /* Border for emphasis */
-}
-
-.payment-methods h2 {
-  margin-bottom: 20px;
-}
-
-.payment-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.payment-icons img {
-  width: 60px;
-  height: auto;
-  filter: brightness(0.85);
-  transition: transform 0.3s ease;
-}
-
-.payment-icons img:hover {
-  transform: scale(1.1);
-}
-
-/* Info Section */
-.impact-info-section {
-  background-color: #2b1a1a; /* Dark brown */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.impact-info-section h2 {
-  font-size: 1.2rem;
-  color: #ffb400; /* Golden color */
-  margin-bottom: 20px;
-}
-
-.links-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  background-color: #2b1a1a; /* Darker section for contrast */
-  padding: 20px 0;
-}
-
-.info-link {
-  color: #ffb400; /* Golden links */
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-}
-
-.info-link:hover {
-  background-color: #ffb400;
-  color: #0e0d0d;
-}
-
-.contact-info {
-  margin-top: 20px;
-}
-
-.contact-info a {
-  color: #e0d9c4;
-  text-decoration: none;
-}
-
-.social-media {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-media img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
-}
-
-.social-media img:hover {
-  transform: scale(1.2);
-}
-
-/* Magic Phrase & Logo */
-.magic-phrase {
-  margin-top: 40px;
-}
-
-.magic-phrase p {
-  font-style: italic;
-  color: #ffb400; /* Golden color for magic */
-  margin-bottom: 10px;
-}
-
-.magic-logo {
-  width: 150px;
-  height: auto;
-  opacity: 0.95;
-  margin-top: 20px;
+  font-size: 1rem;
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2b1a1a; /* Darker background */
-  font-size: 0.9rem;
-  border-top: 1px solid #444;
-}
-
 #footerText {
-  color: #ffb400; /* Golden color for footer text */
+  text-align: center;
+  background-color: #0b0b0b;
+  padding: 15px;
+  color: #e0d9c4;
+  font-size: 0.9rem;
 }
-
