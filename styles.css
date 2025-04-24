@@ -5,7 +5,7 @@ body, html {
   font-family: 'Cinzel', serif;
   background-color: #1a1818;
   color: #e0d9c4;
-  box-sizing: border-box; /* Это поможет контролировать размеры элементов */
+  box-sizing: border-box; /* Для лучшего контроля за размерами элементов */
 }
 
 /* Top Bar */
@@ -68,7 +68,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #1c1a1a;
+  background-color: #201e1e;
   flex-wrap: wrap;
 }
 
@@ -96,6 +96,12 @@ header {
   border-radius: 6px;
 }
 
+.cat-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
@@ -114,7 +120,7 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #1c1a1a;
+  background-color: #201e1e;
   text-align: center;
 }
 
