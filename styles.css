@@ -3,19 +3,19 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1a1410; /* Dark chocolate brown */
+  background-color: #1b1b1b; /* Dark, mystical background */
   color: #e0d9c4;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #0e0b08; /* Very dark brown */
+  background-color: #2b1a1a; /* Darkened mystic red-brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.9rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #4e4b3f; /* Subtle mystical border */
 }
 
 .top-bar a {
@@ -24,21 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #d1b27f;
-}
-
-.language-switcher a {
-  margin-left: 12px;
-}
-
-.language-switcher img {
-  width: 24px;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.language-switcher img:hover {
-  transform: scale(1.1);
+  color: #ffb400; /* Golden hover effect for mystical feel */
 }
 
 /* Navigation Bar */
@@ -47,11 +33,10 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #0e0b08;
+  background-color: #3a2c2c; /* Dark brown for a magical theme */
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding: 12px 20px;
-  flex-wrap: wrap;
 }
 
 .middle-bar .nav-item img {
@@ -67,29 +52,13 @@ body, html {
   opacity: 1;
 }
 
-.catalog-button {
-  color: #e0d9c4;
-  background-color: transparent;
-  border: 2px solid #d1b27f;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.catalog-button:hover {
-  background-color: #d1b27f;
-  color: #0e0d0d;
-}
-
 /* Header Section */
 header {
   width: 100%;
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to blend with the image */
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay for dark, magical feel */
 }
 
 /* Category Section */
@@ -98,10 +67,9 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #2a1e18; /* Darker brown background */
-  flex-wrap: wrap;
-  border: 2px solid #d1b27f; /* Adding border around the whole category block */
-  border-radius: 8px; /* Slight rounding of the corners for a better look */
+  background-color: #4e3929; /* Dark, earthy, almost enchanted brown */
+  border: 2px solid #5f472f; /* Soft, magical brown border */
+  border-radius: 8px;
 }
 
 .category-button {
@@ -113,7 +81,7 @@ header {
   color: #fff;
   transition: transform 0.3s ease;
   padding: 8px;
-  background-color: #0e0b08; /* Dark brown background */
+  background-color: #2b1a1a; /* Dark chocolate brown */
 }
 
 .category-button:hover {
@@ -124,7 +92,7 @@ header {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 6px; /* Keeping the image border for individual category items */
+  border-radius: 6px;
 }
 
 .cat-name {
@@ -136,7 +104,7 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #1a1410; /* Dark chocolate brown */
+  background-color: #2b1a1a; /* Dark, chocolate brown */
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -146,10 +114,9 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #3d2a23; /* Lighter brown with dark undertones */
+  background-color: #5c3f31; /* Dark amber brown for mystical feel */
   text-align: center;
-  border: 1px solid #333; /* Border added for distinction */
-  border-radius: 8px;
+  border: 2px solid #3d2a22; /* Darker border for added depth */
 }
 
 .payment-methods h2 {
@@ -167,7 +134,7 @@ header {
 .payment-icons img {
   width: 60px;
   height: auto;
-  filter: brightness(0.95);
+  filter: brightness(0.85);
   transition: transform 0.3s ease;
 }
 
@@ -177,14 +144,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #2a1e18; /* Dark brown */
+  background-color: #3a2c2c; /* Dark magic theme */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #d1b27f;
+  color: #ffb400; /* Golden magic color */
   margin-bottom: 20px;
 }
 
@@ -194,12 +161,12 @@ header {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
-  background-color: #0e0b08; /* Dark brown */
+  background-color: #2b1a1a; /* Dark brown */
   padding: 20px 0;
 }
 
 .info-link {
-  color: #d1b27f; /* Gold */
+  color: #ffb400; /* Golden links for attention */
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -208,7 +175,7 @@ header {
 }
 
 .info-link:hover {
-  background-color: #d1b27f;
+  background-color: #ffb400;
   color: #0e0d0d;
 }
 
@@ -245,7 +212,7 @@ header {
 
 .magic-phrase p {
   font-style: italic;
-  color: #d1b27f; /* Gold */
+  color: #ffb400; /* Gold magic text */
   margin-bottom: 10px;
 }
 
@@ -254,7 +221,7 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 3px solid #d1b27f; /* Gold border */
+  border: 3px solid #ffb400; /* Golden magical border */
   padding: 10px;
   border-radius: 10px;
 }
@@ -263,13 +230,16 @@ header {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #0e0b08; /* Very dark brown */
+  background-color: #2b1a1a; /* Dark brown footer */
   font-size: 0.9rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid #3d2a22; /* Darker brown border */
 }
 
 #footerText {
-  color: #d1b27f; /* Subtle golden color */
+  color: #ffb400; /* Gold footer text */
 }
 
 
+
+
+  
