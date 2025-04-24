@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1a1818; /* Dark base */
+  background-color: #2a1d1a; /* Темный шоколад */
   color: #e0d9c4;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #2c2a29; /* Deep brown with warm undertones */
+  background-color: #1f1511; /* Глубокий темный коричневый */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #c9b67d; /* Golden yellow for hover effect */
+  color: #d1b27f; /* Светло-золотистый */
 }
 
 .language-switcher a {
@@ -47,7 +47,7 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #2c2a29; /* Deep brown */
+  background-color: #1f1511; /* Глубокий темный коричневый */
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
   padding: 12px 20px;
@@ -70,7 +70,7 @@ body, html {
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
-  border: 2px solid #c9b67d; /* Golden yellow for button */
+  border: 2px solid #d1b27f; /* Золотистый */
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -79,7 +79,7 @@ body, html {
 }
 
 .catalog-button:hover {
-  background-color: #c9b67d; /* Golden yellow for hover effect */
+  background-color: #d1b27f;
   color: #0e0d0d;
 }
 
@@ -89,8 +89,6 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: #3b2f2b; /* Dark brown, warmer tones */
-  filter: brightness(0.8); /* Slightly darker for a more mystical look */
 }
 
 /* Category Section */
@@ -99,7 +97,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #2c2a29; /* Deep brown */
+  background-color: #2a1d1a; /* Темный шоколад */
   flex-wrap: wrap;
 }
 
@@ -111,14 +109,13 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #c9b67d; /* Golden yellow border */
+  border: 2px solid #d1b27f; /* Золотистая рамка */
   padding: 8px;
-  background-color: #1a1818;
+  background-color: #1f1511; /* Глубокий темный коричневый */
 }
 
 .category-button:hover {
   transform: scale(1.05);
-  background-color: #3b2f2b; /* Dark brown */
 }
 
 .category-button img {
@@ -137,7 +134,7 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #3b2f2b; /* Dark brown */
+  background-color: #2a1d1a; /* Темный шоколад */
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -147,19 +144,17 @@ header {
 .shop-description h2 {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #c9b67d; /* Golden yellow for emphasis */
 }
 
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #2c2a29; /* Deep brown */
+  background-color: #2a1d1a; /* Темный шоколад */
   text-align: center;
 }
 
 .payment-methods h2 {
   margin-bottom: 20px;
-  color: #c9b67d; /* Golden yellow */
 }
 
 .payment-icons {
@@ -183,14 +178,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #3b2f2b; /* Dark brown */
+  background-color: #2a1d1a; /* Темный шоколад */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #c9b67d; /* Golden yellow */
+  color: #d1b27f; /* Светло-золотистый */
   margin-bottom: 20px;
 }
 
@@ -203,9 +198,9 @@ header {
 }
 
 .info-link {
-  color: #c9b67d; /* Golden yellow */
+  color: #d1b27f; /* Светло-золотистый */
   text-decoration: none;
-  border: 1px solid #c9b67d; /* Golden yellow */
+  border: 1px solid #d1b27f;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -213,7 +208,7 @@ header {
 }
 
 .info-link:hover {
-  background-color: #c9b67d; /* Golden yellow */
+  background-color: #d1b27f;
   color: #0e0d0d;
 }
 
@@ -250,7 +245,7 @@ header {
 
 .magic-phrase p {
   font-style: italic;
-  color: #c9b67d; /* Golden yellow */
+  color: #d1b27f; /* Золотистый */
   margin-bottom: 10px;
 }
 
@@ -259,34 +254,20 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 2px solid #c9b67d; /* Golden yellow border */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #3b2f2b; /* Dark brown */
+  background-color: #1f1511; /* Глубокий темный коричневый */
   font-size: 0.9rem;
   border-top: 1px solid #444;
 }
 
 #footerText {
-  color: #c9b67d; /* Golden yellow */
+  color: #d1b27f; /* Светло-золотистый */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   
