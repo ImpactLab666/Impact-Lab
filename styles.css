@@ -3,19 +3,19 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1d1410; /* Dark brown */
+  background-color: #1a1410; /* Deep dark brown (chocolate) */
   color: #e0d9c4;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #121010; /* Very dark brown */
+  background-color: #0e0b08; /* Even darker brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.9rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #333;
 }
 
 .top-bar a {
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #d1b27f; /* Gold */
+  color: #d1b27f; /* Subtle golden hover color */
 }
 
 .language-switcher a {
@@ -47,9 +47,9 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #121010; /* Very dark brown */
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
+  background-color: #0e0b08; /* Very dark brown */
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   padding: 12px 20px;
   flex-wrap: wrap;
 }
@@ -70,7 +70,7 @@ body, html {
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
-  border: 2px solid #d1b27f; /* Gold border */
+  border: 2px solid #d1b27f; /* Subtle golden border */
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -98,7 +98,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #1d1410; /* Very dark brown */
+  background-color: #1a1410; /* Dark chocolate brown */
   flex-wrap: wrap;
 }
 
@@ -110,9 +110,9 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #d1b27f; /* Gold border */
+  border: 2px solid #d1b27f; /* Subtle golden border */
   padding: 8px;
-  background-color: #121010; /* Very dark brown */
+  background-color: #0e0b08; /* Dark brown background */
 }
 
 .category-button:hover {
@@ -135,12 +135,12 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #1d1410; /* Very dark brown */
+  background-color: #1a1410; /* Dark chocolate brown */
   text-align: center;
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
-  border: 1px solid #d1b27f; /* Gold border to separate the block */
+  border: 1px solid #333; /* Darker, more subtle border */
   border-radius: 8px;
 }
 
@@ -152,9 +152,9 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #1d1410; /* Very dark brown */
+  background-color: #1a1410; /* Dark chocolate brown */
   text-align: center;
-  border: 1px solid #d1b27f; /* Gold border to separate the block */
+  border: 1px solid #333; /* Darker, more subtle border */
   border-radius: 8px;
 }
 
@@ -183,16 +183,16 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #1d1410; /* Very dark brown */
+  background-color: #1a1410; /* Dark chocolate brown */
   padding: 40px 20px;
   text-align: center;
-  border: 1px solid #d1b27f; /* Gold border */
+  border: 1px solid #333; /* Darker, more subtle border */
   border-radius: 8px;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #d1b27f; /* Gold */
+  color: #d1b27f; /* Subtle golden color */
   margin-bottom: 20px;
 }
 
@@ -261,7 +261,7 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 3px solid #d1b27f; /* Gold border around the logo */
+  border: 3px solid #d1b27f; /* Gold border */
   padding: 10px;
   border-radius: 10px;
 }
@@ -270,13 +270,13 @@ header {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #121010; /* Very dark brown */
+  background-color: #0e0b08; /* Very dark brown */
   font-size: 0.9rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid #333;
 }
 
 #footerText {
-  color: #d1b27f; /* Gold */
+  color: #d1b27f; /* Subtle golden text */
 }
 
 footer img {
@@ -286,15 +286,3 @@ footer img {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
