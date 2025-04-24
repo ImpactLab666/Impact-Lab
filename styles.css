@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #2a1d1a; /* Темный шоколад */
+  background-color: #1d1410; /* Dark brown */
   color: #e0d9c4;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #1f1511; /* Глубокий темный коричневый */
+  background-color: #121010; /* Very dark brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #d1b27f; /* Светло-золотистый */
+  color: #d1b27f; /* Gold */
 }
 
 .language-switcher a {
@@ -47,7 +47,7 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #1f1511; /* Глубокий темный коричневый */
+  background-color: #121010; /* Very dark brown */
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
   padding: 12px 20px;
@@ -70,7 +70,7 @@ body, html {
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
-  border: 2px solid #d1b27f; /* Золотистый */
+  border: 2px solid #d1b27f; /* Gold border */
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -89,6 +89,7 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark filter for harmony with the image */
 }
 
 /* Category Section */
@@ -97,7 +98,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #2a1d1a; /* Темный шоколад */
+  background-color: #1d1410; /* Very dark brown */
   flex-wrap: wrap;
 }
 
@@ -109,9 +110,9 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #d1b27f; /* Золотистая рамка */
+  border: 2px solid #d1b27f; /* Gold border */
   padding: 8px;
-  background-color: #1f1511; /* Глубокий темный коричневый */
+  background-color: #121010; /* Very dark brown */
 }
 
 .category-button:hover {
@@ -134,7 +135,7 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #2a1d1a; /* Темный шоколад */
+  background-color: #1d1410; /* Very dark brown */
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -149,7 +150,7 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #2a1d1a; /* Темный шоколад */
+  background-color: #1d1410; /* Very dark brown */
   text-align: center;
 }
 
@@ -178,14 +179,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #2a1d1a; /* Темный шоколад */
+  background-color: #1d1410; /* Very dark brown */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #d1b27f; /* Светло-золотистый */
+  color: #d1b27f; /* Gold */
   margin-bottom: 20px;
 }
 
@@ -198,7 +199,7 @@ header {
 }
 
 .info-link {
-  color: #d1b27f; /* Светло-золотистый */
+  color: #d1b27f; /* Gold */
   text-decoration: none;
   border: 1px solid #d1b27f;
   padding: 6px 12px;
@@ -245,7 +246,7 @@ header {
 
 .magic-phrase p {
   font-style: italic;
-  color: #d1b27f; /* Золотистый */
+  color: #d1b27f; /* Gold */
   margin-bottom: 10px;
 }
 
@@ -260,14 +261,14 @@ header {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1f1511; /* Глубокий темный коричневый */
+  background-color: #121010; /* Very dark brown */
   font-size: 0.9rem;
   border-top: 1px solid #444;
 }
 
 #footerText {
-  color: #d1b27f; /* Светло-золотистый */
+  color: #d1b27f; /* Gold */
 }
 
 
-  
+
