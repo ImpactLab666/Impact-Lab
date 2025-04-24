@@ -308,3 +308,34 @@ footer {
   background-color: #2d2b2b; /* Adding subtle highlight on hover */
 }
 
+/* New Styles for Missing Icon Paths & Ensuring Everything Works */
+.payment-methods {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #262626;
+}
+
+.payment-methods h2 {
+  color: #e0d9c4;
+}
+
+.payment-icons img {
+  width: 60px;
+  height: auto;
+  margin: 0 15px;
+  filter: invert(70%) sepia(15%) saturate(100%) hue-rotate(90deg);
+}
+
+.payment-icons img:hover {
+  transform: scale(1.2);
+}
+
+.middle-bar .nav-item {
+  color: #c9b67d;
+  transition: color 0.3s ease;
+}
+
+.middle-bar .nav-item:hover {
+  color: #e0d9c4;
+}
+
