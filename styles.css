@@ -178,7 +178,7 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #1a1818;
+  background-color: #1a1818; /* Original background */
   padding: 40px 20px;
   text-align: center;
 }
@@ -256,6 +256,15 @@ header {
   margin-top: 20px;
 }
 
+/* Change background color and logo for legal section */
+.impact-info-section {
+  background-color: #131010; /* Darker background */
+}
+
+.impact-info-section .magic-logo {
+  background-color: #131010; /* Dark background to match */
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -267,42 +276,5 @@ footer {
 
 #footerText {
   color: #c9b67d;
-}
-
-/* Dark background for legal links section and logo above footer */
-.impact-info-section {
-  background-color: #131010; /* Dark background for blending */
-}
-
-.impact-info-section .magic-logo {
-  background-color: #131010; /* Match the background */
-  margin-top: 20px;
-  width: 150px;
-  height: auto;
-  opacity: 0.95;
-}
-
-/* Legal links section */
-.links-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.info-link {
-  color: #c9b67d;
-  text-decoration: none;
-  border: 1px solid #c9b67d;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-}
-
-.info-link:hover {
-  background-color: #c9b67d;
-  color: #0e0d0d;
 }
 
