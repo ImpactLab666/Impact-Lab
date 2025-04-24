@@ -151,6 +151,9 @@ header {
   padding: 40px 20px;
   background-color: #201e1e;
   text-align: center;
+  border: 2px solid #7a6d4f; /* Light frame around the payment methods */
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
 .payment-methods h2 {
@@ -254,6 +257,9 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
+  border: 2px solid #7a6d4f; /* Added border to match the site's style */
+  padding: 8px;
+  border-radius: 10px;
 }
 
 /* Footer */
