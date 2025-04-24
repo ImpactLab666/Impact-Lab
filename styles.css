@@ -3,148 +3,95 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #0e0d0d;
+  background-color: #1a1818;
   color: #e0d9c4;
-  height: 100%;
 }
 
-/* Top bar */
-.top-bar {
-  background-color: #0b0b0b;
-  color: #e0d9c4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #333;
+/* Style for the section with legal links and image above the footer */
+.impact-info-section {
+  background-color: #131010; /* Dark background */
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.top-bar a {
-  color: #e0d9c4;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.impact-info-section .magic-logo {
+  background-color: #131010; /* Dark background to match */
+  border-radius: 8px; /* Optional: adding rounded corners for the logo */
+  margin-top: 20px;
 }
 
-.top-bar a:hover {
+/* Payment Section */
+.payment-methods {
+  padding: 40px 20px;
+  background-color: #201e1e;
+  text-align: center;
+}
+
+/* Info Section */
+.impact-info-section h2 {
+  font-size: 1.2rem;
   color: #c9b67d;
+  margin-bottom: 20px;
 }
 
-.language-switcher a {
-  margin-left: 12px;
-}
-
-.language-switcher img {
-  width: 24px;
-  height: auto;
-  border-radius: 4px;
-  filter: brightness(0.9);
-  transition: transform 0.3s ease;
-}
-
-.language-switcher img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
-/* Navigation Bar */
-.middle-bar {
+.links-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  background-color: #0b0b0b;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding: 12px 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.middle-bar .nav-item img {
-  width: 28px;
-  height: 28px;
-  filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.middle-bar .nav-item img:hover {
-  transform: scale(1.15);
-  opacity: 1;
-}
-
-.catalog-button {
-  font-family: 'Cinzel', serif;
-  color: #e0d9c4;
-  background-color: transparent;
-  border: 2px solid #c9b67d;
-  padding: 6px 14px;
-  border-radius: 6px;
+.info-link {
+  color: #c9b67d;
   text-decoration: none;
+  border: 1px solid #c9b67d;
+  padding: 6px 12px;
+  border-radius: 4px;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.catalog-button:hover {
+.info-link:hover {
   background-color: #c9b67d;
   color: #0e0d0d;
 }
 
-/* Header Section */
-header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('impactlabshop.png') no-repeat center center;
-  background-size: cover;
+.contact-info {
+  margin-top: 20px;
 }
 
-/* Category Section */
-.category-section {
+.contact-info a {
+  color: #e0d9c4;
+  text-decoration: none;
+}
+
+.social-media {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #151313;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.category-button {
-  display: block;
-  width: 180px;
-  height: 180px;
-  background-color: #4c3b2a;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  padding: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+.social-media img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
 }
 
-.category-button:hover {
-  background-color: #5e472f;
-  transform: scale(1.05);
-}
-
-.category-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.category-button span {
-  display: block;
-  margin-top: 10px;
-  font-size: 1rem;
+.social-media img:hover {
+  transform: scale(1.2);
 }
 
 /* Footer */
-#footerText {
+footer {
   text-align: center;
-  background-color: #0b0b0b;
-  padding: 15px;
-  color: #e0d9c4;
+  padding: 20px;
+  background-color: #1c1a1a;
   font-size: 0.9rem;
+  border-top: 1px solid #444;
+}
+
+#footerText {
+  color: #c9b67d;
 }
