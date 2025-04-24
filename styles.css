@@ -9,7 +9,7 @@ body, html {
 
 /* Top Bar */
 .top-bar {
-  background-color: #2d3a2e; /* Dark Olive Green */
+  background-color: #2c2a29; /* Deep brown with warm undertones */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow for hover effect */
 }
 
 .language-switcher a {
@@ -47,7 +47,7 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #2d3a2e; /* Dark Olive Green */
+  background-color: #2c2a29; /* Deep brown */
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
   padding: 12px 20px;
@@ -70,7 +70,7 @@ body, html {
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
-  border: 2px solid #b07d55; /* Copper Accent */
+  border: 2px solid #c9b67d; /* Golden yellow for button */
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -79,7 +79,7 @@ body, html {
 }
 
 .catalog-button:hover {
-  background-color: #b07d55; /* Copper Accent */
+  background-color: #c9b67d; /* Golden yellow for hover effect */
   color: #0e0d0d;
 }
 
@@ -89,8 +89,8 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: #3b4c3a; /* Dark Olive Green */
-  filter: brightness(0.7); /* Slightly darker for mystery */
+  background-color: #3b2f2b; /* Dark brown, warmer tones */
+  filter: brightness(0.8); /* Slightly darker for a more mystical look */
 }
 
 /* Category Section */
@@ -99,7 +99,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #2d3a2e; /* Dark Olive Green */
+  background-color: #2c2a29; /* Deep brown */
   flex-wrap: wrap;
 }
 
@@ -111,14 +111,14 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
-  border: 2px solid #b07d55; /* Copper Accent */
+  border: 2px solid #c9b67d; /* Golden yellow border */
   padding: 8px;
   background-color: #1a1818;
 }
 
 .category-button:hover {
   transform: scale(1.05);
-  background-color: #3b4c3a; /* Dark Olive Green */
+  background-color: #3b2f2b; /* Dark brown */
 }
 
 .category-button img {
@@ -137,7 +137,7 @@ header {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #3b4c3a; /* Dark Olive Green */
+  background-color: #3b2f2b; /* Dark brown */
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -147,19 +147,19 @@ header {
 .shop-description h2 {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow for emphasis */
 }
 
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #2d3a2e; /* Dark Olive Green */
+  background-color: #2c2a29; /* Deep brown */
   text-align: center;
 }
 
 .payment-methods h2 {
   margin-bottom: 20px;
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow */
 }
 
 .payment-icons {
@@ -183,14 +183,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #3b4c3a; /* Dark Olive Green */
+  background-color: #3b2f2b; /* Dark brown */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow */
   margin-bottom: 20px;
 }
 
@@ -203,9 +203,9 @@ header {
 }
 
 .info-link {
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow */
   text-decoration: none;
-  border: 1px solid #b07d55; /* Copper Accent */
+  border: 1px solid #c9b67d; /* Golden yellow */
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -213,7 +213,7 @@ header {
 }
 
 .info-link:hover {
-  background-color: #b07d55; /* Copper Accent */
+  background-color: #c9b67d; /* Golden yellow */
   color: #0e0d0d;
 }
 
@@ -250,7 +250,7 @@ header {
 
 .magic-phrase p {
   font-style: italic;
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow */
   margin-bottom: 10px;
 }
 
@@ -259,22 +259,34 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 2px solid #b07d55; /* Copper Accent */
+  border: 2px solid #c9b67d; /* Golden yellow border */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #3b4c3a; /* Dark Olive Green */
+  background-color: #3b2f2b; /* Dark brown */
   font-size: 0.9rem;
   border-top: 1px solid #444;
 }
 
 #footerText {
-  color: #b07d55; /* Copper Accent */
+  color: #c9b67d; /* Golden yellow */
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
