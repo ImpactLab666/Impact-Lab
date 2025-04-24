@@ -151,9 +151,8 @@ header {
   padding: 40px 20px;
   background-color: #201e1e;
   text-align: center;
-  border: 2px solid #7a6d4f; /* Light frame around the payment methods */
-  border-radius: 8px;
-  margin: 20px 0;
+  border: 2px solid #c9b67d; /* Added border */
+  border-radius: 6px; /* Added rounded corners */
 }
 
 .payment-methods h2 {
@@ -257,9 +256,9 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 2px solid #7a6d4f; /* Added border to match the site's style */
-  padding: 8px;
-  border-radius: 10px;
+  border: 2px solid #c9b67d; /* Added border for magic logo */
+  padding: 8px; /* Padding to create space around the image */
+  border-radius: 6px; /* Rounded corners for the border */
 }
 
 /* Footer */
@@ -273,5 +272,39 @@ footer {
 
 #footerText {
   color: #c9b67d;
+}
+
+/* Custom Style Adjustments */
+.shop-description h2 {
+  font-family: 'Cinzel', serif; /* Adjusting the font for the shop description title */
+  text-transform: uppercase; /* Making title uppercase */
+}
+
+.impact-info-section h2 {
+  font-family: 'Cinzel', serif; /* Adjusting the font for the 'About Shop' section title */
+}
+
+/* Block Styles for Legal and Payment Sections */
+.impact-info-section {
+  background-color: #131010; /* Darker background for the legal info */
+  border-radius: 6px;
+}
+
+.payment-methods {
+  background-color: #2d2b2b; /* Darker background for payment methods */
+  border: 2px solid #c9b67d; /* Keeping the border but slightly softer */
+}
+
+/* Border for Magic Logo */
+.magic-logo {
+  border: 2px solid #c9b67d; /* Adding a soft border */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Category Button */
+.category-button:hover {
+  transform: scale(1.05);
+  background-color: #2d2b2b; /* Adding subtle highlight on hover */
 }
 
