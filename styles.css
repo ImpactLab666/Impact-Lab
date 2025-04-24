@@ -3,19 +3,20 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1b1b1b; /* Dark, mystical background */
+  background-color: #1a1818;
   color: #e0d9c4;
+  box-sizing: border-box; /* Это поможет контролировать размеры элементов */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #2b1a1a; /* Darkened mystic red-brown */
+  background-color: #1c1a1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.9rem;
-  border-bottom: 2px solid #4e4b3f; /* Subtle mystical border */
+  border-bottom: 1px solid #444;
 }
 
 .top-bar a {
@@ -24,7 +25,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #ffb400; /* Golden hover effect for mystical feel */
+  color: #c9b67d;
 }
 
 /* Navigation Bar */
@@ -33,10 +34,11 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #3a2c2c; /* Dark brown for a magical theme */
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  background-color: #1c1a1a;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
   padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
 .middle-bar .nav-item img {
@@ -58,7 +60,6 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6); /* Overlay for dark, magical feel */
 }
 
 /* Category Section */
@@ -67,9 +68,8 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #4e3929; /* Dark, earthy, almost enchanted brown */
-  border: 2px solid #5f472f; /* Soft, magical brown border */
-  border-radius: 8px;
+  background-color: #1c1a1a;
+  flex-wrap: wrap;
 }
 
 .category-button {
@@ -80,8 +80,9 @@ header {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease;
+  border: 2px solid #c9b67d;
   padding: 8px;
-  background-color: #2b1a1a; /* Dark chocolate brown */
+  background-color: #1a1818;
 }
 
 .category-button:hover {
@@ -95,28 +96,26 @@ header {
   border-radius: 6px;
 }
 
-.cat-name {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #2b1a1a; /* Dark, chocolate brown */
+  background-color: #1a1818;
   text-align: center;
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
 }
 
+.shop-description h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #5c3f31; /* Dark amber brown for mystical feel */
+  background-color: #1c1a1a;
   text-align: center;
-  border: 2px solid #3d2a22; /* Darker border for added depth */
 }
 
 .payment-methods h2 {
@@ -134,7 +133,7 @@ header {
 .payment-icons img {
   width: 60px;
   height: auto;
-  filter: brightness(0.85);
+  filter: brightness(0.95);
   transition: transform 0.3s ease;
 }
 
@@ -144,14 +143,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #3a2c2c; /* Dark magic theme */
+  background-color: #1a1818;
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #ffb400; /* Golden magic color */
+  color: #c9b67d;
   margin-bottom: 20px;
 }
 
@@ -161,13 +160,12 @@ header {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
-  background-color: #2b1a1a; /* Dark brown */
-  padding: 20px 0;
 }
 
 .info-link {
-  color: #ffb400; /* Golden links for attention */
+  color: #c9b67d;
   text-decoration: none;
+  border: 1px solid #c9b67d;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -175,7 +173,7 @@ header {
 }
 
 .info-link:hover {
-  background-color: #ffb400;
+  background-color: #c9b67d;
   color: #0e0d0d;
 }
 
@@ -212,7 +210,7 @@ header {
 
 .magic-phrase p {
   font-style: italic;
-  color: #ffb400; /* Gold magic text */
+  color: #c9b67d;
   margin-bottom: 10px;
 }
 
@@ -221,20 +219,18 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 3px solid #ffb400; /* Golden magical border */
-  padding: 10px;
-  border-radius: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2b1a1a; /* Dark brown footer */
+  background-color: #1c1a1a;
   font-size: 0.9rem;
-  border-top: 1px solid #3d2a22; /* Darker brown border */
+  border-top: 1px solid #444;
 }
 
 #footerText {
-  color: #ffb400; /* Gold footer text */
+  color: #c9b67d;
 }
+
