@@ -3,19 +3,19 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1c1a1a; /* Dark background to keep the atmosphere */
-  color: #e0d9c4; /* Light golden color for text */
+  background-color: #1a1818; /* Dark background */
+  color: #e0d9c4; /* Soft light color for text */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #2b1a1a; /* Dark brown with a hint of red */
+  background-color: #2b1a1a; /* Dark red-brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
   font-size: 0.9rem;
-  border-bottom: 2px solid #4e4b3f; /* Soft border harmonizing with the color */
+  border-bottom: 1px solid #444;
 }
 
 .top-bar a {
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #ffb400; /* Golden highlights */
+  color: #ffb400; /* Golden hover effect */
 }
 
 /* Navigation Bar */
@@ -33,9 +33,9 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #3a2c2c; /* Dark brown */
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  background-color: #2a1c1c; /* Dark brown */
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
   padding: 12px 20px;
 }
 
@@ -58,7 +58,7 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
 }
 
 /* Category Section */
@@ -67,8 +67,7 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #4e3929; /* Dark chocolate */
-  border: 2px solid #5f472f; /* Thin border for emphasis */
+  background-color: #3f2b1e; /* Dark chocolate */
   border-radius: 8px;
 }
 
@@ -81,7 +80,7 @@ header {
   color: #fff;
   transition: transform 0.3s ease;
   padding: 8px;
-  background-color: #2b1a1a; /* Dark chocolate */
+  background-color: #2b1a1a; /* Dark brown */
 }
 
 .category-button:hover {
@@ -114,9 +113,9 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #5c3f31; /* Dark brown with golden accents */
+  background-color: #3f2b1e; /* Dark brown */
   text-align: center;
-  border: 2px solid #3d2a22; /* Dark border */
+  border: 2px solid #2b1a1a; /* Border for emphasis */
 }
 
 .payment-methods h2 {
@@ -144,14 +143,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #3a2c2c; /* Dark magical background */
+  background-color: #2b1a1a; /* Dark brown */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #ffb400; /* Golden text for magic */
+  color: #ffb400; /* Golden color */
   margin-bottom: 20px;
 }
 
@@ -161,12 +160,12 @@ header {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
-  background-color: #2b1a1a; /* Slightly darker for contrast */
+  background-color: #2b1a1a; /* Darker section for contrast */
   padding: 20px 0;
 }
 
 .info-link {
-  color: #ffb400; /* Golden links for emphasis */
+  color: #ffb400; /* Golden links */
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -221,21 +220,18 @@ header {
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
-  border: 3px solid #ffb400; /* Golden border for the logo */
-  padding: 10px;
-  border-radius: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2b1a1a; /* Dark brown */
+  background-color: #2b1a1a; /* Darker background */
   font-size: 0.9rem;
-  border-top: 1px solid #3d2a22; /* Dark border for footer */
+  border-top: 1px solid #444;
 }
 
 #footerText {
-  color: #ffb400; /* Golden text for footer */
+  color: #ffb400; /* Golden color for footer text */
 }
 
