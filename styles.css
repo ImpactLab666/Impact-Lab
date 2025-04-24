@@ -178,7 +178,7 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #1a1818; /* Original background */
+  background-color: #000000; /* Black background */
   padding: 40px 20px;
   text-align: center;
 }
@@ -256,13 +256,14 @@ header {
   margin-top: 20px;
 }
 
-/* Change background color and logo for legal section */
+/* Black background and blending for legal section and logo */
 .impact-info-section {
-  background-color: #131010; /* Darker background */
+  background-color: #000000; /* Black background */
 }
 
 .impact-info-section .magic-logo {
-  background-color: #131010; /* Dark background to match */
+  background-color: #000000; /* Black background, blending the logo */
+  border-radius: 8px; /* Optional: rounded corners */
 }
 
 /* Footer */
