@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
-  background-color: #1a1410; /* Deep dark brown (chocolate) */
+  background-color: #1a1410; /* Dark chocolate brown */
   color: #e0d9c4;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #0e0b08; /* Even darker brown */
+  background-color: #0e0b08; /* Very dark brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-bar a:hover {
-  color: #d1b27f; /* Subtle golden hover color */
+  color: #d1b27f;
 }
 
 .language-switcher a {
@@ -47,7 +47,7 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #0e0b08; /* Very dark brown */
+  background-color: #0e0b08;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding: 12px 20px;
@@ -70,7 +70,7 @@ body, html {
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
-  border: 2px solid #d1b27f; /* Subtle golden border */
+  border: 2px solid #d1b27f;
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -89,7 +89,7 @@ header {
   height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark filter for harmony with the image */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to blend with the image */
 }
 
 /* Category Section */
@@ -98,8 +98,10 @@ header {
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
-  background-color: #2e1f17; /* Slightly lighter dark brown to make the categories stand out */
+  background-color: #2a1e18; /* Darker brown background */
   flex-wrap: wrap;
+  border: 2px solid #d1b27f; /* Adding border around the whole category block */
+  border-radius: 8px; /* Slight rounding of the corners for a better look */
 }
 
 .category-button {
@@ -122,7 +124,7 @@ header {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 6px; /* Keeping the image border for individual category items */
 }
 
 .cat-name {
@@ -144,9 +146,9 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #2e1f17; /* Slightly lighter dark brown to make the payment section stand out */
+  background-color: #3d2a23; /* Lighter brown with dark undertones */
   text-align: center;
-  border: 1px solid #333; /* Dark border for a subtle highlight */
+  border: 1px solid #333; /* Border added for distinction */
   border-radius: 8px;
 }
 
@@ -175,14 +177,14 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #2e1f17; /* Slightly lighter dark brown for emphasis */
+  background-color: #2a1e18; /* Dark brown */
   padding: 40px 20px;
   text-align: center;
 }
 
 .impact-info-section h2 {
   font-size: 1.2rem;
-  color: #d1b27f; /* Subtle golden color */
+  color: #d1b27f;
   margin-bottom: 20px;
 }
 
@@ -192,7 +194,7 @@ header {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
-  background-color: #0e0b08; /* Dark brown background */
+  background-color: #0e0b08; /* Dark brown */
   padding: 20px 0;
 }
 
@@ -267,12 +269,7 @@ footer {
 }
 
 #footerText {
-  color: #d1b27f; /* Subtle golden text */
+  color: #d1b27f; /* Subtle golden color */
 }
 
 
-
-
-
-
-  
