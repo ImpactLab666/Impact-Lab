@@ -178,7 +178,7 @@ header {
 
 /* Info Section */
 .impact-info-section {
-  background-color: #000000; /* Black background */
+  background-color: #3c2f2a; /* Dark chocolate background */
   padding: 40px 20px;
   text-align: center;
 }
@@ -256,13 +256,13 @@ header {
   margin-top: 20px;
 }
 
-/* Black background and blending for legal section and logo */
+/* Dark Chocolate background for legal section and logo */
 .impact-info-section {
-  background-color: #000000; /* Black background */
+  background-color: #3c2f2a; /* Dark chocolate background */
 }
 
 .impact-info-section .magic-logo {
-  background-color: #000000; /* Black background, blending the logo */
+  background-color: #3c2f2a; /* Dark chocolate background, blending the logo */
   border-radius: 8px; /* Optional: rounded corners */
 }
 
