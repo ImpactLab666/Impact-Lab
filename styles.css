@@ -87,10 +87,20 @@ body, html {
 /* Header Section */
 header {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Maintains a 16:9 ratio across all screens */
+  height: 100vh;
   background: url('impactlabshop.png') no-repeat center center;
-  background-size: contain; /* Ensures the full image is always visible */
-  background-color: #000; /* Fallback color in case image doesn't load */
+  background-size: cover;
+  background-color: #000;
+}
+
+/* On large screens (desktops), show the full image without cropping */
+@media (min-width: 1200px) {
+  header {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+  }
 }
 
 /* Category Section */
