@@ -85,10 +85,12 @@ body, html {
 
 
 /* Header Section */
-.full-banner {
+header {
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 16 / 9; /* Maintains a 16:9 ratio across all screens */
+  background: url('impactlabshop.png') no-repeat center center;
+  background-size: contain; /* Ensures the full image is always visible */
+  background-color: #000; /* Fallback color in case image doesn't load */
 }
 
 /* Category Section */
