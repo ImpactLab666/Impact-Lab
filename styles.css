@@ -41,7 +41,7 @@ body, html {
   transform: scale(1.1);
 }
 
-/* Navigation Bar */
+/* Middle Navigation Bar */
 .middle-bar {
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ body, html {
   color: #0e0d0d;
 }
 
-/* Header Section - fixed */
+/* Header Section */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -93,42 +93,25 @@ body, html {
   color: white;
 }
 
-.header-bg {
-  background-image: url('impactlabshop.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0;
-  text-align: center;
-}
-
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  
+/* Header background image */
 .header-bg {
   background-image: url('impactlabshop.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh; /* Takes up the full height of the screen */
-  width: 100vw;  /* Takes up the full width of the screen */
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Hide text logo */
 .logo {
-  display: none; /* Hides the "Impact Lab" text in the header */
+  display: none;
 }
 
-/* Navigation links below header */
+/* Navigation links under header */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -163,7 +146,8 @@ body, html {
   }
 
   .header-bg {
-    min-height: 120px;
+    min-height: 300px;
+    height: auto;
     padding: 30px 0;
   }
 
@@ -172,7 +156,7 @@ body, html {
   }
 }
 
-/* Category Section */
+/* Categories Section */
 .category-section {
   display: flex;
   justify-content: center;
@@ -240,7 +224,7 @@ body, html {
   text-transform: uppercase;
 }
 
-/* Payment Section */
+/* Payment Methods Section */
 .payment-methods {
   padding: 40px 20px;
   background-color: #2d2b2b;
@@ -310,15 +294,7 @@ body, html {
   color: #0e0d0d;
 }
 
-.contact-info {
-  margin-top: 20px;
-}
-
-.contact-info a {
-  color: #e0d9c4;
-  text-decoration: none;
-}
-
+/* Social Media & Magic Quote */
 .social-media {
   margin-top: 10px;
   display: flex;
@@ -336,7 +312,6 @@ body, html {
   transform: scale(1.2);
 }
 
-/* Magic Phrase & Logo */
 .magic-phrase {
   margin-top: 40px;
 }
@@ -369,3 +344,7 @@ footer {
 #footerText {
   color: #c9b67d;
 }
+
+
+
+
