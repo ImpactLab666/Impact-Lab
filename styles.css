@@ -41,7 +41,7 @@ body, html {
   transform: scale(1.1);
 }
 
-/* Navigation Bar (Main navigation with icons) */
+/* Navigation Bar */
 .middle-bar {
   display: flex;
   justify-content: center;
@@ -52,9 +52,6 @@ body, html {
   border-bottom: 1px solid #444;
   padding: 12px 20px;
   flex-wrap: wrap;
-  position: absolute; /* Make sure it stays in the top */
-  top: 0;
-  width: 100%;
 }
 
 .middle-bar .nav-item img {
@@ -86,7 +83,7 @@ body, html {
   color: #0e0d0d;
 }
 
-/* Header Section - Fullscreen */
+/* Header Section - fixed */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -94,8 +91,6 @@ body, html {
   width: 100%;
   background-color: #1a1a1a;
   color: white;
-  text-align: center;
-  position: relative;
 }
 
 .header-bg {
@@ -103,31 +98,20 @@ body, html {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh; /* Full height of the screen */
-  width: 100vw; /* Full width of the screen */
+  height: 100vh; /* Takes up the full height of the screen */
+  width: 100vw;  /* Takes up the full width of the screen */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: bold;
   color: white;
-  z-index: 10;
 }
 
-/* Hide navigation items inside header */
-.middle-bar {
-  display: flex; /* Show the navbar items inside the header section */
-  gap: 20px;
-}
-
-/* Navigation links under header */
+/* Navigation links below header */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -144,15 +128,6 @@ body, html {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .middle-bar {
-    display: flex; /* Ensure the navbar is visible on mobile */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-  }
-
   .nav-links {
     display: none;
     flex-direction: column;
