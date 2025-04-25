@@ -156,6 +156,11 @@ body, html {
   }
 }
 
+/* Remove the navigation links on top of the header */
+.middle-bar {
+  display: none; /* Hide these links */
+}
+
 /* Categories Section */
 .category-section {
   display: flex;
@@ -344,6 +349,9 @@ footer {
 #footerText {
   color: #c9b67d;
 }
+
+
+
 
 
 
