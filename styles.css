@@ -85,21 +85,88 @@ body, html {
 
 
 /* Header Section */
-header {
-  width: 100%;
-  height: 100vh;
-  background: url('impactlabshop.png') no-repeat center center;
-  background-size: cover;
-  background-color: #000;
+main-header {
+  display: flex;
+  justify-content: space-between; /* Space out the logo and navigation */
+  align-items: center; /* Vertically center the content */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  width: 100%; /* Full width */
+  max-width: 100%; /* Limit the maximum width of the header */
+  background-color: #1a1a1a;
+  color: white;
 }
 
-/* On large screens (desktops), show the full image without cropping */
-@media (min-width: 1200px) {
-  header {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #000;
+.header-bg {
+  background-image: url('your-image.jpg'); /* Add your background image here */
+  background-size: cover; /* Cover the entire area with the image */
+  background-position: center; /* Center the background image */
+  width: 100%; /* Full width */
+  padding: 50px 0; /* Vertical padding for the header */
+  text-align: center; /* Center align the logo */
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between menu items */
+  padding: 15px 30px;
+  justify-content: center; /* Center the menu horizontally */
+  width: 100%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Burger menu for mobile devices */
+.burger {
+  display: none; /* Initially hidden */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  /* Hide horizontal navigation on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column; /* Stack the menu items vertically */
+    position: absolute;
+    top: 60px; /* Position the menu below the header */
+    width: 100%;
+    background: #1a1a1a;
+    padding: 20px 0;
+  }
+
+  /* Display burger menu button */
+  .burger {
+    display: block; /* Show burger button on mobile */
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Position the burger menu in the top right */
+  }
+
+  /* Only show the logo and background on mobile */
+  .header-bg {
+    padding: 20px 0;
+  }
+
+  /* Limit the header width on mobile */
+  .main-header {
+    width: 100%;
+    max-width: 1200px; /* Limit the header's width */
+    margin: 0 auto; /* Center the header horizontally */
+  }
+
+  .logo {
+    font-size: 20px; /* Reduce the logo size on mobile */
   }
 }
 
