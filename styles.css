@@ -83,7 +83,7 @@ body, html {
   color: #0e0d0d;
 }
 
-/* Header Section - fixed */
+/* Header Section */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -98,17 +98,20 @@ body, html {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh; /* Takes up the full height of the screen */
-  width: 100vw;  /* Takes up the full width of the screen */
+  height: 100vh; /* Full screen height */
+  width: 100vw;  /* Full screen width */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .logo {
   font-size: 30px;
   font-weight: bold;
   color: white;
+  z-index: 1;
 }
 
 /* Navigation links below header */
