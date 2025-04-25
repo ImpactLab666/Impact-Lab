@@ -111,6 +111,21 @@ body, html {
   font-size: 30px;
   font-weight: bold;
   color: white;
+  
+.header-bg {
+  background-image: url('impactlabshop.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Takes up the full height of the screen */
+  width: 100vw;  /* Takes up the full width of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: none; /* Hides the "Impact Lab" text in the header */
 }
 
 /* Navigation links below header */
