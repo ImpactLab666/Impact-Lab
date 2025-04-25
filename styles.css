@@ -83,26 +83,28 @@ body, html {
   color: #0e0d0d;
 }
 
-
-/* Header Section */
-main-header {
+/* Header Section - fixed */
+.main-header {
   display: flex;
-  justify-content: space-between; /* Space out the logo and navigation */
-  align-items: center; /* Vertically center the content */
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  width: 100%; /* Full width */
-  max-width: 100%; /* Limit the maximum width of the header */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   background-color: #1a1a1a;
   color: white;
 }
 
 .header-bg {
-  background-image: url('your-image.jpg'); /* Add your background image here */
-  background-size: cover; /* Cover the entire area with the image */
-  background-position: center; /* Center the background image */
-  width: 100%; /* Full width */
-  padding: 50px 0; /* Vertical padding for the header */
-  text-align: center; /* Center align the logo */
+  background-image: url('impactlabshop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .logo {
@@ -111,11 +113,12 @@ main-header {
   color: white;
 }
 
+/* Navigation links below header */
 .nav-links {
   display: flex;
-  gap: 20px; /* Space between menu items */
+  gap: 20px;
   padding: 15px 30px;
-  justify-content: center; /* Center the menu horizontally */
+  justify-content: center;
   width: 100%;
 }
 
@@ -125,48 +128,32 @@ main-header {
   font-size: 16px;
 }
 
-/* Burger menu for mobile devices */
-.burger {
-  display: none; /* Initially hidden */
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* Styles for mobile devices */
+/* Mobile styles */
 @media (max-width: 768px) {
-  /* Hide horizontal navigation on mobile */
   .nav-links {
     display: none;
-    flex-direction: column; /* Stack the menu items vertically */
+    flex-direction: column;
     position: absolute;
-    top: 60px; /* Position the menu below the header */
+    top: 60px;
     width: 100%;
     background: #1a1a1a;
     padding: 20px 0;
   }
 
-  /* Display burger menu button */
   .burger {
-    display: block; /* Show burger button on mobile */
+    display: block;
     position: absolute;
     top: 20px;
-    right: 20px; /* Position the burger menu in the top right */
+    right: 20px;
   }
 
-  /* Only show the logo and background on mobile */
   .header-bg {
-    padding: 20px 0;
-  }
-
-  /* Limit the header width on mobile */
-  .main-header {
-    width: 100%;
-    max-width: 1200px; /* Limit the header's width */
-    margin: 0 auto; /* Center the header horizontally */
+    min-height: 120px;
+    padding: 30px 0;
   }
 
   .logo {
-    font-size: 20px; /* Reduce the logo size on mobile */
+    font-size: 22px;
   }
 }
 
@@ -181,12 +168,13 @@ main-header {
 }
 
 .category-section h2 {
-  font-size: 2rem;  /* Увеличенный размер шрифта */
-  font-weight: bold; /* Полужирное начертание */
+  font-size: 2rem;
+  font-weight: bold;
   font-family: 'Cinzel', serif;
-  color: #c9b67d; /* Цвет текста */
-  text-align: center;  /* Центрируем текст */
-  margin-bottom: 40px; /* Отступ снизу */
+  color: #c9b67d;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .category-button {
@@ -210,7 +198,7 @@ main-header {
 .category-button img {
   width: 100%;
   height: 180px;
-  object-fit: cover;  /* Обрезка изображений */
+  object-fit: cover;
   border-radius: 6px;
 }
 
@@ -240,7 +228,7 @@ main-header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #201e1e;
+  background-color: #2d2b2b;
   text-align: center;
   border: 2px solid #c9b67d;
   border-radius: 6px;
@@ -324,8 +312,8 @@ main-header {
 }
 
 .social-media img {
-  width: 40px;  /* Увеличиваем размер */
-  height: 40px;  /* Увеличиваем размер */
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s ease;
 }
 
@@ -366,23 +354,3 @@ footer {
 #footerText {
   color: #c9b67d;
 }
-
-/* Custom Style Adjustments */
-.shop-description h2 {
-  font-family: 'Cinzel', serif;
-  text-transform: uppercase;
-}
-
-.impact-info-section h2 {
-  font-family: 'Cinzel', serif;
-}
-
-.payment-methods {
-  background-color: #2d2b2b;
-}
-
-.category-button:hover {
-  transform: scale(1.05);
-  background-color: #2d2b2b;
-}
-
