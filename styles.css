@@ -394,6 +394,70 @@ footer {
 }
 
 
+/* === HEADER IMAGE FIXES === */
+.header-bg {
+  background-image: url('impactlabshop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+/* === REMOVE TEXT LINKS UNDER HEADER === */
+.nav-links {
+  display: none !important;
+}
+
+/* === RESPONSIVE NAVIGATION FIX === */
+@media (max-width: 768px) {
+  .middle-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .middle-bar .nav-item img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .catalog-button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .header-bg {
+    height: 300px; /* reasonable height for mobile */
+  }
+}
+
+/* === FOOTER STYLE RETAINED AND MOBILE-FRIENDLY === */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+
+  .links-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-link {
+    margin: 5px 0;
+  }
+}
+
 
 
 
