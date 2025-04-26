@@ -146,10 +146,11 @@ footer {
 /* Mobile version */
 @media (max-width: 768px) {
   .header-bg {
-    background-size: cover; /* ensures the image covers the area correctly */
-    background-position: center; /* ensures the image is centered */
-    min-height: 150px; /* reduce height slightly for mobile */
+    height: 250px !important;
+    background-size: cover;
+    background-position: center;
   }
+}
 
   .logo {
     font-size: 18px; /* smaller font size for mobile */
