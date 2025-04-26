@@ -1,10 +1,11 @@
- /* General Styles */
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif;
   background-color: #1a1818;
   color: #e0d9c4;
+  scroll-behavior: smooth;
 }
 
 /* Top Bar */
@@ -88,37 +89,38 @@ body, html {
   width: 100%;
   background-color: #0d0d0d;
   overflow: hidden;
-  text-align: center;
-  padding: 20px 0;
+  position: relative;
 }
 
-.logo-wrapper {
-  margin-bottom: 20px;
-}
-
-.impact-logo {
-  width: 150px;
-  height: auto;
+.logo-frame {
+  width: 200px;
+  margin: 20px auto 10px;
   border: 2px solid #c9b67d;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   background-color: #1a1818;
 }
 
-.header-frame {
-  position: relative;
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.header-frame img {
+.logo-frame img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   display: block;
+  opacity: 0.95;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 /* Category Section */
@@ -132,7 +134,7 @@ body, html {
 }
 
 .category-section h2 {
-  font-size: 1.8rem; /* Slightly smaller */
+  font-size: 1.7rem;
   font-weight: bold;
   font-family: 'Cinzel', serif;
   color: #c9b67d;
@@ -196,6 +198,8 @@ body, html {
   text-align: center;
   border: 2px solid #c9b67d;
   border-radius: 6px;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
 .payment-methods h2 {
@@ -227,6 +231,8 @@ body, html {
   padding: 40px 20px;
   text-align: center;
   border-radius: 6px;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
 .impact-info-section h2 {
@@ -260,7 +266,7 @@ body, html {
 }
 
 .social-media {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -276,7 +282,7 @@ body, html {
   transform: scale(1.2);
 }
 
-/* Magic Phrase & Logo */
+/* Magic Phrase and Logo */
 .magic-phrase {
   margin-top: 40px;
 }
@@ -288,7 +294,7 @@ body, html {
 }
 
 .magic-logo {
-  width: 150px;
+  width: 180px;
   height: auto;
   opacity: 0.95;
   margin-top: 20px;
@@ -308,23 +314,6 @@ footer {
 
 #footerText {
   color: #c9b67d;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .impact-logo {
-    width: 120px;
-  }
-  .header-frame {
-    width: 100%;
-  }
-  .category-section {
-    padding: 40px 10px;
-    gap: 20px;
-  }
-  .category-button {
-    width: 140px;
-  }
 }
 
 
