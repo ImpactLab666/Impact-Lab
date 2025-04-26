@@ -84,11 +84,26 @@ body, html {
 }
 
 /* Header Section */
-header {
+.impact-header {
+  width: 100%;
+  background-color: #0d0d0d;
+  overflow: hidden;
+}
+
+.header-frame {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: url('impactlabshop.png') no-repeat center center;
-  background-size: cover;
+  overflow: hidden;
+  border: 8px solid #6d4c41;
+  box-sizing: border-box;
+}
+
+.header-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Category Section */
@@ -102,12 +117,13 @@ header {
 }
 
 .category-section h2 {
-  font-size: 2rem;  /* Увеличенный размер шрифта */
-  font-weight: bold; /* Полужирное начертание */
+  font-size: 2rem;
+  font-weight: bold;
   font-family: 'Cinzel', serif;
-  color: #c9b67d; /* Цвет текста */
-  text-align: center;  /* Центрируем текст */
-  margin-bottom: 40px; /* Отступ снизу */
+  color: #c9b67d;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .category-button {
@@ -131,7 +147,7 @@ header {
 .category-button img {
   width: 100%;
   height: 180px;
-  object-fit: cover;  /* Обрезка изображений */
+  object-fit: cover;
   border-radius: 6px;
 }
 
@@ -161,7 +177,7 @@ header {
 /* Payment Section */
 .payment-methods {
   padding: 40px 20px;
-  background-color: #201e1e;
+  background-color: #2d2b2b;
   text-align: center;
   border: 2px solid #c9b67d;
   border-radius: 6px;
@@ -245,8 +261,8 @@ header {
 }
 
 .social-media img {
-  width: 40px;  /* Увеличиваем размер */
-  height: 40px;  /* Увеличиваем размер */
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s ease;
 }
 
@@ -288,21 +304,7 @@ footer {
   color: #c9b67d;
 }
 
-/* Custom Style Adjustments */
-.shop-description h2 {
-  font-family: 'Cinzel', serif;
-  text-transform: uppercase;
-}
 
-.impact-info-section h2 {
-  font-family: 'Cinzel', serif;
-}
 
-.payment-methods {
-  background-color: #2d2b2b;
-}
 
-.category-button:hover {
-  transform: scale(1.05);
-  background-color: #2d2b2b;
-  }
+  
