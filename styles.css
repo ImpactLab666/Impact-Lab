@@ -83,7 +83,7 @@ body, html {
   color: #0e0d0d;
 }
 
-/* Header Section */
+/* Header Section - fixed */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -91,26 +91,41 @@ body, html {
   width: 100%;
   background-color: #1a1a1a;
   color: white;
+  position: relative;
 }
 
 .header-bg {
   background-image: url('impactlabshop.png');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ensure the image stretches across the screen */
+  background-position: center center; /* Center the image */
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 200px;
+  height: 100vh; /* Make the header cover the full screen height */
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  align-items: center;
+  padding: 0;
   text-align: center;
 }
 
+/* Hide "Impact Lab" text if it's already on the image */
 .logo {
-  font-size: 30px;
-  font-weight: bold;
+  display: none; /* Hide "Impact Lab" text */
+}
+
+/* Center the content on the header image */
+.header-bg .logo {
+  position: absolute; /* Absolute positioning */
+  text-align: center; 
+  font-size: 50px;
   color: white;
+  font-weight: bold;
+  z-index: 1; /* Ensure text is visible above the image */
+}
+
+/* Hide unnecessary footer text */
+footer {
+  display: none;
 }
 
 /* Navigation links below header */
@@ -128,32 +143,16 @@ body, html {
   font-size: 16px;
 }
 
-/* Mobile styles */
+/* Mobile version */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    background: #1a1a1a;
-    padding: 20px 0;
-  }
-
-  .burger {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
   .header-bg {
-    min-height: 120px;
-    padding: 30px 0;
+    background-size: cover; /* ensures the image covers the area correctly */
+    background-position: center; /* ensures the image is centered */
+    min-height: 150px; /* reduce height slightly for mobile */
   }
 
   .logo {
-    font-size: 22px;
+    font-size: 18px; /* smaller font size for mobile */
   }
 }
 
