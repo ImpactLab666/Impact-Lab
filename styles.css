@@ -1,4 +1,4 @@
-/* General Styles */
+ /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -88,33 +88,37 @@ body, html {
   width: 100%;
   background-color: #0d0d0d;
   overflow: hidden;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo-wrapper {
+  margin-bottom: 20px;
+}
+
+.impact-logo {
+  width: 150px;
+  height: auto;
+  border: 2px solid #c9b67d;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #1a1818;
 }
 
 .header-frame {
   position: relative;
-  width: 100%;
-  height: 85vh; /* Made it a bit less than full screen */
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .header-frame img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
-}
-
-/* Logo inside header */
-.header-logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  max-width: 160px;
-  height: auto;
-  border: 2px solid #c9b67d;
-  padding: 6px;
-  background-color: rgba(26, 24, 24, 0.7);
-  border-radius: 8px;
 }
 
 /* Category Section */
@@ -128,7 +132,7 @@ body, html {
 }
 
 .category-section h2 {
-  font-size: 1.6rem; /* Slightly smaller */
+  font-size: 1.8rem; /* Slightly smaller */
   font-weight: bold;
   font-family: 'Cinzel', serif;
   color: #c9b67d;
@@ -306,23 +310,21 @@ footer {
   color: #c9b67d;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
+  .impact-logo {
+    width: 120px;
+  }
   .header-frame {
-    height: 70vh;
+    width: 100%;
   }
-
-  .header-logo {
-    max-width: 120px;
+  .category-section {
+    padding: 40px 10px;
+    gap: 20px;
   }
-
-  .category-section h2 {
-    font-size: 1.4rem;
+  .category-button {
+    width: 140px;
   }
 }
-
-
-
-
 
 
