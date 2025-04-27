@@ -11,40 +11,6 @@ body, html {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Section Transition with Dark Liquid Effect */
-.section-transition {
-  position: relative;
-  margin-bottom: 40px; /* Space between sections */
-}
-
-.section-transition::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px; /* Height of the "liquid" effect */
-  background: linear-gradient(to right, #1a1818, #131010, #1a1818); /* Dark, organic transition */
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow to enhance the depth */
-  animation: liquid-drip 2s infinite ease-in-out; /* Animation for the liquid effect */
-}
-
-@keyframes liquid-drip {
-  0% {
-    transform: scaleX(1) scaleY(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scaleX(1.2) scaleY(1.2); /* Stretching effect */
-    opacity: 0.7;
-  }
-  100% {
-    transform: scaleX(1) scaleY(1);
-    opacity: 1;
-  }
-}
-
 /* Header Section */
 .impact-header {
   width: 100%;
@@ -57,19 +23,6 @@ body, html {
   flex-direction: column; /* Stack logo and header image vertically */
   border-bottom: 1px solid #444; /* A subtle border for a more mysterious vibe */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Soft shadow for depth */
-}
-
-.impact-header::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Adjust based on how much liquid you want to show */
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background: radial-gradient(circle, #1a1818, #131010, #1a1818);
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: liquid-drip 2s infinite ease-in-out; /* Apply animation */
 }
 
 /* Logo container */
@@ -122,6 +75,40 @@ body, html {
   filter: brightness(0.7); /* Slightly darken the image for a more magical and mysterious feel */
 }
 
+/* Section Transition with Dark Liquid Effect (Oil Drip) */
+.section-transition {
+  position: relative;
+  margin-bottom: 40px; /* Space between sections */
+}
+
+.section-transition::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the liquid drip height */
+  left: 0;
+  width: 100%;
+  height: 30px; /* Height of the "liquid" effect */
+  background: linear-gradient(to right, #1a1818, #131010, #1a1818); /* Dark, organic transition */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow to enhance the depth */
+  animation: oil-drip 2s infinite ease-in-out; /* Animation for the oil drip effect */
+}
+
+@keyframes oil-drip {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1.2) scaleY(1.1); /* Slight stretching effect */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+}
+
 /* Category Section */
 .category-section {
   display: flex;
@@ -152,7 +139,7 @@ body, html {
   background: radial-gradient(circle, #1a1818, #131010, #1a1818);
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: liquid-drip 2s infinite ease-in-out; /* Apply animation */
+  animation: oil-drip 2s infinite ease-in-out; /* Apply animation */
 }
 
 /* Payment Methods Section */
@@ -176,7 +163,7 @@ body, html {
   background: radial-gradient(circle, #1a1818, #131010, #1a1818);
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: liquid-drip 2s infinite ease-in-out;
+  animation: oil-drip 2s infinite ease-in-out;
 }
 
 /* Info Section */
@@ -199,7 +186,7 @@ body, html {
   background: radial-gradient(circle, #1a1818, #131010, #1a1818);
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: liquid-drip 2s infinite ease-in-out;
+  animation: oil-drip 2s infinite ease-in-out;
 }
 
 /* Footer */
@@ -217,41 +204,3 @@ footer {
   padding-bottom: 40px;
 }
 
-Что изменилось:
-
-1. Добавлен эффект подтеков между разделами: Каждый блок теперь содержит псевдоэлемент ::after, который создает эффект плавного перехода между разделами (шапка, каталог, о магазине и т. д.) с помощью анимации, как "жидкость", которая подтягивается.
-
-
-2. Псевдоэлементы ::after для всех основных блоков: Для таких секций как impact-header, category-section, shop-description, payment-methods, и impact-info-section добавлены эффекты подтеков, которые создают плавные переходы между этими разделами.
-
-
-3. Градиент и анимация "liquid-drip": Градиент и анимация помогают создать более динамичный, органичный эффект, который выглядит как жидкость или магический поток.
-
-
-
-Применение:
-
-Чтобы использовать эффект между разделами, убедитесь, что классы section-transition применены в HTML-разметке для всех разделов, между которыми вы хотите видеть эффект:
-
-<section class="impact-header section-transition">
-  <!-- Content for the header -->
-</section>
-
-<section class="category-section section-transition">
-  <!-- Content for the category section -->
-</section>
-
-<section class="shop-description section-transition">
-  <!-- Content for the about shop section -->
-</section>
-
-<section class="payment-methods section-transition">
-  <!-- Content for the payment methods section -->
-</section>
-
-<section class="impact-info-section section-transition">
-  <!-- Content for the info section -->
-</section>
-
-
-  
