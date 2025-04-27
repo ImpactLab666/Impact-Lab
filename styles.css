@@ -123,6 +123,8 @@ body, html {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 300px; /* This limits the height of the header image */
+  object-fit: cover;
 }
 
 /* Category Section */
