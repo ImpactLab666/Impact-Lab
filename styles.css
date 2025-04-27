@@ -90,9 +90,9 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #0d0d0d; /* Цвет фона хедера */
+  background-color: #0d0d0d; /* Header background color */
   position: relative;
-  padding-top: 50px; /* Отступ сверху для логотипа */
+  padding-top: 50px; /* Padding top for the logo */
 }
 
 .logo-frame {
@@ -101,10 +101,10 @@ body, html {
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #0d0d0d; /* Тот же цвет, что и фон хедера */
+  background-color: #0d0d0d; /* Same color as header background */
   position: relative;
   z-index: 1;
-  animation: glow 1.5s infinite ease-in-out; /* Логотип с анимацией свечения */
+  animation: glow 1.5s infinite ease-in-out; /* Logo with glow animation */
 }
 
 /* Glowing effect for logo */
@@ -130,7 +130,7 @@ body, html {
 /* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%; /* Картинка хедера растягивается на всю ширину */
+  max-width: 100%; /* Header image stretches to full width */
   margin: 20px auto;
   padding: 0;
 }
@@ -337,3 +337,5 @@ footer {
   padding-bottom: 40px;
 }
 
+
+    
