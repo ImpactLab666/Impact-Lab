@@ -7,6 +7,8 @@ body, html {
   color: #e0d9c4;
   scroll-behavior: smooth;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Предотвращение горизонтальной прокрутки */
 }
 
 /* Top Bar */
@@ -89,17 +91,23 @@ body, html {
 .impact-header {
   width: 100%;
   background-color: #0d0d0d;
-  overflow: hidden;
   position: relative;
+  background-image: url('impactlab-fon.png'); /* Подложка с алхимическими рисунками */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px; /* Отступ сверху для логотипа */
 }
 
 .logo-frame {
   width: 200px;
-  margin: 20px auto 10px;
+  margin: 0 auto;
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
   background-color: #1a1818;
+  position: relative;
+  z-index: 1;
 }
 
 .logo-frame img {
@@ -109,12 +117,12 @@ body, html {
   opacity: 0.95;
 }
 
+/* Header Image */
 .header-image {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%; /* Картинка хедера растягивается на всю ширину */
   margin: 20px auto;
-  overflow: hidden;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .header-image img {
@@ -313,14 +321,9 @@ footer {
   border-top: 1px solid #444;
 }
 
-#footerText {
-  color: #c9b67d;
+/* Fixing the gap between the footer and the previous section */
+.impact-info-section {
+  margin-bottom: 0;
+  padding-bottom: 40px;
 }
-
-/* Fix for background color not stretching to full width */
-.impact-info-section, footer {
-  background-color: #1a1818;
-  width: 100%;
-}
-
 
