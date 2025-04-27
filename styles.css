@@ -96,6 +96,9 @@ body, html {
   position: relative;
   z-index: 1;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Logo (Centered Over Background) */
@@ -251,6 +254,7 @@ body, html {
   border-radius: 6px;
   max-width: 1200px;
   margin: 40px auto;
+  width: 100%; /* Ensure it stretches to full width */
 }
 
 .impact-info-section h2 {
@@ -266,6 +270,8 @@ body, html {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
+  width: 100%; /* Ensure full-width display */
+  justify-content: center; /* Ensure center alignment */
 }
 
 .info-link {
@@ -288,6 +294,7 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 20px;
+  width: 100%; /* Ensure full-width display */
 }
 
 .social-media img {
@@ -329,6 +336,7 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #444;
   color: #e0d9c4;
+  width: 100%; /* Ensure footer spans full width */
 }
 
 /* Fix Background Color Stretch to Footer */
@@ -340,4 +348,5 @@ footer {
 .impact-info-section, footer {
   width: 100%; /* Ensure both blocks stretch to full width */
 }
+
 
