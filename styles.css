@@ -6,6 +6,7 @@ body, html {
   background-color: #1a1818;
   color: #e0d9c4;
   scroll-behavior: smooth;
+  height: 100%; /* Обеспечивает полное покрытие фона */
 }
 
 /* Top Bar */
@@ -87,6 +88,7 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
+  height: 100vh; /* Обеспечивает, что фон заполняет весь экран */
   background-color: #0d0d0d;
   overflow: hidden;
   position: relative;
@@ -110,20 +112,18 @@ body, html {
 
 .header-image {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%; /* Заполняет весь экран */
+  margin: 20px auto;
   overflow: hidden;
-  position: relative;
+  padding: 0 10px;
 }
 
 .header-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+  height: 100%; /* Растягивает изображение по высоте */
+  object-fit: cover; /* Заполняет экран без искажений */
   display: block;
   border-radius: 10px;
-  object-position: center; /* Centers the image */
 }
 
 /* Category Section */
@@ -185,6 +185,7 @@ body, html {
   max-width: 900px;
   margin: auto;
   line-height: 1.7;
+  width: 100%; /* Убирает ограничение max-width на мобильных */
 }
 
 .shop-description h2 {
@@ -192,6 +193,12 @@ body, html {
   font-weight: bold;
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .shop-description {
+    max-width: 100%; /* Убирает ограничение max-width для мобильных */
+  }
 }
 
 /* Payment Section */
@@ -203,6 +210,7 @@ body, html {
   border-radius: 6px;
   max-width: 1000px;
   margin: 40px auto;
+  width: 100%; /* Растягивает на 100% ширины экрана */
 }
 
 .payment-methods h2 {
@@ -236,6 +244,7 @@ body, html {
   border-radius: 6px;
   max-width: 1200px;
   margin: 40px auto;
+  width: 100%; /* Чтобы занимало 100% ширины экрана */
 }
 
 .impact-info-section h2 {
@@ -321,3 +330,4 @@ footer {
 
 
 
+    
