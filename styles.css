@@ -95,12 +95,10 @@ body, html {
 .logo-frame {
   width: 200px;
   margin: 20px auto 10px;
+  border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #c9b67d;
-  background-image: url('impactlab-fon.png');
-  background-size: cover;
-  background-position: center;
+  background-color: #1a1818;
 }
 
 .logo-frame img {
@@ -108,23 +106,20 @@ body, html {
   height: auto;
   display: block;
   opacity: 0.95;
-  border-radius: 6px;
 }
 
-/* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
+  max-width: 1400px;
+  margin: 20px auto;
   overflow: hidden;
+  padding: 0 10px;
 }
 
 .header-image img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -321,65 +316,4 @@ footer {
   color: #c9b67d;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For mobile devices */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    font-size: 0.8rem;
-  }
-
-  .middle-bar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo-frame {
-    width: 150px;
-    margin-top: 15px;
-  }
-
-  .category-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .category-button {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .header-image img {
-    width: 100%;
-  }
-
-  .shop-description {
-    padding: 30px 15px;
-  }
-}
-
-/* For smaller screens (e.g., mobile phones) */
-@media (max-width: 480px) {
-  .top-bar {
-    padding: 10px;
-  }
-
-  .logo-frame {
-    width: 120px;
-    padding: 8px;
-  }
-
-  .middle-bar {
-    gap: 5px;
-  }
-
-  .category-section {
-    padding: 30px 15px;
-  }
-
-  .category-button {
-    width: 100%;
-  }
-}
 
