@@ -1,4 +1,4 @@
- /* General Styles */
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,6 +6,7 @@ body, html {
   background-color: #1a1818;
   color: #e0d9c4;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Top Bar */
@@ -94,11 +95,11 @@ body, html {
 
 .logo-frame {
   width: 200px;
-  margin: 20px auto 15px; /* Увеличил нижнее расстояние */
+  margin: 20px auto 15px; /* Increased the bottom margin */
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #1a1818;
+  background-color: #1a1818; /* Background around the logo matches header image color */
 }
 
 .logo-frame img {
@@ -110,10 +111,9 @@ body, html {
 
 .header-image {
   width: 100%;
-  max-width: 1400px;
-  margin: 20px auto;
-  overflow: hidden;
-  padding: 0 10px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .header-image img {
@@ -121,6 +121,10 @@ body, html {
   height: auto;
   display: block;
   border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Category Section */
