@@ -89,17 +89,17 @@ body, html {
 .impact-header {
   width: 100%;
   background-color: #0d0d0d;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .logo-frame {
   width: 200px;
-  margin: 20px auto 15px; /* Increased the bottom margin */
+  margin: 30px auto;
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #1a1818; /* Background around the logo matches header image color */
+  background-color: #1a1818; /* Background color matches header image */
 }
 
 .logo-frame img {
@@ -109,22 +109,20 @@ body, html {
   opacity: 0.95;
 }
 
+/* Header Image */
 .header-image {
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .header-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
 }
 
 /* Category Section */
