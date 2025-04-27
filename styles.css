@@ -1,4 +1,4 @@
-/* General Styles */
+ /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,9 +6,6 @@ body, html {
   background-color: #1a1818;
   color: #e0d9c4;
   scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden; /* Предотвращение горизонтальной прокрутки */
 }
 
 /* Top Bar */
@@ -90,20 +87,18 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #0d0d0d; /* Цвет фона хедера */
+  background-color: #0d0d0d;
+  overflow: hidden;
   position: relative;
-  padding-top: 50px; /* Отступ сверху для логотипа */
 }
 
 .logo-frame {
   width: 200px;
-  margin: 0 auto;
+  margin: 20px auto 15px; /* Увеличил нижнее расстояние */
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #0d0d0d; /* Тот же цвет, что и фон хедера */
-  position: relative;
-  z-index: 1;
+  background-color: #1a1818;
 }
 
 .logo-frame img {
@@ -113,12 +108,12 @@ body, html {
   opacity: 0.95;
 }
 
-/* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%; /* Картинка хедера растягивается на всю ширину */
+  max-width: 1400px;
   margin: 20px auto;
-  padding: 0;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .header-image img {
@@ -317,13 +312,7 @@ footer {
   border-top: 1px solid #444;
 }
 
-/* Fixing the gap between the footer and the previous section */
-.impact-info-section {
-  margin-bottom: 0;
-  padding-bottom: 40px;
+#footerText {
+  color: #c9b67d;
 }
 
-
-
-
-  
