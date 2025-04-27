@@ -90,21 +90,34 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #000000; /* Deepest black header background */
+  background-color: #000000; /* Deepest black background for header */
   position: relative;
-  padding-top: 50px; /* Top padding for the logo */
+  padding-top: 60px; /* Increased padding for better alignment */
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+  flex-direction: column; /* Stack logo and header image vertically */
+  border-bottom: 1px solid #444; /* A subtle border for a more mysterious vibe */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Soft shadow for depth */
 }
 
-/* Logo container, now with deep black background */
+/* Logo container */
 .logo-frame {
-  width: 200px;
-  margin: 0 auto;
-  border: 2px solid #c9b67d; /* Gold border around logo */
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #000000; /* Deepest black background to match header */
+  width: 160px; /* Adjust size to make it more prominent */
+  margin-bottom: 15px; /* Reduced space between logo and header image */
+  border: 3px solid #c9b67d; /* Gold border, matching the theme */
+  padding: 8px;
+  border-radius: 12px; /* Slightly more rounded corners for a mystic feel */
+  background-color: #000000; /* Deepest black to match the header */
   position: relative;
   z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for extra focus */
+  transition: transform 0.3s ease; /* Adding transition for interaction */
+}
+
+/* Logo hover effect */
+.logo-frame:hover {
+  transform: scale(1.1); /* Slight enlargement for hover interaction */
 }
 
 .logo-frame img {
@@ -118,7 +131,7 @@ body, html {
 .header-image {
   width: 100%;
   max-width: 100%; /* Header image stretches to full width */
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -126,7 +139,8 @@ body, html {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners for the mystical look */
+  filter: brightness(0.7); /* Slightly darken the image for a more magical and mysterious feel */
 }
 
 /* Category Section */
@@ -183,7 +197,7 @@ body, html {
 /* Shop Description */
 .shop-description {
   padding: 40px 20px;
-  background-color: #201e1e;
+  background-color: #1a1818;
   text-align: center;
   max-width: 900px;
   margin: auto;
@@ -233,7 +247,7 @@ body, html {
 
 /* Info Section */
 .impact-info-section {
-  background-color: rgba(0, 0, 50, 0.9); /* Dark blue background */
+  background-color: #131010;
   padding: 40px 20px;
   text-align: center;
   border-radius: 6px;
@@ -316,5 +330,11 @@ footer {
   background-color: #1c1a1a;
   font-size: 0.9rem;
   border-top: 1px solid #444;
+}
+
+/* Fixing the gap between the footer and the previous section */
+.impact-info-section {
+  margin-bottom: 0;
+  padding-bottom: 40px;
 }
 
