@@ -13,27 +13,24 @@ body, html {
 /* Logo Background Section (Above Header) */
 .logo-background {
   width: 100%;
-  background-image: url('path/to/impactlab-fon.png'); /* Specify the path to the background image */
-  background-size: cover; /* Background should cover the entire area */
-  background-position: center; /* Center the background */
+  background-image: url('path/to/impactlab-fon.png'); /* Path to background image */
+  background-size: cover;
+  background-position: center;
   padding: 80px 0; /* Adjust padding to position the logo correctly */
   position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Logo (Centered Over Background) */
 .logo-frame {
   width: 200px;
-  margin: 0 auto; /* Center the logo horizontally */
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
   background-color: #1a1818;
   position: relative;
-  z-index: 2; /* The logo should be on top of the background */
+  z-index: 2;
   text-align: center;
 }
 
@@ -50,13 +47,13 @@ body, html {
   background-color: #0d0d0d;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .header-image {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
   padding: 0;
 }
 
@@ -177,7 +174,6 @@ body, html {
   border-radius: 6px;
   max-width: 1200px;
   margin: 40px auto;
-  width: 100%; /* Ensure it stretches to full width */
 }
 
 .impact-info-section h2 {
@@ -193,8 +189,7 @@ body, html {
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
-  width: 100%; /* Ensure full-width display */
-  justify-content: center; /* Ensure center alignment */
+  width: 100%;
 }
 
 .info-link {
@@ -217,7 +212,7 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 20px;
-  width: 100%; /* Ensure full-width display */
+  width: 100%;
 }
 
 .social-media img {
@@ -259,16 +254,13 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #444;
   color: #e0d9c4;
-  width: 100%; /* Ensure footer spans full width */
+  width: 100%;
 }
 
-/* Fix Background Color Stretch to Footer */
+/* Ensure background color for footer and info section stretches */
 .impact-info-section, footer {
-  background-color: #1a1818; /* Ensure both sections fill the entire screen width */
+  background-color: #1a1818;
+  width: 100%;
 }
 
-/* Ensure footer and info section stretch fully */
-.impact-info-section, footer {
-  width: 100%; /* Ensure both blocks stretch to full width */
-}
 
