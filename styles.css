@@ -103,10 +103,10 @@ body, html {
 
 /* Logo container */
 .logo-frame {
-  width: 160px; /* Adjust size to make it more prominent */
-  margin-bottom: 15px; /* Reduced space between logo and header image */
+  width: 220px; /* Increased size of logo */
+  margin-bottom: 20px; /* Increased space between logo and header image */
   border: 3px solid #c9b67d; /* Gold border, matching the theme */
-  padding: 8px;
+  padding: 10px;
   border-radius: 12px; /* Slightly more rounded corners for a mystic feel */
   background-color: #000000; /* Deepest black to match the header */
   position: relative;
