@@ -90,11 +90,12 @@ body, html {
 .logo-background {
   width: 100%;
   background-image: url('path/to/impactlab-fon.png'); /* Path to your background image */
-  background-size: cover; /* Cover the entire area */
+  background-size: cover; /* Ensure the background covers the area */
   background-position: center;
   padding: 40px 0; /* Adjust padding as needed */
   position: relative;
   z-index: 1;
+  height: auto;
 }
 
 /* Logo (Over Background) */
@@ -106,7 +107,8 @@ body, html {
   border-radius: 8px;
   background-color: #1a1818;
   position: relative;
-  z-index: 2; /* Make sure logo is on top of the background */
+  z-index: 2; /* Ensure logo is over background */
+  text-align: center;
 }
 
 .logo-frame img {
@@ -122,12 +124,11 @@ body, html {
   background-color: #0d0d0d;
   overflow: hidden;
   position: relative;
-  display: block;
 }
 
 .header-image {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%;
   margin: 20px auto;
   overflow: hidden;
   padding: 0 10px;
@@ -326,6 +327,7 @@ footer {
   padding: 20px;
   background-color: #1c1a1a;
   font-size: 0.9rem;
-  border-top: 1px solid #444
+  border-top: 1px solid #444;
+  color: #
 
-    
+  
