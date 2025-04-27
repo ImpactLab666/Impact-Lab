@@ -103,21 +103,34 @@ body, html {
 
 /* Logo container */
 .logo-frame {
-  width: 220px; /* Increased size of logo */
+  width: 280px; /* Increased size of logo */
+  height: 280px;
   margin-bottom: 20px; /* Increased space between logo and header image */
-  border: 3px solid #c9b67d; /* Gold border, matching the theme */
   padding: 10px;
   border-radius: 12px; /* Slightly more rounded corners for a mystic feel */
   background-color: #000000; /* Deepest black to match the header */
   position: relative;
   z-index: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for extra focus */
-  transition: transform 0.3s ease; /* Adding transition for interaction */
+  animation: glow 1.5s infinite ease-in-out; /* Adding glowing animation */
 }
 
 /* Logo hover effect */
 .logo-frame:hover {
   transform: scale(1.1); /* Slight enlargement for hover interaction */
+}
+
+/* Glowing effect for logo */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff, 0 0 30px #c9b67d, 0 0 50px #c9b67d, 0 0 70px #c9b67d;
+  }
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
+  }
 }
 
 .logo-frame img {
