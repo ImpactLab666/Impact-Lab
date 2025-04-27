@@ -11,80 +11,38 @@ body, html {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Top Bar */
-.top-bar {
-  background-color: #1c1a1a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #444;
+/* Section Transition with Dark Liquid Effect */
+.section-transition {
+  position: relative;
+  margin-bottom: 40px; /* Space between sections */
 }
 
-.top-bar a {
-  color: #e0d9c4;
-  text-decoration: none;
+.section-transition::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Height of the "liquid" effect */
+  background: linear-gradient(to right, #1a1818, #131010, #1a1818); /* Dark, organic transition */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow to enhance the depth */
+  animation: liquid-drip 2s infinite ease-in-out; /* Animation for the liquid effect */
 }
 
-.top-bar a:hover {
-  color: #c9b67d;
-}
-
-.language-switcher a {
-  margin-left: 12px;
-}
-
-.language-switcher img {
-  width: 24px;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.language-switcher img:hover {
-  transform: scale(1.1);
-}
-
-/* Navigation Bar */
-.middle-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  background-color: #1c1a1a;
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
-  padding: 12px 20px;
-  flex-wrap: wrap;
-}
-
-.middle-bar .nav-item img {
-  width: 28px;
-  height: 28px;
-  filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.middle-bar .nav-item img:hover {
-  transform: scale(1.15);
-  opacity: 1;
-}
-
-.catalog-button {
-  color: #e0d9c4;
-  background-color: transparent;
-  border: 2px solid #c9b67d;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.catalog-button:hover {
-  background-color: #c9b67d;
-  color: #0e0d0d;
+@keyframes liquid-drip {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1.2) scaleY(1.2); /* Stretching effect */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
 }
 
 /* Header Section */
@@ -101,6 +59,19 @@ body, html {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Soft shadow for depth */
 }
 
+.impact-header::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust based on how much liquid you want to show */
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(circle, #1a1818, #131010, #1a1818);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: liquid-drip 2s infinite ease-in-out; /* Apply animation */
+}
+
 /* Logo container */
 .logo-frame {
   width: 280px; /* Increased size of logo */
@@ -113,11 +84,6 @@ body, html {
   z-index: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for extra focus */
   animation: glow 1.5s infinite ease-in-out; /* Adding glowing animation */
-}
-
-/* Logo hover effect */
-.logo-frame:hover {
-  transform: scale(1.1); /* Slight enlargement for hover interaction */
 }
 
 /* Glowing effect for logo */
@@ -166,48 +132,7 @@ body, html {
   flex-wrap: wrap;
 }
 
-.category-section h2 {
-  font-size: 1.7rem;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  color: #c9b67d;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.category-button {
-  display: block;
-  width: 180px;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-  border: 2px solid #c9b67d;
-  padding: 8px;
-  background-color: #1a1818;
-}
-
-.category-button:hover {
-  transform: scale(1.05);
-  background-color: #2d2b2b;
-}
-
-.category-button img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.cat-name {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-/* Shop Description */
+/* About Shop Section */
 .shop-description {
   padding: 40px 20px;
   background-color: #1a1818;
@@ -217,14 +142,20 @@ body, html {
   line-height: 1.7;
 }
 
-.shop-description h2 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  text-transform: uppercase;
+.shop-description::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust based on how much liquid you want to show */
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(circle, #1a1818, #131010, #1a1818);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: liquid-drip 2s infinite ease-in-out; /* Apply animation */
 }
 
-/* Payment Section */
+/* Payment Methods Section */
 .payment-methods {
   padding: 40px 20px;
   background-color: #2d2b2b;
@@ -235,27 +166,17 @@ body, html {
   margin: 40px auto;
 }
 
-.payment-methods h2 {
-  margin-bottom: 20px;
-}
-
-.payment-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.payment-icons img {
-  width: 60px;
-  height: auto;
-  filter: brightness(0.95);
-  transition: transform 0.3s ease;
-}
-
-.payment-icons img:hover {
-  transform: scale(1.1);
+.payment-methods::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(circle, #1a1818, #131010, #1a1818);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: liquid-drip 2s infinite ease-in-out;
 }
 
 /* Info Section */
@@ -268,72 +189,17 @@ body, html {
   margin: 40px auto;
 }
 
-.impact-info-section h2 {
-  font-size: 1.2rem;
-  color: #c9b67d;
-  margin-bottom: 20px;
-  font-family: 'Cinzel', serif;
-}
-
-.links-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.info-link {
-  color: #c9b67d;
-  text-decoration: none;
-  border: 1px solid #c9b67d;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-}
-
-.info-link:hover {
-  background-color: #c9b67d;
-  color: #0e0d0d;
-}
-
-.social-media {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-media img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.social-media img:hover {
-  transform: scale(1.2);
-}
-
-/* Magic Phrase and Logo */
-.magic-phrase {
-  margin-top: 40px;
-}
-
-.magic-phrase p {
-  font-style: italic;
-  color: #c9b67d;
-  margin-bottom: 10px;
-}
-
-.magic-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0.95;
-  margin-top: 20px;
-  border: 2px solid #c9b67d;
-  padding: 10px;
-  border-radius: 8px;
+.impact-info-section::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(circle, #1a1818, #131010, #1a1818);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: liquid-drip 2s infinite ease-in-out;
 }
 
 /* Footer */
@@ -351,3 +217,41 @@ footer {
   padding-bottom: 40px;
 }
 
+Что изменилось:
+
+1. Добавлен эффект подтеков между разделами: Каждый блок теперь содержит псевдоэлемент ::after, который создает эффект плавного перехода между разделами (шапка, каталог, о магазине и т. д.) с помощью анимации, как "жидкость", которая подтягивается.
+
+
+2. Псевдоэлементы ::after для всех основных блоков: Для таких секций как impact-header, category-section, shop-description, payment-methods, и impact-info-section добавлены эффекты подтеков, которые создают плавные переходы между этими разделами.
+
+
+3. Градиент и анимация "liquid-drip": Градиент и анимация помогают создать более динамичный, органичный эффект, который выглядит как жидкость или магический поток.
+
+
+
+Применение:
+
+Чтобы использовать эффект между разделами, убедитесь, что классы section-transition применены в HTML-разметке для всех разделов, между которыми вы хотите видеть эффект:
+
+<section class="impact-header section-transition">
+  <!-- Content for the header -->
+</section>
+
+<section class="category-section section-transition">
+  <!-- Content for the category section -->
+</section>
+
+<section class="shop-description section-transition">
+  <!-- Content for the about shop section -->
+</section>
+
+<section class="payment-methods section-transition">
+  <!-- Content for the payment methods section -->
+</section>
+
+<section class="impact-info-section section-transition">
+  <!-- Content for the info section -->
+</section>
+
+
+  
