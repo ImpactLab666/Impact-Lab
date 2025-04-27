@@ -90,7 +90,7 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #0d0d0d; /* Deep black header background */
+  background-color: #000000; /* Deepest black header background */
   position: relative;
   padding-top: 50px; /* Top padding for the logo */
 }
@@ -102,7 +102,7 @@ body, html {
   border: 2px solid #c9b67d; /* Gold border around logo */
   padding: 10px;
   border-radius: 8px;
-  background-color: #0d0d0d; /* Deep black background matching header */
+  background-color: #000000; /* Deepest black background to match header */
   position: relative;
   z-index: 1;
 }
@@ -318,6 +318,3 @@ footer {
   border-top: 1px solid #444;
 }
 
-
-
- 
