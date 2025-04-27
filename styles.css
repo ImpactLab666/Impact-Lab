@@ -286,27 +286,6 @@ body, html {
   transform: scale(1.2);
 }
 
-/* Magic Phrase and Logo */
-.magic-phrase {
-  margin-top: 40px;
-}
-
-.magic-phrase p {
-  font-style: italic;
-  color: #c9b67d;
-  margin-bottom: 10px;
-}
-
-.magic-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0.95;
-  margin-top: 20px;
-  border: 2px solid #c9b67d;
-  padding: 10px;
-  border-radius: 8px;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -320,3 +299,7 @@ footer {
   color: #c9b67d;
 }
 
+
+
+
+  
