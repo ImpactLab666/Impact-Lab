@@ -8,7 +8,7 @@ body, html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* Предотвращение горизонтальной прокрутки */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Top Bar */
@@ -90,20 +90,34 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #0d0d0d; /* Цвет фона хедера */
+  background-color: #0d0d0d; /* Header background color */
   position: relative;
-  padding-top: 50px; /* Отступ сверху для логотипа */
+  padding-top: 50px; /* Top padding for the logo */
 }
 
+/* Logo container, adding dark space */
 .logo-frame {
   width: 200px;
   margin: 0 auto;
   border: 2px solid #c9b67d;
   padding: 10px;
   border-radius: 8px;
-  background-color: #0d0d0d; /* Тот же цвет, что и фон хедера */
+  background-color: #0d0d0d; /* Same color as header background */
   position: relative;
   z-index: 1;
+}
+
+/* Semi-transparent overlay to darken the area around the logo */
+.logo-frame::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+  border-radius: 10px;
+  z-index: -1; /* Ensures it doesn’t cover the logo */
 }
 
 .logo-frame img {
@@ -116,7 +130,7 @@ body, html {
 /* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%; /* Картинка хедера растягивается на всю ширину */
+  max-width: 100%; /* Header image stretches to full width */
   margin: 20px auto;
   padding: 0;
 }
@@ -323,7 +337,3 @@ footer {
   padding-bottom: 40px;
 }
 
-
-
-
-  
