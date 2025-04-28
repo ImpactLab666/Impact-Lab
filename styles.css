@@ -45,38 +45,83 @@ body, html {
   transform: scale(1.1);
 }
 
-/* Header Section */
-.impact-header {
-  width: 100%;
-  background-color: #000000;
-  position: relative;
-  padding-top: 60px;
+/* Navigation Bar */
+.middle-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 25px;
+  background-color: #1c1a1a;
+  border-top: 1px solid #444;
   border-bottom: 1px solid #444;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
+.middle-bar .nav-item img {
+  width: 28px;
+  height: 28px;
+  filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.middle-bar .nav-item img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.catalog-button {
+  color: #e0d9c4;
+  background-color: transparent;
+  border: 2px solid #c9b67d;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: #c9b67d;
+  color: #0e0d0d;
+}
+
+/* Header Section */
+.impact-header {
+  width: 100%;
+  background-color: #000000; /* Deepest black background for header */
+  position: relative;
+  padding-top: 60px; /* Increased padding for better alignment */
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+  flex-direction: column; /* Stack logo and header image vertically */
+  border-bottom: 1px solid #444; /* A subtle border for a more mysterious vibe */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Soft shadow for depth */
+}
+
+/* Logo container */
 .logo-frame {
-  width: 280px;
-  margin-bottom: 20px;
-  border: 4px solid #c9b67d;
+  width: 280px; /* Larger size of logo */
+  margin-bottom: 20px; /* Increased space between logo and header image */
+  border: 4px solid #c9b67d; /* Gold border, matching the theme */
   padding: 15px;
-  border-radius: 12px;
-  background-color: #000000;
+  border-radius: 12px; /* Slightly more rounded corners for a mystic feel */
+  background-color: #000000; /* Deepest black to match the header */
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  animation: glow 1.5s infinite ease-in-out;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Subtle shadow for extra focus */
+  animation: glow 1.5s infinite ease-in-out; /* Adding glowing animation */
+  transition: transform 0.3s ease; /* Adding transition for interaction */
 }
 
+/* Logo hover effect */
 .logo-frame:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Slight enlargement for hover interaction */
 }
 
+/* Glowing effect for logo */
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
@@ -89,6 +134,7 @@ body, html {
   }
 }
 
+/* Logo image */
 .logo-frame img {
   width: 100%;
   height: auto;
@@ -96,9 +142,10 @@ body, html {
   opacity: 0.95;
 }
 
+/* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%;
+  max-width: 100%; /* Header image stretches to full width */
   margin: 0 auto;
   padding: 0;
 }
@@ -107,63 +154,28 @@ body, html {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
-  filter: brightness(0.7);
+  border-radius: 10px; /* Rounded corners for the mystical look */
+  filter: brightness(0.7); /* Slightly darken the image for a more magical and mysterious feel */
   transition: filter 0.3s ease-in-out;
 }
 
+/* Header image hover effect */
 .header-image:hover img {
-  filter: brightness(1);
+  filter: brightness(1); /* Lighter on hover */
 }
 
-/* Magic Slider */
-.magic-slider {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.slider-images {
-  display: flex;
-  width: 300%; /* 3 slides */
-  transition: transform 1s ease-in-out;
-}
-
-.perfume-slide {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-.perfume-slide img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.slider-button.prev {
-  left: 10px;
-}
-
-.slider-button.next {
-  right: 10px;
+/* New Header Title (Centered and below the header) */
+.header-title {
+  text-align: center;
+  font-size: 2.5rem; /* Larger size for this title */
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: #c9b67d;
+  margin-top: 30px; /* Spacing from the header */
+  margin-bottom: 40px; /* Spacing for the content below */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
 }
 
 /* Category Section */
@@ -361,5 +373,68 @@ footer {
   padding-bottom: 40px;
 }
 
+/* Slider Styles */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.slider-images {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.perfume-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+/* Optional: Add a fade effect for the slider transitions */
+.slider-images.fade .perfume-slide {
+  animation: fadeIn 5s infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+ 
 
   
