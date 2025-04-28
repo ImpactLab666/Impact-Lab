@@ -92,7 +92,3 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('.slider-button.prev')?.addEventListener('click', () => moveSlide(-1));
 });
 
- 
-
-
-
