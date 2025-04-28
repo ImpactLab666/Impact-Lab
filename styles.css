@@ -164,25 +164,6 @@ body, html {
   filter: brightness(1); /* Lighter on hover */
 }
 
-/* Top Perfumes Title */
-.top-perfumes {
-  background-color: #1a1818;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #444;
-}
-
-.top-perfumes-title {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  color: #c9b67d; /* Golden color for the text */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #c9b67d, 0 0 20px #c9b67d;
-}
-
 /* Category Section */
 .category-section {
   display: flex;
@@ -380,8 +361,3 @@ footer {
 
 
 
-
-
-
-
-  
