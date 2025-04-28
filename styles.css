@@ -164,6 +164,20 @@ body, html {
   filter: brightness(1); /* Lighter on hover */
 }
 
+/* New Header Title (Centered and below the header) */
+.header-title {
+  text-align: center;
+  font-size: 2.5rem; /* Larger size for this title */
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: #c9b67d;
+  margin-top: 30px; /* Spacing from the header */
+  margin-bottom: 40px; /* Spacing for the content below */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
 /* Category Section */
 .category-section {
   display: flex;
@@ -358,6 +372,8 @@ footer {
   margin-bottom: 0;
   padding-bottom: 40px;
 }
+
+
 
 
 
