@@ -1,4 +1,4 @@
-// Translations for the headers
+// Language translations
 const translationsHeader = {
     en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
     de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
@@ -6,7 +6,6 @@ const translationsHeader = {
     ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
 };
 
-// Translations for the content
 const translationsContent = {
     en: {
         enter: "Enter Catalog",
