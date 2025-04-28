@@ -176,7 +176,7 @@ body, html {
   font-size: 2rem;
   font-weight: bold;
   font-family: 'Cinzel', serif;
-  color: #c9b67d;
+  color: #c9b67d; /* Golden color for the text */
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 40px;
@@ -379,3 +379,9 @@ footer {
 }
 
 
+
+
+
+
+
+  
