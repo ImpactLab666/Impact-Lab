@@ -67,31 +67,3 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
     });
 });
 
-// Slider logic
-let slideIndex = 0;
-
-// Function to show the current slide
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slider-images .perfume-slide');
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-}
-
-// Function to move the slide forward or backward
-function moveSlide(step) {
-    const slides = document.querySelectorAll('.slider-images .perfume-slide');
-    slideIndex = (slideIndex + step + slides.length) % slides.length;
-    showSlide(slideIndex);
-}
-
-// Initialization and interval for automatic slider movement
-document.addEventListener("DOMContentLoaded", () => {
-    showSlide(slideIndex); // Show the first slide on load
-    setInterval(() => moveSlide(1), 5000); // Change slide every 5 seconds
-
-    // Event listeners for slider buttons
-    document.querySelector('.slider-button.next')?.addEventListener('click', () => moveSlide(1));
-    document.querySelector('.slider-button.prev')?.addEventListener('click', () => moveSlide(-1));
-});
-
