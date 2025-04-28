@@ -377,23 +377,38 @@ footer {
 .slider-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 30px auto;
+  max-width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-images {
+  width: 100%;
+  max-width: 800px;
   display: flex;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .perfume-slide {
   display: none;
   width: 100%;
-  height: auto;
-  transition: opacity 1s ease;
 }
 
+.perfume-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+}
+
+.perfume-slide img:hover {
+  filter: brightness(1);
+}
+
+/* Slider Buttons */
 .slider-button {
   position: absolute;
   top: 50%;
@@ -402,9 +417,7 @@ footer {
   color: #fff;
   border: none;
   padding: 10px;
-  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 10;
 }
 
 .slider-button.prev {
@@ -415,26 +428,8 @@ footer {
   right: 10px;
 }
 
-/* Optional: Add a fade effect for the slider transitions */
-.slider-images.fade .perfume-slide {
-  animation: fadeIn 5s infinite;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
 
 
-
- 
 
   
