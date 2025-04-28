@@ -1,98 +1,103 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Инициализация слайдера
-    let slideIndex = 0;
+const translationsHeader = {
+    en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
+    de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
+    ua: { title: "Імпакт Лаб", subtitle: "Алхімічна Парфумерна Крамниця" },
+    ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
+};
 
-    function showSlides(n) {
-        const slides = document.querySelectorAll('.perfume-slide');
-        if (n >= slides.length) slideIndex = 0;
-        if (n < 0) slideIndex = slides.length - 1;
-
-        // Скрываем все слайды
-        slides.forEach(slide => slide.style.display = 'none');
-
-        // Показываем текущий слайд
-        slides[slideIndex].style.display = 'block';
+const translationsContent = {
+    en: {
+        enter: "Enter Catalog",
+        women: "Women's Perfumes",
+        men: "Men's Perfumes",
+        unisex: "Unisex Perfumes",
+        gifts: "Magical Gifts",
+        jewelry: "Jewelry",
+        footer: "© 2025 Impact Lab. All rights reserved."
+    },
+    ru: {
+        enter: "Войти в каталог",
+        women: "Женские духи",
+        men: "Мужские духи",
+        unisex: "Унисекс духи",
+        gifts: "Магические подарки",
+        jewelry: "Украшения",
+        footer: "© 2025 Impact Lab. Все права защищены."
+    },
+    ua: {
+        enter: "Увійти в каталог",
+        women: "Жіночі парфуми",
+        men: "Чоловічі парфуми",
+        unisex: "Унісекс парфуми",
+        gifts: "Магічні подарунки",
+        jewelry: "Прикраси",
+        footer: "© 2025 Impact Lab. Всі права захищені."
+    },
+    de: {
+        enter: "Katalog betreten",
+        women: "Düfte für Frauen",
+        men: "Düfte für Männer",
+        unisex: "Unisex Düfte",
+        gifts: "Magische Geschenke",
+        jewelry: "Schmuck",
+        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
     }
+};
 
-    function moveSlide(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Инициализация слайдера при загрузке страницы
-    showSlides(slideIndex);
-
-    // Переключение слайдов автоматически
-    setInterval(() => {
-        moveSlide(1);
-    }, 5000); // Слайд меняется каждые 5 секунд
-
-    // Переключение языков
-    const languageLinks = document.querySelectorAll('.language-switcher a');
-
-    languageLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = e.target.dataset.lang;
-
-            // Сохраняем выбранный язык в localStorage
-            localStorage.setItem('lang', lang);
-
-            // Перезагружаем страницу для применения изменений
-            location.reload();
-        });
+// Language switching function
+function switchLanguage(lang) {
+    const t = translationsContent[lang];
+    document.getElementById('enterButton')?.textContent = t.enter;
+    document.querySelectorAll('.cat-name').forEach(span => {
+        const key = span.getAttribute('data-key');
+        if (t[key]) span.textContent = t[key];
     });
+    document.getElementById('footerText').textContent = t.footer;
+    // Update the header titles as well
+    document.getElementById('main-title').textContent = translationsHeader[lang].title;
+    document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
+}
 
-    // Функция для получения текущего языка
-    function getLanguage() {
-        const lang = localStorage.getItem('lang');
-        return lang ? lang : 'en'; // Если язык не выбран, по умолчанию 'en'
-    }
-
-    // Применение языка ко всем элементам на странице
-    const currentLang = getLanguage();
-    const elements = document.querySelectorAll('[data-lang-text]');
-
-    const translations = {
-        en: {
-            "home": "Home",
-            "catalog": "Catalog",
-            "about": "About Us",
-            "privacy-policy": "Privacy Policy",
-            "shipping-policy": "Shipping and Delivery Policy",
-            "contact": "Contact"
-        },
-        ua: {
-            "home": "Головна",
-            "catalog": "Каталог",
-            "about": "Про нас",
-            "privacy-policy": "Політика конфіденційності",
-            "shipping-policy": "Політика доставки та доставки",
-            "contact": "Контакт"
-        },
-        ru: {
-            "home": "Главная",
-            "catalog": "Каталог",
-            "about": "О нас",
-            "privacy-policy": "Политика конфиденциальности",
-            "shipping-policy": "Политика доставки",
-            "contact": "Контакт"
-        },
-        de: {
-            "home": "Startseite",
-            "catalog": "Katalog",
-            "about": "Über uns",
-            "privacy-policy": "Datenschutz",
-            "shipping-policy": "Versand- und Lieferpolitik",
-            "contact": "Kontakt"
-        }
-    };
-
-    // Применяем переводы для всех элементов, которые имеют атрибут data-lang-text
-    elements.forEach(element => {
-        const textKey = element.getAttribute('data-lang-text');
-        if (translations[currentLang] && translations[currentLang][textKey]) {
-            element.textContent = translations[currentLang][textKey];
-        }
+// Event listener for language selection
+document.querySelectorAll('.language-switcher a').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = btn.getAttribute('data-lang');
+        switchLanguage(lang);
     });
 });
+
+// Slider logic
+let slideIndex = 0;
+
+// Function to show the current slide
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slider-images .perfume-slide');
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+// Function to move the slide forward or backward
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.slider-images .perfume-slide');
+    slideIndex = (slideIndex + step + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
+
+// Initialization and interval for automatic slider movement
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide(slideIndex); // Show the first slide on load
+    setInterval(() => moveSlide(1), 5000); // Change slide every 5 seconds
+
+    // Event listeners for slider buttons
+    document.querySelector('.slider-button.next')?.addEventListener('click', () => moveSlide(1));
+    document.querySelector('.slider-button.prev')?.addEventListener('click', () => moveSlide(-1));
+});
+
+
+
+ 
+
+
 
