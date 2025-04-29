@@ -1,4 +1,4 @@
-/* General Styles */
+ /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -167,7 +167,7 @@ body, html {
 /* New Header Title (Centered and below the header) */
 .header-title {
   text-align: center;
-  font-size: 2.5rem; /* Larger size for this title */
+  font-size: 2rem; /* Reduced from 2.5rem */
   font-weight: bold;
   font-family: 'Cinzel', serif;
   color: #c9b67d;
@@ -330,107 +330,35 @@ body, html {
 .social-media img {
   width: 40px;
   height: 40px;
+  filter: brightness(0.9);
   transition: transform 0.3s ease;
 }
 
 .social-media img:hover {
-  transform: scale(1.2);
-}
-
-/* Magic Phrase and Logo */
-.magic-phrase {
-  margin-top: 40px;
-}
-
-.magic-phrase p {
-  font-style: italic;
-  color: #c9b67d;
-  margin-bottom: 10px;
-}
-
-.magic-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0.95;
-  margin-top: 20px;
-  border: 2px solid #c9b67d;
-  padding: 10px;
-  border-radius: 8px;
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
-  text-align: center;
+  background-color: #201e1e;
+  color: #e0d9c4;
   padding: 20px;
-  background-color: #1c1a1a;
+  text-align: center;
   font-size: 0.9rem;
   border-top: 1px solid #444;
+  margin-top: 40px;
 }
 
-/* Fixing the gap between the footer and the previous section */
-.impact-info-section {
-  margin-bottom: 0;
-  padding-bottom: 40px;
+footer a {
+  color: #c9b67d;
+  text-decoration: none;
 }
 
-/* Swiper Styles */
-.swiper-container {
-  width: 100%;
-  max-width: 100%;
-  padding: 20px 0;
-  position: relative;
+footer a:hover {
+  color: #e0d9c4;
 }
 
-.swiper-wrapper {
-  display: flex;
-  transition-timing-function: ease;
+footer p {
+  margin: 10px 0;
 }
 
-.swiper-slide {
-  width: 100%;
-  height: auto;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  filter: brightness(0.7);
-  transition: filter 0.3s ease-in-out;
-}
-
-.swiper-slide img:hover {
-  filter: brightness(1);
-}
-
-/* Swiper Buttons */
-.swiper-button-next, .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.swiper-button-next {
-  right: 10px;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
-.swiper-pagination-bullet {
-  background-color: #c9b67d;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #e0d9c4;
-}
-
-
-
-  
