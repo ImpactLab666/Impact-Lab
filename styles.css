@@ -408,8 +408,8 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Темный фон кнопок */
-  color: #c9b67d; /* Цвет стрелок */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background for buttons */
+  color: #c9b67d; /* Arrow color */
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -419,21 +419,14 @@ footer {
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Темнее на ховер */
-  transform: scale(1.1); /* Увеличение кнопки при наведении */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  transform: scale(1.1); /* Button scale on hover */
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 1.5rem; /* Размер стрелок */
-  color: #c9b67d; /* Цвет стрелок */
+  font-size: 1.5rem; /* Size of arrows */
+  color: #c9b67d; /* Arrow color */
 }
 
-/* Swiper Pagination (точки слайдера) */
-.swiper-pagination-bullet {
-  background-color: #c9b67d; /* Цвет точек слайдера */
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #e0d9c4; /* Цвет активной точки */
-}
+/* Swiper Pagination (dots)
 
