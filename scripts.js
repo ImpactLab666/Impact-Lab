@@ -67,37 +67,27 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
     });
 });
 
-// Slider logic
-let slideIndex = 0;
-
-// Function to show the current slide
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slider-images .perfume-slide');
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-}
-
-// Function to move the slide forward or backward
-function moveSlide(step) {
-    const slides = document.querySelectorAll('.slider-images .perfume-slide');
-    slideIndex = (slideIndex + step + slides.length) % slides.length;
-    showSlide(slideIndex);
-}
-
-// Initialization and interval for automatic slider movement
+// Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
-    showSlide(slideIndex); // Show the first slide on load
-    setInterval(() => moveSlide(1), 5000); // Change slide every 5 seconds
+    // Initialize Swiper with specific settings
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // Enable looping of slides
+        autoplay: {
+            delay: 5000, // 5 seconds delay for auto-sliding
+            disableOnInteraction: false, // Continue autoplay even after user interaction
+        },
+        navigation: {
+            nextEl: '.swiper-button-next', // Next slide button
+            prevEl: '.swiper-button-prev', // Previous slide button
+        },
+        pagination: {
+            el: '.swiper-pagination', // Pagination dots (optional)
+            clickable: true,
+        },
+        effect: 'fade', // Smooth fading effect between slides
+    });
 
-    // Event listeners for slider buttons
-    document.querySelector('.slider-button.next')?.addEventListener('click', () => moveSlide(1));
-    document.querySelector('.slider-button.prev')?.addEventListener('click', () => moveSlide(-1));
+    // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
-
-
-
- 
-
 
 
