@@ -1,173 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impact Lab | Alchemical Perfume Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #1a1818;
-      color: #e0d9c4;
-    }
-
-    .top-bar {
-      background-color: #111;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .middle-bar {
-      background-color: #222;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .nav-item {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    .impact-header {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #000;
-    }
-
-    .logo-frame img {
-      width: 200px;
-    }
-
-    .header-image img {
-      max-width: 100%;
-      border-radius: 12px;
-      filter: brightness(0.7);
-    }
-
-    h1 {
-      color: #c9b67d;
-      font-size: 2rem;
-      margin-top: 20px;
-    }
-
-    .slider-container {
-      padding: 40px 0;
-      background-color: #201e1e;
-    }
-
-    .swiper-container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      position: relative;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .caption {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #c9b67d;
-      font-size: 1.2rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #c9b67d;
-    }
-
-    .category-section {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .category-button {
-      display: inline-block;
-      margin: 10px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .category-button img {
-      width: 200px;
-      border-radius: 12px;
-    }
-
-    .category-button .cat-name {
-      display: block;
-      margin-top: 10px;
-      font-size: 1.2rem;
-    }
-
-    .shop-description {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .payment-methods {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .payment-icons img {
-      margin: 10px;
-      width: 50px;
-    }
-
-    .impact-info-section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .info-link {
-      display: inline-block;
-      margin: 10px;
-      color: #c9b67d;
-      text-decoration: none;
-    }
-
-    .social-media img {
-      width: 40px;
-      margin: 10px;
-    }
-
-    .magic-phrase {
-      margin-top: 20px;
-    }
-
-    .magic-logo {
-      width: 100px;
-      margin-top: 20px;
-    }
-
-    footer {
-      padding: 20px;
-      text-align: center;
-      background-color: #1c1a1a;
-      color: #e0d9c4;
-    }
-  </style>
 </head>
 <body>
 
@@ -206,26 +44,24 @@
     <h1>Elixirs of Essence: Top Perfumes Revealed</h1>
   </header>
 
-  <!-- Swiper Slider Section -->
+  <!-- Slider Section -->
   <section class="slider-container">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="perfum.jpg" alt="Perfume 1">
-          <div class="caption">Magical Elixir</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="perfum1.jpg" alt="Perfume 2">
-          <div class="caption">Royal Essence</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="perfum2.jpg" alt="Perfume 3">
-          <div class="caption">Sensual Aura</div>
-        </div>
+    <div class="slider">
+      <div class="slide">
+        <img src="slide1.jpg" alt="Slide 1">
+        <div class="caption">Magical Elixir</div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="slide">
+        <img src="slide2.jpg" alt="Slide 2">
+        <div class="caption">Royal Essence</div>
+      </div>
+      <div class="slide">
+        <img src="slide3.jpg" alt="Slide 3">
+        <div class="caption">Sensual Aura</div>
+      </div>
     </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </section>
 
   <!-- Categories Section -->
@@ -318,21 +154,9 @@
   </footer>
 
   <script src="scripts.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000, // 5 секунд
-      },
-    });
-  </script>
 </body>
 </html>
 
 
-    
+
+        
