@@ -373,30 +373,25 @@ footer {
   padding-bottom: 40px;
 }
 
-/* Slider Styles */
-.slider-container {
-  position: relative;
+/* Swiper Styles */
+.swiper-container {
   width: 100%;
   max-width: 100%;
-  margin: 20px 0;
+  padding: 20px 0;
+  position: relative;
+}
+
+.swiper-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  transition-timing-function: ease;
 }
 
-.slider-images {
+.swiper-slide {
   width: 100%;
-  max-width: 800px;
-  display: flex;
-  overflow: hidden;
+  height: auto;
 }
 
-.perfume-slide {
-  display: none;
-  width: 100%;
-}
-
-.perfume-slide img {
+.swiper-slide img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -404,12 +399,12 @@ footer {
   transition: filter 0.3s ease-in-out;
 }
 
-.perfume-slide img:hover {
+.swiper-slide img:hover {
   filter: brightness(1);
 }
 
-/* Slider Buttons */
-.slider-button {
+/* Swiper Buttons */
+.swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -420,16 +415,22 @@ footer {
   cursor: pointer;
 }
 
-.slider-button.prev {
-  left: 10px;
-}
-
-.slider-button.next {
+.swiper-button-next {
   right: 10px;
 }
 
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c9b67d;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e0d9c4;
+}
 
 
 
-
-    
+  
