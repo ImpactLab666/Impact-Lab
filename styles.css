@@ -430,3 +430,15 @@ footer {
 
 /* Swiper Pagination (dots)
 
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide figcaption {
+  color: #c9b67d;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
