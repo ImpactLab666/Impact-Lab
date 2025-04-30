@@ -8,7 +8,7 @@ body, html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 /* Top Bar */
@@ -71,6 +71,7 @@ body, html {
   opacity: 1;
 }
 
+/* Catalog Button */
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
@@ -90,38 +91,35 @@ body, html {
 /* Header Section */
 .impact-header {
   width: 100%;
-  background-color: #000000; /* Deepest black background for header */
+  background-color: #000000;
   position: relative;
-  padding-top: 60px; /* Increased padding for better alignment */
+  padding-top: 60px;
   display: flex;
-  justify-content: center; /* Center the logo horizontally */
-  align-items: center; /* Center the logo vertically */
-  flex-direction: column; /* Stack logo and header image vertically */
-  border-bottom: 1px solid #444; /* A subtle border for a more mysterious vibe */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Soft shadow for depth */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
-/* Logo container */
 .logo-frame {
-  width: 280px; /* Larger size of logo */
-  margin-bottom: 20px; /* Increased space between logo and header image */
-  border: 4px solid #c9b67d; /* Gold border, matching the theme */
+  width: 280px;
+  margin-bottom: 20px;
+  border: 4px solid #c9b67d;
   padding: 15px;
-  border-radius: 12px; /* Slightly more rounded corners for a mystic feel */
-  background-color: #000000; /* Deepest black to match the header */
+  border-radius: 12px;
+  background-color: #000000;
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Subtle shadow for extra focus */
-  animation: glow 1.5s infinite ease-in-out; /* Adding glowing animation */
-  transition: transform 0.3s ease; /* Adding transition for interaction */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  animation: glow 1.5s infinite ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-/* Logo hover effect */
 .logo-frame:hover {
-  transform: scale(1.1); /* Slight enlargement for hover interaction */
+  transform: scale(1.1);
 }
 
-/* Glowing effect for logo */
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
@@ -134,7 +132,6 @@ body, html {
   }
 }
 
-/* Logo image */
 .logo-frame img {
   width: 100%;
   height: auto;
@@ -142,10 +139,9 @@ body, html {
   opacity: 0.95;
 }
 
-/* Header Image */
 .header-image {
   width: 100%;
-  max-width: 100%; /* Header image stretches to full width */
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -154,25 +150,23 @@ body, html {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px; /* Rounded corners for the mystical look */
-  filter: brightness(0.7); /* Slightly darken the image for a more magical and mysterious feel */
+  border-radius: 10px;
+  filter: brightness(0.7);
   transition: filter 0.3s ease-in-out;
 }
 
-/* Header image hover effect */
 .header-image:hover img {
-  filter: brightness(1); /* Lighter on hover */
+  filter: brightness(1);
 }
 
-/* New Header Title (Centered and below the header) */
 .header-title {
   text-align: center;
-  font-size: 2.5rem; /* Larger size for this title */
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Cinzel', serif;
   color: #c9b67d;
-  margin-top: 30px; /* Spacing from the header */
-  margin-bottom: 40px; /* Spacing for the content below */
+  margin-top: 30px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   line-height: 1.2;
@@ -227,23 +221,6 @@ body, html {
   display: block;
   margin-top: 10px;
   font-size: 0.95rem;
-}
-
-/* Shop Description */
-.shop-description {
-  padding: 40px 20px;
-  background-color: #1a1818;
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.7;
-}
-
-.shop-description h2 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-  text-transform: uppercase;
 }
 
 /* Payment Section */
@@ -337,86 +314,7 @@ body, html {
   transform: scale(1.2);
 }
 
-/* Magic Phrase and Logo */
-.magic-phrase {
-  margin-top: 40px;
-}
-
-.magic-phrase p {
-  font-style: italic;
-  color: #c9b67d;
-  margin-bottom: 10px;
-}
-
-.magic-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0.95;
-  margin-top: 20px;
-  border: 2px solid #c9b67d;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1c1a1a;
-  font-size: 0.9rem;
-  border-top: 1px solid #444;
-}
-
-/* Fixing the gap between the footer and the previous section */
-.impact-info-section {
-  margin-bottom: 0;
-  padding-bottom: 40px;
-}
-
-
-/* Swiper Slide Captions */
-.swiper-slide .caption {
-  text-align: center;
-  color: #c9b67d; /* Gold color matching site theme */
-  font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  margin-top: 12px;
-  text-shadow: 0 0 6px rgba(201, 182, 125, 0.4); /* Soft golden glow */
-  letter-spacing: 1px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  margin-bottom: 30px; /* Поднимает подпись вверх */
-  }
-
-
-/* Swiper Pagination Dots */
-.swiper-pagination {
-  bottom: 15px !important; /* Move dots slightly upward */
-}
-
-.swiper-pagination-bullet {
-  background-color: #c9b67d !important; /* Base gold color */
-  opacity: 0.7;
-  width: 12px;
-  height: 12px;
-  margin: 0 6px !important;
-  border-radius: 50%;
-  border: 1px solid #c9b67d;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #e0d9c4 !important; /* Brighter gold for active */
-  box-shadow: 0 0 8px rgba(201, 182, 125, 0.6); /* Glow for active dot */
-  transform: scale(1.4);
-  opacity: 1;
-  }
-
-/* Swiper Styles */
+/* Swiper Styles (for Slyder) */
 .swiper-container {
   width: 100%;
   max-width: 100%;
@@ -447,13 +345,12 @@ footer {
 }
 
 /* Swiper Buttons */
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Dark background for buttons */
-  color: #c9b67d; /* Arrow color */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #c9b67d;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -462,109 +359,33 @@ footer {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
-  transform: scale(1.1); /* Button scale on hover */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 1.5rem; /* Size of arrows */
-  color: #c9b67d; /* Arrow color */
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 1.5rem;
+  color: #c9b67d;
 }
 
-/* Swiper Pagination Dots */
+/* Swiper Pagination (dots) */
 .swiper-pagination {
-  bottom: 15px !important; /* Move dots slightly upward */
+  bottom: 15px !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: #c9b67d !important; /* Base gold color */
+  background-color: #c9b67d !important;
   opacity: 0.7;
   width: 12px;
   height: 12px;
   margin: 0 6px !important;
   border-radius: 50%;
   border: 1px solid #c9b67d;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet:hover {
-  transform: scale(1.2);
-  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #e0d9c4 !important; /* Brighter gold for active */
-  box-shadow: 0 0 8px rgba(201, 182, 125, 0.6); /* Glow for active dot */
-  transform: scale(1.4);
+  background-color: #c9b67d !important;
   opacity: 1;
 }
-
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-  .middle-bar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .category-section {
-    gap: 20px;
-    padding: 40px 20px;
-  }
-
-  .category-button {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .header-title {
-    font-size: 1.8rem;
-    margin-top: 20px;
-  }
-
-  .impact-header {
-    padding-top: 30px; /* Adjusted for better spacing */
-  }
-
-  .impact-info-section {
-    padding: 20px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 1.2rem; /* Smaller buttons on mobile */
-  }
-}
-
-/* Extra Small Mobile Styles */
-@media only screen and (max-width: 480px) {
-  .header-title {
-    font-size: 1.5rem;
-  }
-
-  .category-button img {
-    height: 150px;
-  }
-
-  .category-section {
-    padding: 30px 20px;
-  }
-
-  .magic-logo {
-    width: 150px;
-  }
-
-  .shop-description {
-    padding: 30px 20px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 1rem; /* Smaller buttons for very small screens */
-  }
-}
-
-
 
