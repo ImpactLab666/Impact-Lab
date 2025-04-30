@@ -428,7 +428,35 @@ footer {
   color: #c9b67d; /* Arrow color */
 }
 
-/* Swiper Pagination (dots) */
+/* Swiper Pagination (dots)
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide figcaption {
+  color: #c9b67d;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Swiper Slide Captions */
+.swiper-slide .caption {
+  text-align: center;
+  color: #c9b67d; /* Gold color matching site theme */
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  margin-top: 12px;
+  text-shadow: 0 0 6px rgba(201, 182, 125, 0.4); /* Soft golden glow */
+  letter-spacing: 1px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  margin-bottom: 30px; /* Поднимает подпись вверх */
+  }
+
+
+/* Swiper Pagination Dots */
 .swiper-pagination {
   bottom: 15px !important; /* Move dots slightly upward */
 }
@@ -454,5 +482,4 @@ footer {
   box-shadow: 0 0 8px rgba(201, 182, 125, 0.6); /* Glow for active dot */
   transform: scale(1.4);
   opacity: 1;
-}
-
+  }
