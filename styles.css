@@ -452,7 +452,9 @@ footer {
   text-shadow: 0 0 6px rgba(201, 182, 125, 0.4); /* Soft golden glow */
   letter-spacing: 1px;
   transition: color 0.3s ease, text-shadow 0.3s ease;
-}
+  margin-bottom: 30px; /* Поднимает подпись вверх */
+  }
+
 
 /* Swiper Pagination Dots */
 .swiper-pagination {
