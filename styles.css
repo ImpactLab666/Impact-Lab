@@ -1,4 +1,4 @@
-/* General Styles */
+/* Общие стили */
 body, html {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Top Bar */
+/* Верхняя панель */
 .top-bar {
   background-color: #1c1a1a;
   display: flex;
@@ -45,7 +45,7 @@ body, html {
   transform: scale(1.1);
 }
 
-/* Navigation Bar */
+/* Навигация */
 .middle-bar {
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ body, html {
   opacity: 1;
 }
 
-/* Catalog Button */
+/* Кнопка каталога */
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
@@ -88,77 +88,82 @@ body, html {
   color: #0e0d0d;
 }
 
-/* Header Section */
-.impact-header {
-  width: 100%;
-  background-color: #000000;
-  position: relative;
-  padding-top: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-bottom: 1px solid #444;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-}
-
-.logo-frame {
-  width: 280px;
-  margin-bottom: 20px;
-  border: 4px solid #c9b67d;
-  padding: 15px;
-  border-radius: 12px;
-  background-color: #000000;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  animation: glow 1.5s infinite ease-in-out;
-  transition: transform 0.3s ease;
-}
-
-.logo-frame:hover {
-  transform: scale(1.1);
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
-  }
-  50% {
-    box-shadow: 0 0 20px #fff, 0 0 30px #c9b67d, 0 0 50px #c9b67d, 0 0 70px #c9b67d;
-  }
-  100% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #c9b67d, 0 0 30px #c9b67d, 0 0 40px #c9b67d;
-  }
-}
-
-.logo-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 0.95;
-}
-
-.header-image {
+/* Слайдер */
+.swiper-container {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
+  padding: 20px 0;
+  position: relative;
 }
 
-.header-image img {
+.swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease;
+}
+
+.swiper-slide {
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   filter: brightness(0.7);
   transition: filter 0.3s ease-in-out;
 }
 
-.header-image:hover img {
+.swiper-slide img:hover {
   filter: brightness(1);
 }
 
+/* Кнопки слайдера */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #c9b67d;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 1.5rem;
+  color: #c9b67d;
+}
+
+/* Пагинация слайдера */
+.swiper-pagination {
+  bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c9b67d !important;
+  opacity: 0.7;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  border: 1px solid #c9b67d;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c9b67d !important;
+  opacity: 1;
+}
+
+/* Заголовок */
 .header-title {
   text-align: center;
   font-size: 2.5rem;
@@ -172,7 +177,7 @@ body, html {
   line-height: 1.2;
 }
 
-/* Category Section */
+/* Секция категорий */
 .category-section {
   display: flex;
   justify-content: center;
@@ -223,7 +228,23 @@ body, html {
   font-size: 0.95rem;
 }
 
-/* Payment Section */
+/* Стиль кнопки "Каталог" */
+.catalog-button {
+  font-size: 1rem;
+  padding: 8px 16px;
+  background-color: #c9b67d;
+  color: #0e0d0d;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: #c9b67d;
+  color: #1a1818;
+}
+
+/* Стиль информации о способах оплаты */
 .payment-methods {
   padding: 40px 20px;
   background-color: #2d2b2b;
@@ -257,7 +278,7 @@ body, html {
   transform: scale(1.1);
 }
 
-/* Info Section */
+/* Секция "О нас" */
 .impact-info-section {
   background-color: #131010;
   padding: 40px 20px;
@@ -312,80 +333,5 @@ body, html {
 
 .social-media img:hover {
   transform: scale(1.2);
-}
-
-/* Swiper Styles (for Slyder) */
-.swiper-container {
-  width: 100%;
-  max-width: 100%;
-  padding: 20px 0;
-  position: relative;
-}
-
-.swiper-wrapper {
-  display: flex;
-  transition-timing-function: ease;
-}
-
-.swiper-slide {
-  width: 100%;
-  height: auto;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  filter: brightness(0.7);
-  transition: filter 0.3s ease-in-out;
-}
-
-.swiper-slide img:hover {
-  filter: brightness(1);
-}
-
-/* Swiper Buttons */
-.swiper-button-next, .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #c9b67d;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 1.5rem;
-  color: #c9b67d;
-}
-
-/* Swiper Pagination (dots) */
-.swiper-pagination {
-  bottom: 15px !important;
-}
-
-.swiper-pagination-bullet {
-  background-color: #c9b67d !important;
-  opacity: 0.7;
-  width: 12px;
-  height: 12px;
-  margin: 0 6px !important;
-  border-radius: 50%;
-  border: 1px solid #c9b67d;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #c9b67d !important;
-  opacity: 1;
 }
 
