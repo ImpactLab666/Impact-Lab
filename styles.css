@@ -373,74 +373,6 @@ footer {
   padding-bottom: 40px;
 }
 
-/* Swiper Styles */
-.swiper-container {
-  width: 100%;
-  max-width: 100%;
-  padding: 20px 0;
-  position: relative;
-}
-
-.swiper-wrapper {
-  display: flex;
-  transition-timing-function: ease;
-}
-
-.swiper-slide {
-  width: 100%;
-  height: auto;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  filter: brightness(0.7);
-  transition: filter 0.3s ease-in-out;
-}
-
-.swiper-slide img:hover {
-  filter: brightness(1);
-}
-
-/* Swiper Buttons */
-.swiper-button-next, .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Dark background for buttons */
-  color: #c9b67d; /* Arrow color */
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
-  transform: scale(1.1); /* Button scale on hover */
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 1.5rem; /* Size of arrows */
-  color: #c9b67d; /* Arrow color */
-}
-
-/* Swiper Pagination (dots)
-
-.swiper-slide {
-  text-align: center;
-}
-
-.swiper-slide figcaption {
-  color: #c9b67d;
-  font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  margin-top: 10px;
-  text-align: center;
-}
 
 /* Swiper Slide Captions */
 .swiper-slide .caption {
@@ -483,3 +415,156 @@ footer {
   transform: scale(1.4);
   opacity: 1;
   }
+
+/* Swiper Styles */
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+}
+
+.swiper-slide img:hover {
+  filter: brightness(1);
+}
+
+/* Swiper Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background for buttons */
+  color: #c9b67d; /* Arrow color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  transform: scale(1.1); /* Button scale on hover */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.5rem; /* Size of arrows */
+  color: #c9b67d; /* Arrow color */
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination {
+  bottom: 15px !important; /* Move dots slightly upward */
+}
+
+.swiper-pagination-bullet {
+  background-color: #c9b67d !important; /* Base gold color */
+  opacity: 0.7;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  border: 1px solid #c9b67d;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e0d9c4 !important; /* Brighter gold for active */
+  box-shadow: 0 0 8px rgba(201, 182, 125, 0.6); /* Glow for active dot */
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .middle-bar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .category-section {
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .category-button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  .impact-header {
+    padding-top: 30px; /* Adjusted for better spacing */
+  }
+
+  .impact-info-section {
+    padding: 20px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 1.2rem; /* Smaller buttons on mobile */
+  }
+}
+
+/* Extra Small Mobile Styles */
+@media only screen and (max-width: 480px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .category-button img {
+    height: 150px;
+  }
+
+  .category-section {
+    padding: 30px 20px;
+  }
+
+  .magic-logo {
+    width: 150px;
+  }
+
+  .shop-description {
+    padding: 30px 20px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 1rem; /* Smaller buttons for very small screens */
+  }
+}
+
+
+
