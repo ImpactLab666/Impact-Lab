@@ -67,6 +67,38 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
     });
 });
 
+// Function to switch currency
+function switchCurrency(currency) {
+    // Example: change prices based on the selected currency
+    // You can modify this code to change the prices on your site according to the selected currency.
+    const prices = document.querySelectorAll('.price'); // All elements with class .price
+
+    prices.forEach(priceElement => {
+        let priceInUsd = parseFloat(priceElement.getAttribute('data-usd')); // Assume price is in USD
+
+        if (currency === 'eur') {
+            priceElement.textContent = (priceInUsd * 0.85).toFixed(2) + ' €'; // Example conversion to Euro
+        } else if (currency === 'uah') {
+            priceElement.textContent = (priceInUsd * 27).toFixed(2) + ' UAH'; // Example conversion to Ukrainian Hryvnia
+        } else {
+            priceElement.textContent = priceInUsd.toFixed(2) + ' $'; // If USD
+        }
+    });
+}
+
+// Currency change event listener
+document.getElementById('currency-select').addEventListener('change', (event) => {
+    const selectedCurrency = event.target.value; // Get the selected currency
+    switchCurrency(selectedCurrency); // Change the currency
+});
+
+// Initialize with default currency
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultCurrency = 'usd'; // Set USD as the default currency
+    switchCurrency(defaultCurrency); // Apply the default currency on page load
+});
+
+
 // Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize Swiper with specific settings
