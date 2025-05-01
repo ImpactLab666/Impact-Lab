@@ -99,6 +99,22 @@ currency-switcher {
   border-color: #f0e6d2;
 }
 
+currency-select {
+  background-color: #1c1a1a;
+  color: #e0d9c4;
+  border: 1px solid #c9b67d;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.currency-select:hover {
+  background-color: #2d2b2b;
+}
+
 
 /* Navigation Bar */
 .middle-bar {
