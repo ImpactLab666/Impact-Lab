@@ -115,6 +115,19 @@ currency-select {
   background-color: #2d2b2b;
 }
 
+currency-select {
+  height: 32px;
+  padding: 4px 8px;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #1c1a1a;
+  color: #e0d9c4;
+  border: 1px solid #c9b67d;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+}
+
 
 /* Navigation Bar */
 .middle-bar {
