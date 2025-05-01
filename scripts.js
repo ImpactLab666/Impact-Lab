@@ -98,6 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
     switchCurrency(defaultCurrency); // Apply the default currency on page load
 });
 
+// Currency formatting and saving
+const currencySymbols = {
+  UAH: '₴',
+  USD: '$',
+  EUR: '€',
+  GBP: '£'
+};
+
+let currentCurrency = localStorage.getItem('selectedCurrency') || 'UAH';
+document.getElementById('currency-select').value = currentCurrency;
+
+function updateCurrencyDisplay() {
+  // Тут ты можешь изменить цены на странице, если они есть
+  console.log(`Currency set to ${currentCurrency}`);
+}
+
+document.getElementById('currency-select').addEventListener('change', function () {
+  currentCurrency = this.value;
+  localStorage.setItem('selectedCurrency', currentCurrency);
+  updateCurrencyDisplay();
+});
+
+updateCurrencyDisplay();
+
 
 // Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
