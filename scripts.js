@@ -114,9 +114,29 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const currency = link.dataset.currency;
       console.log(`Currency changed to: ${currency}`);
-      // You can add a function here to recalculate prices based on currency
+      // Function to recalculate prices based on selected currency
+      recalculatePrices(currency);
       menu.style.display = 'none';
     });
   });
 });
 
+// Recalculation of prices based on the selected currency
+function recalculatePrices(currency) {
+  const prices = document.querySelectorAll('.product-price');
+  prices.forEach(priceElem => {
+    const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
+    let convertedPrice = basePrice;
+    if (currency === 'USD') {
+        convertedPrice = basePrice * 1.1; // Example conversion rate
+    } else if (currency === 'EUR') {
+        convertedPrice = basePrice * 0.9; // Example conversion rate
+    }
+    priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
+}
+
+ 
+
+
+
+                 
