@@ -387,7 +387,6 @@ footer {
   margin-bottom: 30px; /* Поднимает подпись вверх */
   }
 
-
 /* Swiper Pagination Dots */
 .swiper-pagination {
   bottom: 15px !important; /* Move dots slightly upward */
@@ -414,7 +413,7 @@ footer {
   box-shadow: 0 0 8px rgba(201, 182, 125, 0.6); /* Glow for active dot */
   transform: scale(1.4);
   opacity: 1;
-  }
+}
 
 /* Swiper Styles */
 .swiper-container {
@@ -474,14 +473,4 @@ footer {
   color: #c9b67d; /* Arrow color */
 }
 
-/* Swiper Pagination Dots */
-.swiper-pagination {
-  bottom: 15px !important; /* Move dots slightly upward */
-}
-
-.swiper-pagination-bullet {
-  background-color: #c9b67d !important; /* Base gold color */
-  opacity: 0.7;
-  width: 12px;
-  height: 12px;
-  margi
+  
