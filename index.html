@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+:<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,17 +27,7 @@
     </div>
   </div>
 
-  <!-- Currency Switcher -->
-  <div class="currency-switcher">
-    <select id="currencySelector">
-      <option value="UAH">UAH</option>
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-    </select>
-  </div>
-
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar with Currency -->
   <div class="middle-bar">
     <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
     <a href="#categories" class="catalog-button">Catalog</a>
@@ -46,6 +36,14 @@
     <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
     <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
     <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
+
+    <!-- Currency Selector -->
+    <select id="currency-select" class="currency-select" title="Select currency">
+      <option value="UAH">₴ UAH</option>
+      <option value="USD">$ USD</option>
+      <option value="EUR">€ EUR</option>
+      <option value="GBP">£ GBP</option>
+    </select>
   </div>
 
   <!-- Header Section -->
@@ -62,18 +60,9 @@
   <!-- Swiper Slider -->
   <section class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="perfum.jpg" alt="Perfume 1" />
-        <div class="caption">Black Magic</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="perfum1.jpg" alt="Perfume 2" />
-        <div class="caption">Impact</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="perfum2.jpg" alt="Perfume 3" />
-        <div class="caption">Love Potion</div>
-      </div>
+      <div class="swiper-slide"><img src="perfum.jpg" alt="Perfume 1" /><div class="caption">Black Magic</div></div>
+      <div class="swiper-slide"><img src="perfum1.jpg" alt="Perfume 2" /><div class="caption">Impact</div></div>
+      <div class="swiper-slide"><img src="perfum2.jpg" alt="Perfume 3" /><div class="caption">Love Potion</div></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -83,40 +72,23 @@
   <!-- Categories Section -->
   <section class="category-section" id="categories">
     <h2>Perfumed Spells & Magical Jewels</h2>
-    <a href="womens.html" class="category-button">
-      <img src="womanperfume.png" alt="Women's Perfumes" />
-      <span class="cat-name">Women's Perfumes</span>
-    </a>
-    <a href="mens.html" class="category-button">
-      <img src="menperfume.png" alt="Men's Perfumes" />
-      <span class="cat-name">Men's Perfumes</span>
-    </a>
-    <a href="unisex.html" class="category-button">
-      <img src="unisexperfume.png" alt="Unisex Perfumes" />
-      <span class="cat-name">Unisex Perfumes</span>
-    </a>
-    <a href="gifts.html" class="category-button">
-      <img src="magicgifts.png" alt="Magical Gifts" />
-      <span class="cat-name">Magical Gifts</span>
-    </a>
-    <a href="jewelry.html" class="category-button">
-      <img src="jewellery.png" alt="Jewelry" />
-      <span class="cat-name">Jewelry</span>
-    </a>
+    <a href="womens.html" class="category-button"><img src="womanperfume.png" alt="Women's Perfumes" /><span class="cat-name">Women's Perfumes</span></a>
+    <a href="mens.html" class="category-button"><img src="menperfume.png" alt="Men's Perfumes" /><span class="cat-name">Men's Perfumes</span></a>
+    <a href="unisex.html" class="category-button"><img src="unisexperfume.png" alt="Unisex Perfumes" /><span class="cat-name">Unisex Perfumes</span></a>
+    <a href="gifts.html" class="category-button"><img src="magicgifts.png" alt="Magical Gifts" /><span class="cat-name">Magical Gifts</span></a>
+    <a href="jewelry.html" class="category-button"><img src="jewellery.png" alt="Jewelry" /><span class="cat-name">Jewelry</span></a>
   </section>
 
   <!-- Shop Description -->
   <section class="shop-description">
     <h2>About the Shop</h2>
     <p>
-      Welcome to Impact Lab.
-      The place where you will find handcrafted alchemical perfumes.<br><br>
+      Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
       Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
       Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
       Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
       Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
       perfect for those who want to leave a lasting impression.
-      Experience our enchanting fragrances and feel the power of attraction like never before.
     </p>
   </section>
 
@@ -124,14 +96,14 @@
   <section class="payment-methods">
     <h2>Payment Methods</h2>
     <div class="payment-icons">
-      <img src="icons/visa-logo.png" alt="Visa">
-      <img src="icons/mastercard-logo.png" alt="MasterCard">
-      <img src="icons/stripe-logo.png" alt="Stripe">
-      <img src="icons/paypal-logo.png" alt="PayPal">
-      <img src="icons/revolut-logo.png" alt="Revolut">
-      <img src="icons/mono-logo.png" alt="Mono">
-      <img src="icons/payoneer-logo.png" alt="Payoneer">
-      <img src="icons/liqpay-logo.png" alt="LiqPay">
+      <img src="icons/visa-logo.png" alt="Visa" />
+      <img src="icons/mastercard-logo.png" alt="MasterCard" />
+      <img src="icons/stripe-logo.png" alt="Stripe" />
+      <img src="icons/paypal-logo.png" alt="PayPal" />
+      <img src="icons/revolut-logo.png" alt="Revolut" />
+      <img src="icons/mono-logo.png" alt="Mono" />
+      <img src="icons/payoneer-logo.png" alt="Payoneer" />
+      <img src="icons/liqpay-logo.png" alt="LiqPay" />
     </div>
   </section>
 
@@ -152,17 +124,13 @@
     </div>
 
     <div class="social-media">
-      <a href="https://facebook.com" target="_blank">
-        <img src="icons/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://instagram.com" target="_blank">
-        <img src="icons/instagram.png" alt="Instagram">
-      </a>
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
     </div>
 
     <div class="magic-phrase">
       <p>"The magic is within you, embrace the journey."</p>
-      <img src="magic-logo.png" alt="Magic Logo" class="magic-logo">
+      <img src="magic-logo.png" alt="Magic Logo" class="magic-logo" />
     </div>
   </section>
 
@@ -172,8 +140,6 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Init -->
   <script>
     const swiper = new Swiper('.swiper-container', {
       loop: true,
@@ -193,8 +159,10 @@
     });
   </script>
 
-  <!-- Your existing JS -->
+  <!-- Your existing JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
+
+
 
