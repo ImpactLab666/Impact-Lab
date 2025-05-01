@@ -90,33 +90,46 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         effect: 'fade', // Smooth fading effect between slides
     });
-
-    // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
 
+// Currency menu logic
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector('.currency-toggle');
   const menu = document.querySelector('.currency-menu');
 
+  // Toggle the currency menu visibility
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   });
 
+  // Close the currency menu if clicking outside of it
   document.addEventListener('click', (e) => {
     if (!toggle.contains(e.target) && !menu.contains(e.target)) {
       menu.style.display = 'none';
     }
   });
 
+  // Handle currency selection
   document.querySelectorAll('.currency-menu a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const currency = link.dataset.currency;
       console.log(`Currency changed to: ${currency}`);
-      // Здесь можешь добавить функцию, чтобы пересчитать цены
+      // Here you can add logic to change the prices according to the selected currency
       menu.style.display = 'none';
     });
   });
 });
+
+
+
+
+
+
+
+ 
+
+
+
 
