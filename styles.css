@@ -71,6 +71,51 @@ body, html {
   opacity: 1;
 }
 
+currency-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-toggle img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  filter: invert(90%) sepia(10%) saturate(60%) hue-rotate(10deg);
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.currency-toggle:hover img {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.currency-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #1c1a1a;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.currency-menu a {
+  display: block;
+  color: #e0d9c4;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.currency-menu a:hover {
+  color: #c9b67d;
+}
+
 .catalog-button {
   color: #e0d9c4;
   background-color: transparent;
