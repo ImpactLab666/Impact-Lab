@@ -39,7 +39,7 @@
 
     <!-- Currency Icons (with dropdown) -->
     <div class="currency-selector">
-      <img src="icon-currency.svg" alt="Currency" class="currency-icons" id="currency-icons">
+      <img src="icons/icon-currency.svg" alt="Currency" class="currency-icons" id="currency-icon">
       <div class="currency-dropdown" id="currency-dropdown">
         <a href="#" data-currency="UAH">₴ UAH</a>
         <a href="#" data-currency="USD">$ USD</a>
@@ -161,29 +161,6 @@
       speed: 600,
     });
 
-    // Toggle the dropdown for currency selector
-    const currencyIcon = document.getElementById('currency-icon');
-    const currencyDropdown = document.getElementById('currency-dropdown');
+    // Toggle
 
-    currencyIcon.addEventListener('click', function () {
-      currencyDropdown.classList.toggle('show');
-    });
-
-    // Update currency when a currency option is selected
-    const currencyOptions = document.querySelectorAll('.currency-dropdown a');
-    currencyOptions.forEach(option => {
-      option.addEventListener('click', function (e) {
-        e.preventDefault();
-        const selectedCurrency = e.target.getAttribute('data-currency');
-        console.log('Selected currency: ' + selectedCurrency);
-        currencyDropdown.classList.remove('show');
-      });
-    });
-  </script>
-
-  <!-- Your existing JavaScript -->
-  <script src="scripts.js"></script>
-</body>
-</html>
-
-  
+        
