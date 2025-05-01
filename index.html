@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -74,9 +74,10 @@
   <!-- Shop Description -->
   <section class="shop-description">
     <h2>About the Shop</h2>
-    <p>Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>Our online shop features: eau de toilette, perfume and influence formulas with pheromones.</p>
+    <p>Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes. Our online shop features: eau de toilette, perfume and influence formulas with pheromones.</p>
   </section>
 
+  <!-- Footer Section -->
   <footer id="footerText">
     © 2025 Impact Lab. All rights reserved.
   </footer>
@@ -106,7 +107,82 @@
 
   <!-- Your existing JS -->
   <script src="scripts.js"></script>
+
+  <!-- Currency Selector (simple implementation) -->
+  <div class="currency-selector">
+    <button class="currency-button" onclick="toggleCurrencyDropdown()">Currency</button>
+    <div class="currency-dropdown" id="currency-dropdown">
+      <a href="#" data-currency="UAH">₴ UAH</a>
+      <a href="#" data-currency="USD">$ USD</a>
+      <a href="#" data-currency="EUR">€ EUR</a>
+      <a href="#" data-currency="GBP">£ GBP</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleCurrencyDropdown() {
+      document.getElementById('currency-dropdown').classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
 
+
+---
+
+2. Объяснение изменений:
+
+1. Слайдер Swiper — без изменений, сохранил вашу настройку слайдера.
+
+
+2. Валютный переключатель — добавлен внизу страницы. Этот блок не нарушает ваш основной дизайн. Включает кнопку для открытия и скрытия выпадающего списка с валютами. Простая логика на JavaScript для открытия и закрытия списка валют.
+
+
+3. CSS — если у вас уже есть стили, они останутся без изменений, и мы добавим только небольшие стили для нового блока с валютами.
+
+
+
+
+---
+
+3. Стиль для нового блока валют:
+
+Если вы хотите, чтобы валюта выглядела красиво, вот дополнительные стили для валютного переключателя:
+
+.currency-selector {
+  position: relative;
+}
+
+.currency-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.currency-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  top: 35px;
+  right: 0;
+  z-index: 1;
+}
+
+.currency-dropdown.show {
+  display: block;
+}
+
+.currency-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.currency-dropdown a:hover {
+  background-color: #f1f1f1;
+}
 
