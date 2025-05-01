@@ -69,21 +69,21 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
 
 // Function to switch currency
 function switchCurrency(currency) {
-    // Example: change prices based on the selected currency
-    // You can modify this code to change the prices on your site according to the selected currency.
     const prices = document.querySelectorAll('.price'); // All elements with class .price
-
     prices.forEach(priceElement => {
         let priceInUsd = parseFloat(priceElement.getAttribute('data-usd')); // Assume price is in USD
-
         if (currency === 'eur') {
-            priceElement.textContent = (priceInUsd * 0.85).toFixed(2) + ' €'; // Example conversion to Euro
+            priceElement.textContent = `${(priceInUsd * 0.85).toFixed(2)} €`; // Example conversion to Euro
         } else if (currency === 'uah') {
-            priceElement.textContent = (priceInUsd * 27).toFixed(2) + ' UAH'; // Example conversion to Ukrainian Hryvnia
+            priceElement.textContent = `${(priceInUsd * 27).toFixed(2)} UAH`; // Example conversion to Ukrainian Hryvnia
         } else {
-            priceElement.textContent = priceInUsd.toFixed(2) + ' $'; // If USD
+            priceElement.textContent = `${priceInUsd.toFixed(2)} $`; // If USD
         }
     });
+
+    // Save the selected currency to localStorage
+    localStorage.setItem('selectedCurrency', currency);
+    updateCurrencyDisplay(currency);
 }
 
 // Currency change event listener
@@ -92,38 +92,19 @@ document.getElementById('currency-select').addEventListener('change', (event) =>
     switchCurrency(selectedCurrency); // Change the currency
 });
 
-// Initialize with default currency
+// Initialize with default currency on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const defaultCurrency = 'usd'; // Set USD as the default currency
+    const defaultCurrency = localStorage.getItem('selectedCurrency') || 'usd'; // Default to USD if nothing is stored
     switchCurrency(defaultCurrency); // Apply the default currency on page load
 });
 
-// Currency formatting and saving
-const currencySymbols = {
-  UAH: '₴',
-  USD: '$',
-  EUR: '€',
-  GBP: '£'
-};
-
-let currentCurrency = localStorage.getItem('selectedCurrency') || 'UAH';
-document.getElementById('currency-select').value = currentCurrency;
-
-function updateCurrencyDisplay() {
-  // Тут ты можешь изменить цены на странице, если они есть
-  console.log(`Currency set to ${currentCurrency}`);
+// Function to update currency display
+function updateCurrencyDisplay(currency) {
+    console.log(`Currency set to ${currency}`);
+    // Here you can implement additional actions, like showing a notification or updating the UI
 }
 
-document.getElementById('currency-select').addEventListener('change', function () {
-  currentCurrency = this.value;
-  localStorage.setItem('selectedCurrency', currentCurrency);
-  updateCurrencyDisplay();
-});
-
-updateCurrencyDisplay();
-
-
-// Swiper slider initialization and logic
+// Initialize Swiper slider and other elements
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize Swiper with specific settings
     const swiper = new Swiper('.swiper-container', {
@@ -145,5 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
+
+  
+
 
 
