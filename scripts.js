@@ -94,3 +94,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector('.currency-toggle');
+  const menu = document.querySelector('.currency-menu');
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+      menu.style.display = 'none';
+    }
+  });
+
+  document.querySelectorAll('.currency-menu a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const currency = link.dataset.currency;
+      console.log(`Currency changed to: ${currency}`);
+      // Здесь можешь добавить функцию, чтобы пересчитать цены
+      menu.style.display = 'none';
+    });
+  });
+});
+
