@@ -1,3 +1,4 @@
+// Translations for the header
 const translationsHeader = {
     en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
     de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
@@ -5,6 +6,7 @@ const translationsHeader = {
     ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
 };
 
+// Translations for content
 const translationsContent = {
     en: {
         enter: "Enter Catalog",
@@ -44,21 +46,24 @@ const translationsContent = {
     }
 };
 
-// Language switching function
+// Function to switch language
 function switchLanguage(lang) {
     const t = translationsContent[lang];
+
+    // Update button text and content of the categories
     document.getElementById('enterButton')?.textContent = t.enter;
     document.querySelectorAll('.cat-name').forEach(span => {
         const key = span.getAttribute('data-key');
         if (t[key]) span.textContent = t[key];
     });
     document.getElementById('footerText').textContent = t.footer;
-    // Update the header titles as well
+
+    // Update header titles
     document.getElementById('main-title').textContent = translationsHeader[lang].title;
     document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
 }
 
-// Event listener for language selection
+// Event listener for language switch
 document.querySelectorAll('.language-switcher a').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -67,46 +72,8 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
     });
 });
 
-// Function to switch currency
-function switchCurrency(currency) {
-    const prices = document.querySelectorAll('.price'); // All elements with class .price
-    prices.forEach(priceElement => {
-        let priceInUsd = parseFloat(priceElement.getAttribute('data-usd')); // Assume price is in USD
-        if (currency === 'eur') {
-            priceElement.textContent = `${(priceInUsd * 0.85).toFixed(2)} €`; // Example conversion to Euro
-        } else if (currency === 'uah') {
-            priceElement.textContent = `${(priceInUsd * 27).toFixed(2)} UAH`; // Example conversion to Ukrainian Hryvnia
-        } else {
-            priceElement.textContent = `${priceInUsd.toFixed(2)} $`; // If USD
-        }
-    });
-
-    // Save the selected currency to localStorage
-    localStorage.setItem('selectedCurrency', currency);
-    updateCurrencyDisplay(currency);
-}
-
-// Currency change event listener
-document.getElementById('currency-select').addEventListener('change', (event) => {
-    const selectedCurrency = event.target.value; // Get the selected currency
-    switchCurrency(selectedCurrency); // Change the currency
-});
-
-// Initialize with default currency on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const defaultCurrency = localStorage.getItem('selectedCurrency') || 'usd'; // Default to USD if nothing is stored
-    switchCurrency(defaultCurrency); // Apply the default currency on page load
-});
-
-// Function to update currency display
-function updateCurrencyDisplay(currency) {
-    console.log(`Currency set to ${currency}`);
-    // Here you can implement additional actions, like showing a notification or updating the UI
-}
-
-// Initialize Swiper slider and other elements
+// Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize Swiper with specific settings
     const swiper = new Swiper('.swiper-container', {
         loop: true, // Enable looping of slides
         autoplay: {
@@ -119,15 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         pagination: {
             el: '.swiper-pagination', // Pagination dots (optional)
-            clickable: true,
+            clickable: true, // Make pagination dots clickable
         },
         effect: 'fade', // Smooth fading effect between slides
     });
 
     // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
-
-  
-
-
 
