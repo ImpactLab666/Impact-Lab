@@ -1,4 +1,4 @@
-// Translations for the header
+// Header translations
 const translationsHeader = {
     en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
     de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
@@ -6,7 +6,7 @@ const translationsHeader = {
     ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
 };
 
-// Translations for content
+// Content translations
 const translationsContent = {
     en: {
         enter: "Enter Catalog",
@@ -46,97 +46,104 @@ const translationsContent = {
     }
 };
 
-// Function to switch language
+// Switch language
 function switchLanguage(lang) {
     const t = translationsContent[lang];
+    if (!t) return;
 
-    // Update button text and content of the categories
     document.getElementById('enterButton')?.textContent = t.enter;
+
     document.querySelectorAll('.cat-name').forEach(span => {
         const key = span.getAttribute('data-key');
         if (t[key]) span.textContent = t[key];
     });
-    document.getElementById('footerText').textContent = t.footer;
 
-    // Update header titles
-    document.getElementById('main-title').textContent = translationsHeader[lang].title;
-    document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
+    document.getElementById('footerText')?.textContent = t.footer;
+
+    document.getElementById('main-title')?.textContent = translationsHeader[lang].title;
+    document.getElementById('subtitle')?.textContent = translationsHeader[lang].subtitle;
 }
 
-// Event listener for language switch
-document.querySelectorAll('.language-switcher a').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const lang = btn.getAttribute('data-lang');
-        switchLanguage(lang);
-    });
-});
-
-// Swiper slider initialization and logic
+// All JS after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
+    // Language switch event
+    document.querySelectorAll('.language-switcher a').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.getAttribute('data-lang');
+            switchLanguage(lang);
+        });
+    });
+
+    // Swiper initialization
     const swiper = new Swiper('.swiper-container', {
-        loop: true, // Enable looping of slides
+        loop: true,
         autoplay: {
-            delay: 5000, // 5 seconds delay for auto-sliding
-            disableOnInteraction: false, // Continue autoplay even after user interaction
+            delay: 5000,
+            disableOnInteraction: false,
         },
         navigation: {
-            nextEl: '.swiper-button-next', // Next slide button
-            prevEl: '.swiper-button-prev', // Previous slide button
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         pagination: {
-            el: '.swiper-pagination', // Pagination dots (optional)
-            clickable: true, // Make pagination dots clickable
+            el: '.swiper-pagination',
+            clickable: true,
         },
-        effect: 'fade', // Smooth fading effect between slides
+        effect: 'fade',
     });
 
-    // Swiper instance is automatically initialized, no need for custom next/prev button listeners
-});
+    // Currency toggle logic
+    const toggle = document.querySelector('.currency-toggle');
+    const menu = document.querySelector('.currency-menu');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector('.currency-toggle');
-  const menu = document.querySelector('.currency-menu');
+    if (toggle && menu) {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
 
-  toggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  });
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.style.display = 'none';
+            }
+        });
 
-  document.addEventListener('click', (e) => {
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-      menu.style.display = 'none';
+        document.querySelectorAll('.currency-menu a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const currency = link.dataset.currency;
+                console.log(`Currency changed to: ${currency}`);
+                recalculatePrices(currency);
+                menu.style.display = 'none';
+            });
+        });
     }
-  });
-
-  document.querySelectorAll('.currency-menu a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const currency = link.dataset.currency;
-      console.log(`Currency changed to: ${currency}`);
-      // Function to recalculate prices based on selected currency
-      recalculatePrices(currency);
-      menu.style.display = 'none';
-    });
-  });
 });
 
-// Recalculation of prices based on the selected currency
+// Currency price recalculation
 function recalculatePrices(currency) {
-  const prices = document.querySelectorAll('.product-price');
-  prices.forEach(priceElem => {
-    const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
-    let convertedPrice = basePrice;
-    if (currency === 'USD') {
-        convertedPrice = basePrice * 1.1; // Example conversion rate
-    } else if (currency === 'EUR') {
-        convertedPrice = basePrice * 0.9; // Example conversion rate
-    }
-    priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
+    const prices = document.querySelectorAll('.product-price');
+    prices.forEach(priceElem => {
+        const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
+        if (!isNaN(basePrice)) {
+            let convertedPrice = basePrice;
+            if (currency === 'USD') {
+                convertedPrice = basePrice * 1.1;
+            } else if (currency === 'EUR') {
+                convertedPrice = basePrice * 0.9;
+            }
+            priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
+        }
+    });
 }
 
- 
 
 
 
-                 
+
+
+
+
+
+
