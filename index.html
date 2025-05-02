@@ -14,6 +14,50 @@
 </head>
 <body>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('currency-icon');
+    const menu = document.getElementById('currency-dropdown');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+
+    document.querySelectorAll('.currency-menu a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const currency = link.dataset.currency;
+        console.log(`Currency changed to: ${currency}`);
+        recalculatePrices(currency);
+        menu.style.display = 'none';
+      });
+    });
+  });
+
+  function recalculatePrices(currency) {
+    const prices = document.querySelectorAll('.product-price');
+    prices.forEach(priceElem => {
+      const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
+      let convertedPrice = basePrice;
+      if (currency === 'USD') {
+        convertedPrice = basePrice * 1.1;
+      } else if (currency === 'EUR') {
+        convertedPrice = basePrice * 0.9;
+      } else if (currency === 'GBP') {
+        convertedPrice = basePrice * 0.85;
+      }
+      priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
+    });
+  }
+      </script>
+  
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="contact">
