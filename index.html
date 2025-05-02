@@ -15,6 +15,32 @@
 <body>
 
   <script>
+  const icon = document.getElementById('currency-icon');
+  const dropdown = document.getElementById('currency-dropdown');
+
+  icon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  document.querySelectorAll('#currency-dropdown a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const currency = link.dataset.currency;
+      console.log(`Currency changed to: ${currency}`);
+      dropdown.style.display = 'none';
+    });
+  });
+  </script>
+  
+
+  <script>
   document.getElementById('currency-icon').addEventListener('click', () => {
     alert('Иконка нажата!');
   });
