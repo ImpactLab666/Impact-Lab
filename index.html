@@ -8,88 +8,10 @@
   <!-- Fonts and CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
-  <script>
-  const icon = document.getElementById('currency-icon');
-  const dropdown = document.getElementById('currency-dropdown');
-
-  icon.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.style.display = 'none';
-    }
-  });
-
-  document.querySelectorAll('#currency-dropdown a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const currency = link.dataset.currency;
-      console.log(`Currency changed to: ${currency}`);
-      dropdown.style.display = 'none';
-    });
-  });
-  </script>
-  
-
-  <script>
-  document.getElementById('currency-icon').addEventListener('click', () => {
-    alert('Иконка нажата!');
-  });
-  </script>
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById('currency-icon');
-    const menu = document.getElementById('currency-dropdown');
-
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-        menu.style.display = 'none';
-      }
-    });
-
-    document.querySelectorAll('.currency-menu a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const currency = link.dataset.currency;
-        console.log(`Currency changed to: ${currency}`);
-        recalculatePrices(currency);
-        menu.style.display = 'none';
-      });
-    });
-  });
-
-  function recalculatePrices(currency) {
-    const prices = document.querySelectorAll('.product-price');
-    prices.forEach(priceElem => {
-      const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
-      let convertedPrice = basePrice;
-      if (currency === 'USD') {
-        convertedPrice = basePrice * 1.1;
-      } else if (currency === 'EUR') {
-        convertedPrice = basePrice * 0.9;
-      } else if (currency === 'GBP') {
-        convertedPrice = basePrice * 0.85;
-      }
-      priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
-    });
-  }
-      </script>
-  
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="contact">
@@ -114,16 +36,17 @@
     <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
 
     <!-- Currency Dropdown -->
-<div class="currency-selector">
-  <img src="icons/icon-currency.svg" alt="Currency" id="currency-icon" style="width:28px; cursor:pointer;">
-  <div id="currency-dropdown" style="display:none; position:absolute; background:#1c1a1a; border:1px solid #c9b67d; padding:10px; border-radius:5px; z-index:1000;">
-    <a href="#" data-currency="UAH" style="display:block; color:#e0d9c4; padding:5px 10px;">₴ UAH</a>
-    <a href="#" data-currency="USD" style="display:block; color:#e0d9c4; padding:5px 10px;">$ USD</a>
-    <a href="#" data-currency="EUR" style="display:block; color:#e0d9c4; padding:5px 10px;">€ EUR</a>
-    <a href="#" data-currency="GBP" style="display:block; color:#e0d9c4; padding:5px 10px;">£ GBP</a>
+    <div class="currency-selector">
+      <img src="icons/icon-currency.svg" alt="Currency" id="currency-icon" style="width:28px; cursor:pointer;">
+      <div id="currency-dropdown" style="display:none; position:absolute; background:#1c1a1a; border:1px solid #c9b67d; padding:10px; border-radius:5px; z-index:1000;">
+        <a href="#" data-currency="UAH" style="display:block; color:#e0d9c4; padding:5px 10px;">₴ UAH</a>
+        <a href="#" data-currency="USD" style="display:block; color:#e0d9c4; padding:5px 10px;">$ USD</a>
+        <a href="#" data-currency="EUR" style="display:block; color:#e0d9c4; padding:5px 10px;">€ EUR</a>
+        <a href="#" data-currency="GBP" style="display:block; color:#e0d9c4; padding:5px 10px;">£ GBP</a>
+      </div>
+    </div>
   </div>
-</div>
-    
+
   <!-- Header Section -->
   <header class="impact-header">
     <div class="logo-frame">
@@ -163,10 +86,7 @@
     <p>
       Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
       Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
-      Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
       Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
-      Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
-      perfect for those who want to leave a lasting impression.
     </p>
   </section>
 
@@ -190,22 +110,14 @@
     <h2>Privacy Policy</h2>
     <div class="links-section">
       <a href="/articles" class="info-link">Articles</a>
-      <a href="/faq" class="info-link">Frequently Asked Questions</a>
+      <a href="/faq" class="info-link">FAQ</a>
       <a href="/terms-and-conditions" class="info-link">Terms and Conditions</a>
       <a href="/privacy-policy" class="info-link">Privacy Policy</a>
-      <a href="/return-refund-policy" class="info-link">Return and Refund Policy</a>
-      <a href="/cookie-policy" class="info-link">Cookie Policy</a>
-      <a href="/shipping-policy" class="info-link">Shipping and Delivery Policy</a>
-      <a href="/legal-notice" class="info-link">Legal Notice</a>
-      <a href="/consumer-rights" class="info-link">Consumer Rights</a>
-      <a href="/gdpr-compliance" class="info-link">GDPR Compliance</a>
     </div>
-
     <div class="social-media">
       <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook" /></a>
       <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
     </div>
-
     <div class="magic-phrase">
       <p>"The magic is within you, embrace the journey."</p>
       <img src="magic-logo.png" alt="Magic Logo" class="magic-logo" />
@@ -216,26 +128,27 @@
     © 2025 Impact Lab. All rights reserved.
   </footer>
 
-  <!-- Swiper JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      speed: 600,
-    });
+    document.addEventListener("DOMContentLoaded", () => {
+      new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+      });
 
-    // Toggle
+      const
 
-                                                                                                            
+    
