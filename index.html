@@ -30,7 +30,10 @@
   <!-- Navigation Bar with Currency -->
   <div class="middle-bar">
     <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
-    <a href="#categories" class="catalog-button">Catalog</a>
+    
+    <!-- Catalog Button (навигация) -->
+    <a href="#" class="catalog-button" id="catalog-btn">Catalog</a>
+    
     <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
     <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
     <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
@@ -47,6 +50,15 @@
         <a href="#" data-currency="GBP">£ GBP</a>
       </div>
     </div>
+  </div>
+
+  <!-- Скрытое меню для каталога -->
+  <div class="catalog-menu" id="catalog-menu">
+    <a href="womens.html">Women's Perfumes</a>
+    <a href="mens.html">Men's Perfumes</a>
+    <a href="unisex.html">Unisex Perfumes</a>
+    <a href="gifts.html">Magical Gifts</a>
+    <a href="jewelry.html">Jewelry</a>
   </div>
 
   <!-- Header Section -->
@@ -179,11 +191,25 @@
         currencyDropdown.classList.remove('show');
       });
     });
+
+    // Catalog Menu Toggle
+    const catalogBtn = document.getElementById('catalog-btn');
+    const catalogMenu = document.getElementById('catalog-menu');
+
+    catalogBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      catalogMenu.classList.toggle('show');
+    });
+
+    // Hide menu when clicked outside
+    document.addEventListener('click', function(event) {
+      if (!catalogMenu.contains(event.target) && event.target !== catalogBtn) {
+        catalogMenu.classList.remove('show');
+      }
+    });
   </script>
 
   <!-- Your existing JavaScript -->
   <script src="scripts.js"></script>
 </body>
-</html>
-
-  
+  </html>
