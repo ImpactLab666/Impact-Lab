@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
 
+// Currency Toggle Logic
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector('.currency-toggle');
   const menu = document.querySelector('.currency-menu');
@@ -135,3 +136,29 @@ function recalculatePrices(currency) {
     priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
 }
 
+// Catalog Toggle Logic
+document.addEventListener("DOMContentLoaded", () => {
+    // Button to open the catalog
+    const openCatalogBtn = document.getElementById('enterButton'); // Assuming it's the catalog button
+    const catalogWindow = document.getElementById('catalogWindow'); // The catalog window
+
+    // Open catalog window on button click
+    openCatalogBtn.addEventListener('click', () => {
+        catalogWindow.style.display = 'block'; // Show the catalog window
+    });
+
+    // Close catalog window
+    const closeCatalogBtn = document.getElementById('closeCatalogBtn');
+    if (closeCatalogBtn) {
+        closeCatalogBtn.addEventListener('click', () => {
+            catalogWindow.style.display = 'none'; // Hide the catalog window
+        });
+    }
+
+    // Optionally close catalog if clicked outside of it
+    document.addEventListener('click', (e) => {
+        if (!catalogWindow.contains(e.target) && !openCatalogBtn.contains(e.target)) {
+            catalogWindow.style.display = 'none'; // Close the catalog if clicked outside
+        }
+    });
+});
