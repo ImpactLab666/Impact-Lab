@@ -1,177 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact Lab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impact Lab | Alchemical Perfume Shop</title>
 
-    <!-- Подключение стилей Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- Основные стили -->
-    <style>
-        /* Ваши стили */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        #main-title {
-            font-size: 36px;
-        }
-
-        #subtitle {
-            font-size: 20px;
-            margin-top: 5px;
-        }
-
-        .language-switcher {
-            margin-top: 10px;
-        }
-
-        .language-switcher a {
-            color: white;
-            margin: 0 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #catalog {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .categories {
-            margin-top: 20px;
-        }
-
-        .cat-name {
-            display: inline-block;
-            font-size: 18px;
-            margin: 10px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 300px;
-            margin-top: 50px;
-        }
-
-        .currency-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .currency-menu {
-            position: absolute;
-            top: 50px;
-            right: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: none;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .currency-menu a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .currency-menu a:hover {
-            background-color: #f5f5f5;
-        }
-
-    </style>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1 id="main-title">Impact Lab</h1>
-        <h2 id="subtitle">Alchemical Perfume Shop</h2>
-
-        <!-- Language Switcher -->
-        <div class="language-switcher">
-            <a href="#" data-lang="en">EN</a>
-            <a href="#" data-lang="ru">RU</a>
-            <a href="#" data-lang="ua">UA</a>
-            <a href="#" data-lang="de">DE</a>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div id="catalog">
-        <button id="enterButton">Enter Catalog</button>
-
-        <div class="categories">
-            <span class="cat-name" data-key="women">Women's Perfumes</span>
-            <span class="cat-name" data-key="men">Men's Perfumes</span>
-            <span class="cat-name" data-key="unisex">Unisex Perfumes</span>
-            <span class="cat-name" data-key="gifts">Magical Gifts</span>
-            <span class="cat-name" data-key="jewelry">Jewelry</span>
-        </div>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact">
+      <a href="mailto:impactlab666@gmail.com">Send a message</a>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p id="footerText">© 2025 Impact Lab. All rights reserved.</p>
-    </footer>
-
-    <!-- Swiper Slider -->
-    <div class="swiper-container">
-        <!-- Slides here -->
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+    <div class="language-switcher">
+      <a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
+      <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
+      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
+      <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
     </div>
+  </div>
 
-    <!-- Currency Toggle -->
-    <div class="currency-toggle">
-        <span>Currency</span>
-    </div>
-    <div class="currency-menu" style="display:none;">
-        <a href="#" data-currency="USD">USD</a>
-        <a href="#" data-currency="EUR">EUR</a>
-    </div>
+  <!-- Navigation Bar with Currency -->
+  <div class="middle-bar">
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
 
-    <!-- Подключение Swiper и вашего JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script> <!-- Ваш скрипт будет в этом файле -->
+    <!-- Currency Icons (with dropdown) -->
+    <div class="currency-selector">
+      <img src="icons/icon-currency.svg" alt="Currency" class="currency-icons" id="currency-icon">
+      <div class="currency-dropdown" id="currency-dropdown">
+        <a href="#" data-currency="UAH">₴ UAH</a>
+        <a href="#" data-currency="USD">$ USD</a>
+        <a href="#" data-currency="EUR">€ EUR</a>
+        <a href="#" data-currency="GBP">£ GBP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="impact-header">
+    <div class="logo-frame">
+      <img src="impactlab-logo.png" alt="Impact Lab Logo" />
+    </div>
+    <div class="header-image">
+      <img src="impactlabshop.png" alt="Impact Lab Shop Image" />
+    </div>
+    <h1 class="header-title" id="main-title">Elixir Essences: Top Perfumes Revealed</h1>
+  </header>
+
+  <!-- Swiper Slider -->
+  <section class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="perfum.jpg" alt="Perfume 1" /><div class="caption">Black Magic</div></div>
+      <div class="swiper-slide"><img src="perfum1.jpg" alt="Perfume 2" /><div class="caption">Impact</div></div>
+      <div class="swiper-slide"><img src="perfum2.jpg" alt="Perfume 3" /><div class="caption">Love Potion</div></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="category-section" id="categories">
+    <h2 id="category-title">Perfumed Spells & Magical Jewels</h2>
+    <a href="womens.html" class="category-button"><img src="womanperfume.png" alt="Women's Perfumes" /><span class="cat-name" data-key="women">Women's Perfumes</span></a>
+    <a href="mens.html" class="category-button"><img src="menperfume.png" alt="Men's Perfumes" /><span class="cat-name" data-key="men">Men's Perfumes</span></a>
+    <a href="unisex.html" class="category-button"><img src="unisexperfume.png" alt="Unisex Perfumes" /><span class="cat-name" data-key="unisex">Unisex Perfumes</span></a>
+    <a href="gifts.html" class="category-button"><img src="magicgifts.png" alt="Magical Gifts" /><span class="cat-name" data-key="gifts">Magical Gifts</span></a>
+    <a href="jewelry.html" class="category-button"><img src="jewellery.png" alt="Jewelry" /><span class="cat-name" data-key="jewelry">Jewelry</span></a>
+  </section>
+
+  <!-- Shop Description -->
+  <section class="shop-description">
+    <h2>About the Shop</h2>
+    <p id="shop-description">Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes...</p>
+  </section>
+
+  <footer id="footerText">
+    © 2025 Impact Lab. All rights reserved.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript for Language Switch, Currency Toggle, and Swiper -->
+  <script src="main.js"></script>
 
 </body>
 </html>
