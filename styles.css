@@ -473,4 +473,38 @@ footer {
   color: #c9b67d; /* Arrow color */
 }
 
+currency-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-toggle {
+  width: 28px;
+  cursor: pointer;
+}
+
+.currency-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #1c1a1a;
+  border: 1px solid #c9b67d;
+  border-radius: 6px;
+  padding: 6px 0;
+  display: none;
+  z-index: 1000;
+  min-width: 130px;
+}
+
+.currency-menu a {
+  display: block;
+  padding: 8px 12px;
+  color: #c9b67d;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.currency-menu a:hover {
+  background-color: #2d2b2b;
+}
     
