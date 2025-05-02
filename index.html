@@ -8,6 +8,8 @@
   <!-- Fonts and CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
@@ -35,14 +37,14 @@
     <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
     <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
 
-    <!-- Currency Dropdown -->
+    <!-- Currency Icon (with dropdown) -->
     <div class="currency-selector">
-      <img src="icons/icon-currency.svg" alt="Currency" id="currency-icon" style="width:28px; cursor:pointer;">
-      <div id="currency-dropdown" style="display:none; position:absolute; background:#1c1a1a; border:1px solid #c9b67d; padding:10px; border-radius:5px; z-index:1000;">
-        <a href="#" data-currency="UAH" style="display:block; color:#e0d9c4; padding:5px 10px;">₴ UAH</a>
-        <a href="#" data-currency="USD" style="display:block; color:#e0d9c4; padding:5px 10px;">$ USD</a>
-        <a href="#" data-currency="EUR" style="display:block; color:#e0d9c4; padding:5px 10px;">€ EUR</a>
-        <a href="#" data-currency="GBP" style="display:block; color:#e0d9c4; padding:5px 10px;">£ GBP</a>
+      <img src="icon-currency.svg" alt="Currency" class="currency-icon" id="currency-icon">
+      <div class="currency-dropdown" id="currency-dropdown">
+        <a href="#" data-currency="UAH">₴ UAH</a>
+        <a href="#" data-currency="USD">$ USD</a>
+        <a href="#" data-currency="EUR">€ EUR</a>
+        <a href="#" data-currency="GBP">£ GBP</a>
       </div>
     </div>
   </div>
@@ -86,7 +88,10 @@
     <p>
       Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
       Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
+      Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
       Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
+      Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
+      perfect for those who want to leave a lasting impression.
     </p>
   </section>
 
@@ -110,14 +115,22 @@
     <h2>Privacy Policy</h2>
     <div class="links-section">
       <a href="/articles" class="info-link">Articles</a>
-      <a href="/faq" class="info-link">FAQ</a>
+      <a href="/faq" class="info-link">Frequently Asked Questions</a>
       <a href="/terms-and-conditions" class="info-link">Terms and Conditions</a>
       <a href="/privacy-policy" class="info-link">Privacy Policy</a>
+      <a href="/return-refund-policy" class="info-link">Return and Refund Policy</a>
+      <a href="/cookie-policy" class="info-link">Cookie Policy</a>
+      <a href="/shipping-policy" class="info-link">Shipping and Delivery Policy</a>
+      <a href="/legal-notice" class="info-link">Legal Notice</a>
+      <a href="/consumer-rights" class="info-link">Consumer Rights</a>
+      <a href="/gdpr-compliance" class="info-link">GDPR Compliance</a>
     </div>
+
     <div class="social-media">
       <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook" /></a>
       <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
     </div>
+
     <div class="magic-phrase">
       <p>"The magic is within you, embrace the journey."</p>
       <img src="magic-logo.png" alt="Magic Logo" class="magic-logo" />
@@ -128,27 +141,49 @@
     © 2025 Impact Lab. All rights reserved.
   </footer>
 
-  <!-- Scripts -->
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      new Swiper('.swiper-container', {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        speed: 600,
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+    });
+
+    // Toggle the dropdown for currency selector
+    const currencyIcon = document.getElementById('currency-icon');
+    const currencyDropdown = document.getElementById('currency-dropdown');
+
+    currencyIcon.addEventListener('click', function () {
+      currencyDropdown.classList.toggle('show');
+    });
+
+    // Update currency when a currency option is selected
+    const currencyOptions = document.querySelectorAll('.currency-dropdown a');
+    currencyOptions.forEach(option => {
+      option.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selectedCurrency = e.target.getAttribute('data-currency');
+        console.log('Selected currency: ' + selectedCurrency);
+        currencyDropdown.classList.remove('show');
       });
+    });
+  </script>
 
-      const
+  <!-- Your existing JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>
 
-    
+  
