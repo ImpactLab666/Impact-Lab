@@ -57,7 +57,7 @@
     <div class="header-image">
       <img src="impactlabshop.png" alt="Impact Lab Shop Image" />
     </div>
-    <h1 class="header-title" id="main-title">Elixir Essences: Top Perfumes Revealed</h1>
+    <h1 class="header-title">Elixir Essences: Top Perfumes Revealed</h1>
   </header>
 
   <!-- Swiper Slider -->
@@ -74,18 +74,67 @@
 
   <!-- Categories Section -->
   <section class="category-section" id="categories">
-    <h2 id="category-title">Perfumed Spells & Magical Jewels</h2>
-    <a href="womens.html" class="category-button"><img src="womanperfume.png" alt="Women's Perfumes" /><span class="cat-name" data-key="women">Women's Perfumes</span></a>
-    <a href="mens.html" class="category-button"><img src="menperfume.png" alt="Men's Perfumes" /><span class="cat-name" data-key="men">Men's Perfumes</span></a>
-    <a href="unisex.html" class="category-button"><img src="unisexperfume.png" alt="Unisex Perfumes" /><span class="cat-name" data-key="unisex">Unisex Perfumes</span></a>
-    <a href="gifts.html" class="category-button"><img src="magicgifts.png" alt="Magical Gifts" /><span class="cat-name" data-key="gifts">Magical Gifts</span></a>
-    <a href="jewelry.html" class="category-button"><img src="jewellery.png" alt="Jewelry" /><span class="cat-name" data-key="jewelry">Jewelry</span></a>
+    <h2>Perfumed Spells & Magical Jewels</h2>
+    <a href="womens.html" class="category-button"><img src="womanperfume.png" alt="Women's Perfumes" /><span class="cat-name">Women's Perfumes</span></a>
+    <a href="mens.html" class="category-button"><img src="menperfume.png" alt="Men's Perfumes" /><span class="cat-name">Men's Perfumes</span></a>
+    <a href="unisex.html" class="category-button"><img src="unisexperfume.png" alt="Unisex Perfumes" /><span class="cat-name">Unisex Perfumes</span></a>
+    <a href="gifts.html" class="category-button"><img src="magicgifts.png" alt="Magical Gifts" /><span class="cat-name">Magical Gifts</span></a>
+    <a href="jewelry.html" class="category-button"><img src="jewellery.png" alt="Jewelry" /><span class="cat-name">Jewelry</span></a>
   </section>
 
   <!-- Shop Description -->
   <section class="shop-description">
     <h2>About the Shop</h2>
-    <p id="shop-description">Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes...</p>
+    <p>
+      Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
+      Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
+      Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
+      Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
+      Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
+      perfect for those who want to leave a lasting impression.
+    </p>
+  </section>
+
+  <!-- Payment Methods -->
+  <section class="payment-methods">
+    <h2>Payment Methods</h2>
+    <div class="payment-icons">
+      <img src="icons/visa-logo.png" alt="Visa" />
+      <img src="icons/mastercard-logo.png" alt="MasterCard" />
+      <img src="icons/stripe-logo.png" alt="Stripe" />
+      <img src="icons/paypal-logo.png" alt="PayPal" />
+      <img src="icons/revolut-logo.png" alt="Revolut" />
+      <img src="icons/mono-logo.png" alt="Mono" />
+      <img src="icons/payoneer-logo.png" alt="Payoneer" />
+      <img src="icons/liqpay-logo.png" alt="LiqPay" />
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="impact-info-section">
+    <h2>Privacy Policy</h2>
+    <div class="links-section">
+      <a href="/articles" class="info-link">Articles</a>
+      <a href="/faq" class="info-link">Frequently Asked Questions</a>
+      <a href="/terms-and-conditions" class="info-link">Terms and Conditions</a>
+      <a href="/privacy-policy" class="info-link">Privacy Policy</a>
+      <a href="/return-refund-policy" class="info-link">Return and Refund Policy</a>
+      <a href="/cookie-policy" class="info-link">Cookie Policy</a>
+      <a href="/shipping-policy" class="info-link">Shipping and Delivery Policy</a>
+      <a href="/legal-notice" class="info-link">Legal Notice</a>
+      <a href="/consumer-rights" class="info-link">Consumer Rights</a>
+      <a href="/gdpr-compliance" class="info-link">GDPR Compliance</a>
+    </div>
+
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
+    </div>
+
+    <div class="magic-phrase">
+      <p>"The magic is within you, embrace the journey."</p>
+      <img src="magic-logo.png" alt="Magic Logo" class="magic-logo" />
+    </div>
   </section>
 
   <footer id="footerText">
@@ -94,10 +143,24 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+    });
 
-  <!-- JavaScript for Language Switch, Currency Toggle, and Swiper -->
-  <script src="main.js"></script>
+    // Toggle
 
-</body>
-</html>
-
+                                                                                                            
