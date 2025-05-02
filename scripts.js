@@ -1,12 +1,12 @@
-// Перевод заголовков
+// Translations for the header
 const translationsHeader = {
     en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
-    de: { title: "Impact Labor", subtitle: "Alchemistisches Parfümgeschäft" },
+    de: { title: "Impact Labor", subtitle: "Alchimistisches Parfümgeschäft" },
     ua: { title: "Імпакт Лаб", subtitle: "Алхімічна Парфумерна Крамниця" },
     ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
 };
 
-// Перевод контента
+// Translations for content
 const translationsContent = {
     en: {
         enter: "Enter Catalog",
@@ -17,14 +17,14 @@ const translationsContent = {
         jewelry: "Jewelry",
         footer: "© 2025 Impact Lab. All rights reserved."
     },
-    de: {
-        enter: "Katalog betreten",
-        women: "Düfte für Frauen",
-        men: "Düfte für Männer",
-        unisex: "Unisex Düfte",
-        gifts: "Magische Geschenke",
-        jewelry: "Schmuck",
-        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
+    ru: {
+        enter: "Войти в каталог",
+        women: "Женские духи",
+        men: "Мужские духи",
+        unisex: "Унисекс духи",
+        gifts: "Магические подарки",
+        jewelry: "Украшения",
+        footer: "© 2025 Impact Lab. Все права защищены."
     },
     ua: {
         enter: "Увійти в каталог",
@@ -35,22 +35,22 @@ const translationsContent = {
         jewelry: "Прикраси",
         footer: "© 2025 Impact Lab. Всі права захищені."
     },
-    ru: {
-        enter: "Войти в каталог",
-        women: "Женские духи",
-        men: "Мужские духи",
-        unisex: "Унисекс духи",
-        gifts: "Магические подарки",
-        jewelry: "Украшения",
-        footer: "© 2025 Impact Lab. Все права защищены."
+    de: {
+        enter: "Katalog betreten",
+        women: "Düfte für Frauen",
+        men: "Düfte für Männer",
+        unisex: "Unisex Düfte",
+        gifts: "Magische Geschenke",
+        jewelry: "Schmuck",
+        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
     }
 };
 
-// Функция смены языка
+// Function to switch language
 function switchLanguage(lang) {
     const t = translationsContent[lang];
 
-    // Обновление текста кнопок и категорий
+    // Update button text and content of the categories
     document.getElementById('enterButton')?.textContent = t.enter;
     document.querySelectorAll('.cat-name').forEach(span => {
         const key = span.getAttribute('data-key');
@@ -58,12 +58,12 @@ function switchLanguage(lang) {
     });
     document.getElementById('footerText').textContent = t.footer;
 
-    // Обновление заголовков
+    // Update header titles
     document.getElementById('main-title').textContent = translationsHeader[lang].title;
     document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
 }
 
-// Обработчик события для смены языка
+// Event listener for language switch
 document.querySelectorAll('.language-switcher a').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -72,66 +72,66 @@ document.querySelectorAll('.language-switcher a').forEach(btn => {
     });
 });
 
-// Инициализация Swiper слайдера
+// Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper('.swiper-container', {
-        loop: true,
+        loop: true, // Enable looping of slides
         autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+            delay: 5000, // 5 seconds delay for auto-sliding
+            disableOnInteraction: false, // Continue autoplay even after user interaction
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next', // Next slide button
+            prevEl: '.swiper-button-prev', // Previous slide button
         },
         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+            el: '.swiper-pagination', // Pagination dots (optional)
+            clickable: true, // Make pagination dots clickable
         },
-        effect: 'fade',
+        effect: 'fade', // Smooth fading effect between slides
     });
+
+    // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
 
-// Переключение валюты
 document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector('.currency-toggle');
-    const menu = document.querySelector('.currency-menu');
+  const toggle = document.querySelector('.currency-toggle');
+  const menu = document.querySelector('.currency-menu');
 
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  });
 
-    document.addEventListener('click', (e) => {
-        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-            menu.style.display = 'none';
-        }
-    });
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+      menu.style.display = 'none';
+    }
+  });
 
-    document.querySelectorAll('.currency-menu a').forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const currency = link.dataset.currency;
-            console.log(`Currency changed to: ${currency}`);
-            recalculatePrices(currency);
-            menu.style.display = 'none';
-        });
+  document.querySelectorAll('.currency-menu a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const currency = link.dataset.currency;
+      console.log(`Currency changed to: ${currency}`);
+      // Function to recalculate prices based on selected currency
+      recalculatePrices(currency);
+      menu.style.display = 'none';
     });
+  });
 });
 
-// Функция пересчёта цен
+// Recalculation of prices based on the selected currency
 function recalculatePrices(currency) {
-    const prices = document.querySelectorAll('.product-price');
-    prices.forEach(priceElem => {
-        const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
-        let convertedPrice = basePrice;
-        if (currency === 'USD') {
-            convertedPrice = basePrice * 1.1; // Примерный курс
-        } else if (currency === 'EUR') {
-            convertedPrice = basePrice * 0.9; // Примерный курс
-        }
-        priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
-    });
+  const prices = document.querySelectorAll('.product-price');
+  prices.forEach(priceElem => {
+    const basePrice = parseFloat(priceElem.getAttribute('data-base-price'));
+    let convertedPrice = basePrice;
+    if (currency === 'USD') {
+        convertedPrice = basePrice * 1.1; // Example conversion rate
+    } else if (currency === 'EUR') {
+        convertedPrice = basePrice * 0.9; // Example conversion rate
+    }
+    priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
 }
-
 
