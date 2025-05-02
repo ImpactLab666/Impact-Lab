@@ -507,4 +507,42 @@ currency-selector {
 .currency-menu a:hover {
   background-color: #2d2b2b;
 }
-    
+
+.currency-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.currency-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #1c1a1a;
+  border: 1px solid #c9b67d;
+  border-radius: 5px;
+  padding: 10px;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+}
+
+.currency-dropdown a {
+  display: block;
+  color: #e0d9c4;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.currency-dropdown a:hover {
+  background-color: #2c2a2a;
+}
+
+.currency-dropdown.show {
+  display: block;
+}
