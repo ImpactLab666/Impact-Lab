@@ -188,6 +188,38 @@ document.querySelectorAll('.submenu > a').forEach(link => {
     }
   });
 });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  // Кнопка "Каталог"
+  const catalogToggle = document.getElementById("catalogToggle");
+  const dropdown = document.querySelector(".dropdown");
+
+  // Открытие/закрытие выпадающего меню
+  catalogToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle("show");
+  });
+
+  // Закрытие меню при клике вне
+  window.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target) && !catalogToggle.contains(e.target)) {
+      dropdown.classList.remove("show");
+      document.querySelectorAll('.submenu').forEach(sub => sub.classList.remove('active'));
+    }
+  });
+
+  // Подкатегории на мобильных
+  document.querySelectorAll(".submenu > a").forEach(link => {
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = link.parentElement;
+        parent.classList.toggle("active");
+      }
+    });
+  });
+});
+    
     
 
 
