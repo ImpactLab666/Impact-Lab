@@ -163,5 +163,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+    function toggleCatalog(event) {
+  event.preventDefault();
+  const dropdown = event.target.closest('.dropdown');
+  dropdown.classList.toggle('show');
+}
+
+// Закрытие каталога при клике вне
+window.addEventListener('click', function (e) {
+  const dropdown = document.querySelector('.dropdown');
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove('show');
+    document.querySelectorAll('.submenu').forEach(sm => sm.classList.remove('active'));
+  }
+});
+
+// Открытие подкатегорий на мобильных
+document.querySelectorAll('.submenu > a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      parent.classList.toggle('active');
+    }
+  });
+});
+    
 
 
