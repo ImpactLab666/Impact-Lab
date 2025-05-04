@@ -1,4 +1,4 @@
-// Translations for the header
+// Translations for header
 const translationsHeader = {
   en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
   de: { title: "Impact Labor", subtitle: "Alchimistisches Parfümgeschäft" },
@@ -17,14 +17,14 @@ const translationsContent = {
     jewelry: "Jewelry",
     footer: "© 2025 Impact Lab. All rights reserved."
   },
-  ru: {
-    enter: "Войти в каталог",
-    women: "Женские духи",
-    men: "Мужские духи",
-    unisex: "Унисекс духи",
-    gifts: "Магические подарки",
-    jewelry: "Украшения",
-    footer: "© 2025 Impact Lab. Все права защищены."
+  de: {
+    enter: "Katalog betreten",
+    women: "Düfte für Frauen",
+    men: "Düfte für Männer",
+    unisex: "Unisex Düfte",
+    gifts: "Magische Geschenke",
+    jewelry: "Schmuck",
+    footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
   },
   ua: {
     enter: "Увійти в каталог",
@@ -35,14 +35,14 @@ const translationsContent = {
     jewelry: "Прикраси",
     footer: "© 2025 Impact Lab. Всі права захищені."
   },
-  de: {
-    enter: "Katalog betreten",
-    women: "Düfte für Frauen",
-    men: "Düfte für Männer",
-    unisex: "Unisex Düfte",
-    gifts: "Magische Geschenke",
-    jewelry: "Schmuck",
-    footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
+  ru: {
+    enter: "Войти в каталог",
+    women: "Женские духи",
+    men: "Мужские духи",
+    unisex: "Унисекс духи",
+    gifts: "Магические подарки",
+    jewelry: "Украшения",
+    footer: "© 2025 Impact Lab. Все права защищены."
   }
 };
 
@@ -195,9 +195,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-
-
-                                     
