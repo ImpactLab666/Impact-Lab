@@ -524,43 +524,38 @@ footer {
   position: absolute;
   background-color: #
 
- .dropdown {
+ /* Общие стили для nav-item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Контейнер dropdown */
+.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-.catalog-button {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
+/* Выпадающее меню */
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: white;
   min-width: 220px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 10;
-  top: 100%;
-  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
+/* Когда меню активно */
 .dropdown.show .dropdown-content {
   display: block;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px 15px;
-  color: black;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
+/* Подкатегории */
 .submenu {
   position: relative;
 }
@@ -586,7 +581,24 @@ footer {
   display: block;
 }
 
-/* Мобильная адаптация */
+/* Цвета (настрой сам) */
+.catalog-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
   .dropdown-content,
   .sub-dropdown {
@@ -607,5 +619,3 @@ footer {
     display: block;
   }
 }
- 
-
