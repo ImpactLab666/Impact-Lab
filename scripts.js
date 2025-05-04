@@ -1,97 +1,97 @@
 // Translations for the header
 const translationsHeader = {
-    en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
-    de: { title: "Impact Labor", subtitle: "Alchimistisches Parfümgeschäft" },
-    ua: { title: "Імпакт Лаб", subtitle: "Алхімічна Парфумерна Крамниця" },
-    ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
+  en: { title: "Impact Lab", subtitle: "Alchemical Perfume Shop" },
+  de: { title: "Impact Labor", subtitle: "Alchimistisches Parfümgeschäft" },
+  ua: { title: "Імпакт Лаб", subtitle: "Алхімічна Парфумерна Крамниця" },
+  ru: { title: "Импакт Лаб", subtitle: "Алхимическая парфюмерная лавка" }
 };
 
 // Translations for content
 const translationsContent = {
-    en: {
-        enter: "Enter Catalog",
-        women: "Women's Perfumes",
-        men: "Men's Perfumes",
-        unisex: "Unisex Perfumes",
-        gifts: "Magical Gifts",
-        jewelry: "Jewelry",
-        footer: "© 2025 Impact Lab. All rights reserved."
-    },
-    ru: {
-        enter: "Войти в каталог",
-        women: "Женские духи",
-        men: "Мужские духи",
-        unisex: "Унисекс духи",
-        gifts: "Магические подарки",
-        jewelry: "Украшения",
-        footer: "© 2025 Impact Lab. Все права защищены."
-    },
-    ua: {
-        enter: "Увійти в каталог",
-        women: "Жіночі парфуми",
-        men: "Чоловічі парфуми",
-        unisex: "Унісекс парфуми",
-        gifts: "Магічні подарунки",
-        jewelry: "Прикраси",
-        footer: "© 2025 Impact Lab. Всі права захищені."
-    },
-    de: {
-        enter: "Katalog betreten",
-        women: "Düfte für Frauen",
-        men: "Düfte für Männer",
-        unisex: "Unisex Düfte",
-        gifts: "Magische Geschenke",
-        jewelry: "Schmuck",
-        footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
-    }
+  en: {
+    enter: "Enter Catalog",
+    women: "Women's Perfumes",
+    men: "Men's Perfumes",
+    unisex: "Unisex Perfumes",
+    gifts: "Magical Gifts",
+    jewelry: "Jewelry",
+    footer: "© 2025 Impact Lab. All rights reserved."
+  },
+  ru: {
+    enter: "Войти в каталог",
+    women: "Женские духи",
+    men: "Мужские духи",
+    unisex: "Унисекс духи",
+    gifts: "Магические подарки",
+    jewelry: "Украшения",
+    footer: "© 2025 Impact Lab. Все права защищены."
+  },
+  ua: {
+    enter: "Увійти в каталог",
+    women: "Жіночі парфуми",
+    men: "Чоловічі парфуми",
+    unisex: "Унісекс парфуми",
+    gifts: "Магічні подарунки",
+    jewelry: "Прикраси",
+    footer: "© 2025 Impact Lab. Всі права захищені."
+  },
+  de: {
+    enter: "Katalog betreten",
+    women: "Düfte für Frauen",
+    men: "Düfte für Männer",
+    unisex: "Unisex Düfte",
+    gifts: "Magische Geschenke",
+    jewelry: "Schmuck",
+    footer: "© 2025 Impact Lab. Alle Rechte vorbehalten."
+  }
 };
 
 // Function to switch language
 function switchLanguage(lang) {
-    const t = translationsContent[lang];
+  const t = translationsContent[lang];
 
-    // Update button text and content of the categories
-    document.getElementById('enterButton')?.textContent = t.enter;
-    document.querySelectorAll('.cat-name').forEach(span => {
-        const key = span.getAttribute('data-key');
-        if (t[key]) span.textContent = t[key];
-    });
-    document.getElementById('footerText').textContent = t.footer;
+  // Update button text and content of the categories
+  document.getElementById('enterButton')?.textContent = t.enter;
+  document.querySelectorAll('.cat-name').forEach(span => {
+    const key = span.getAttribute('data-key');
+    if (t[key]) span.textContent = t[key];
+  });
+  document.getElementById('footerText').textContent = t.footer;
 
-    // Update header titles
-    document.getElementById('main-title').textContent = translationsHeader[lang].title;
-    document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
+  // Update header titles
+  document.getElementById('main-title').textContent = translationsHeader[lang].title;
+  document.getElementById('subtitle').textContent = translationsHeader[lang].subtitle;
 }
 
 // Event listener for language switch
 document.querySelectorAll('.language-switcher a').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const lang = btn.getAttribute('data-lang');
-        switchLanguage(lang);
-    });
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const lang = btn.getAttribute('data-lang');
+    switchLanguage(lang);
+  });
 });
 
 // Swiper slider initialization and logic
 document.addEventListener("DOMContentLoaded", () => {
-    const swiper = new Swiper('.swiper-container', {
-        loop: true, // Enable looping of slides
-        autoplay: {
-            delay: 5000, // 5 seconds delay for auto-sliding
-            disableOnInteraction: false, // Continue autoplay even after user interaction
-        },
-        navigation: {
-            nextEl: '.swiper-button-next', // Next slide button
-            prevEl: '.swiper-button-prev', // Previous slide button
-        },
-        pagination: {
-            el: '.swiper-pagination', // Pagination dots (optional)
-            clickable: true, // Make pagination dots clickable
-        },
-        effect: 'fade', // Smooth fading effect between slides
-    });
+  const swiper = new Swiper('.swiper-container', {
+    loop: true, // Enable looping of slides
+    autoplay: {
+      delay: 5000, // 5 seconds delay for auto-sliding
+      disableOnInteraction: false, // Continue autoplay even after user interaction
+    },
+    navigation: {
+      nextEl: '.swiper-button-next', // Next slide button
+      prevEl: '.swiper-button-prev', // Previous slide button
+    },
+    pagination: {
+      el: '.swiper-pagination', // Pagination dots (optional)
+      clickable: true, // Make pagination dots clickable
+    },
+    effect: 'fade', // Smooth fading effect between slides
+  });
 
-    // Swiper instance is automatically initialized, no need for custom next/prev button listeners
+  // Swiper instance is automatically initialized, no need for custom next/prev button listeners
 });
 
 // Currency Toggle Logic
@@ -134,73 +134,48 @@ function recalculatePrices(currency) {
         convertedPrice = basePrice * 0.9; // Example conversion rate
     }
     priceElem.textContent = `${convertedPrice.toFixed(2)} ${currency}`;
+  });
 }
 
 // Catalog Toggle Logic
 document.addEventListener("DOMContentLoaded", () => {
-    // Button to open the catalog
-    const openCatalogBtn = document.getElementById('enterButton'); // Assuming it's the catalog button
-    const catalogWindow = document.getElementById('catalogWindow'); // The catalog window
+  // Button to open the catalog
+  const openCatalogBtn = document.getElementById('enterButton'); // Assuming it's the catalog button
+  const catalogWindow = document.getElementById('catalogWindow'); // The catalog window
 
-    // Open catalog window on button click
-    openCatalogBtn.addEventListener('click', () => {
-        catalogWindow.style.display = 'block'; // Show the catalog window
+  // Open catalog window on button click
+  openCatalogBtn.addEventListener('click', () => {
+    catalogWindow.style.display = 'block'; // Show the catalog window
+  });
+
+  // Close catalog window
+  const closeCatalogBtn = document.getElementById('closeCatalogBtn');
+  if (closeCatalogBtn) {
+    closeCatalogBtn.addEventListener('click', () => {
+      catalogWindow.style.display = 'none'; // Hide the catalog window
     });
-
-    // Close catalog window
-    const closeCatalogBtn = document.getElementById('closeCatalogBtn');
-    if (closeCatalogBtn) {
-        closeCatalogBtn.addEventListener('click', () => {
-            catalogWindow.style.display = 'none'; // Hide the catalog window
-        });
-    }
-
-    // Optionally close catalog if clicked outside of it
-    document.addEventListener('click', (e) => {
-        if (!catalogWindow.contains(e.target) && !openCatalogBtn.contains(e.target)) {
-            catalogWindow.style.display = 'none'; // Close the catalog if clicked outside
-        }
-    });
-});
-
-    function toggleCatalog(event) {
-  event.preventDefault();
-  const dropdown = event.target.closest('.dropdown');
-  dropdown.classList.toggle('show');
-}
-
-// Закрытие каталога при клике вне
-window.addEventListener('click', function (e) {
-  const dropdown = document.querySelector('.dropdown');
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove('show');
-    document.querySelectorAll('.submenu').forEach(sm => sm.classList.remove('active'));
   }
-});
 
-// Открытие подкатегорий на мобильных
-document.querySelectorAll('.submenu > a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      const parent = this.parentElement;
-      parent.classList.toggle('active');
+  // Optionally close catalog if clicked outside of it
+  document.addEventListener('click', (e) => {
+    if (!catalogWindow.contains(e.target) && !openCatalogBtn.contains(e.target)) {
+      catalogWindow.style.display = 'none'; // Close the catalog if clicked outside
     }
   });
 });
 
-    document.addEventListener("DOMContentLoaded", () => {
-  // Кнопка "Каталог"
+// Toggle Dropdown Menu for Catalog
+document.addEventListener("DOMContentLoaded", () => {
   const catalogToggle = document.getElementById("catalogToggle");
   const dropdown = document.querySelector(".dropdown");
 
-  // Открытие/закрытие выпадающего меню
+  // Open/close the dropdown menu when clicking the catalog button
   catalogToggle.addEventListener("click", (e) => {
     e.preventDefault();
     dropdown.classList.toggle("show");
   });
 
-  // Закрытие меню при клике вне
+  // Close the menu when clicking outside of it
   window.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target) && !catalogToggle.contains(e.target)) {
       dropdown.classList.remove("show");
@@ -208,7 +183,7 @@ document.querySelectorAll('.submenu > a').forEach(link => {
     }
   });
 
-  // Подкатегории на мобильных
+  // Subcategory toggle for mobile
   document.querySelectorAll(".submenu > a").forEach(link => {
     link.addEventListener("click", (e) => {
       if (window.innerWidth <= 768) {
@@ -219,7 +194,10 @@ document.querySelectorAll('.submenu > a').forEach(link => {
     });
   });
 });
-    
-    
 
 
+
+
+
+
+                                     
