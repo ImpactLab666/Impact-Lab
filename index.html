@@ -33,6 +33,7 @@
   <div class="middle-bar">
     <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
 
+    <!-- Catalog Dropdown -->
     <div class="dropdown nav-item">
       <a href="#" id="catalogToggle" class="catalog-button">Catalog</a>
       <div class="dropdown-content" id="catalogDropdown">
@@ -78,7 +79,7 @@
     <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
     <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
 
-    <!-- Currency Icon (with dropdown) -->
+    <!-- Currency Icon (in the same line) -->
     <div class="currency-selector">
       <img src="icons/icon-currency.png" alt="Currency" class="currency-icon" id="currency-icon">
       <div class="currency-dropdown" id="currency-dropdown">
@@ -186,6 +187,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
+    // Swiper Initialization
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       navigation: {
@@ -203,22 +205,19 @@
       speed: 600,
     });
 
-    // Toggle the dropdown for currency selector
+    // Toggle Currency Dropdown
     const currencyIcon = document.getElementById('currency-icon');
     const currencyDropdown = document.getElementById('currency-dropdown');
     currencyIcon.addEventListener('click', function () {
       currencyDropdown.classList.toggle('show');
     });
 
-    // Update currency when a currency option is selected
-    const currencyOptions = document.querySelectorAll('.currency-dropdown a');
-    currencyOptions.forEach(option => {
-      option.addEventListener('click', function (e) {
-        e.preventDefault();
-        const selectedCurrency = e.target.getAttribute('data-currency');
-        console.log('Selected currency: ' + selectedCurrency);
-        currencyDropdown.classList.remove('show');
-      });
+    // Toggle Catalog Dropdown
+    const catalogToggle = document.getElementById('catalogToggle');
+    const catalogDropdown = document.getElementById('catalogDropdown');
+    catalogToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      catalogDropdown.classList.toggle('show');
     });
   </script>
 
@@ -226,5 +225,4 @@
 
 </body>
 </html>
-
 
