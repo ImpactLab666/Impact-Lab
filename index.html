@@ -1,373 +1,223 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impact Lab | Alchemical Perfume Shop</title>
 
-<meta charset="UTF-8" />
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>Impact Lab | Alchemical Perfume Shop</title>
-
-
-
-<!-- Fonts and CSS -->
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="styles.css" />
-
-
-
-<!-- Swiper CSS -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-
 <body>
 
-
-
-<!-- Top Bar -->
-
-<div class="top-bar">
-
-<div class="contact">
-
-<a href="mailto:impactlab666@gmail.com">Send a message</a>
-
-</div>
-
-<div class="language-switcher">
-
-<a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-
-<a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
-
-<a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
-
-<a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
-
-</div>
-
-</div>
-
-
-
-<!-- Navigation Bar with Currency -->
-
-<div class="middle-bar">
-
-<a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
-
-<a href="#categories" class="catalog-button">Catalog</a>
-
-<a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
-
-<a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
-
-<a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
-
-<a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
-
-<a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
-
-
-
-<!-- Currency Icon (with dropdown) -->
-
-<div class="currency-selector">
-
-<img src="icons/icon-currency.png" alt="Currency" class="currency-icon" id="currency-icon">
-
-<div class="currency-dropdown" id="currency-dropdown">
-
-<a href="#" data-currency="UAH">₴ UAH</a>
-
-<a href="#" data-currency="USD">$ USD</a>
-
-<a href="#" data-currency="EUR">€ EUR</a>
-
-<a href="#" data-currency="GBP">£ GBP</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Header Section -->
-
-<header class="impact-header">
-
-<div class="logo-frame">
-
-<img src="impactlab-logo.png" alt="Impact Lab Logo" />
-
-</div>
-
-<div class="header-image">
-
-<img src="impactlabshop.png" alt="Impact Lab Shop Image" />
-
-</div>
-
-<h1 class="header-title">Elixir Essences: Top Perfumes Revealed</h1>
-
-</header>
-
-
-
-<!-- Swiper Slider -->
-
-<section class="swiper-container">
-
-<div class="swiper-wrapper">
-
-<div class="swiper-slide"><img src="perfum.jpg" alt="Perfume 1" /><div class="caption">Black Magic</div></div>
-
-<div class="swiper-slide"><img src="perfum1.jpg" alt="Perfume 2" /><div class="caption">Impact</div></div>
-
-<div class="swiper-slide"><img src="perfum2.jpg" alt="Perfume 3" /><div class="caption">Love Potion</div></div>
-
-</div>
-
-<div class="swiper-button-next"></div>
-
-<div class="swiper-button-prev"></div>
-
-<div class="swiper-pagination"></div>
-
-</section>
-
-
-
-<!-- Categories Section -->
-
-<section class="category-section" id="categories">
-
-<h2>Perfumed Spells & Magical Jewels</h2>
-
-<a href="womens.html" class="category-button"><img src="womanperfume.png" alt="Women's Perfumes" /><span class="cat-name">Women's Perfumes</span></a>
-
-<a href="mens.html" class="category-button"><img src="menperfume.png" alt="Men's Perfumes" /><span class="cat-name">Men's Perfumes</span></a>
-
-<a href="unisex.html" class="category-button"><img src="unisexperfume.png" alt="Unisex Perfumes" /><span class="cat-name">Unisex Perfumes</span></a>
-
-<a href="gifts.html" class="category-button"><img src="magicgifts.png" alt="Magical Gifts" /><span class="cat-name">Magical Gifts</span></a>
-
-<a href="jewelry.html" class="category-button"><img src="jewellery.png" alt="Jewelry" /><span class="cat-name">Jewelry</span></a>
-
-</section>
-
-
-
-<!-- Shop Description -->
-
-<section class="shop-description">
-
-<h2>About the Shop</h2>
-
-<p>
-
-Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
-
-Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
-
-Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
-
-Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
-
-Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
-
-perfect for those who want to leave a lasting impression.
-
-</p>
-
-</section>
-
-
-
-<!-- Payment Methods -->
-
-<section class="payment-methods">
-
-<h2>Payment Methods</h2>
-
-<div class="payment-icons">
-
-<img src="icons/visa-logo.png" alt="Visa" />
-
-<img src="icons/mastercard-logo.png" alt="MasterCard" />
-
-<img src="icons/stripe-logo.png" alt="Stripe" />
-
-<img src="icons/paypal-logo.png" alt="PayPal" />
-
-<img src="icons/revolut-logo.png" alt="Revolut" />
-
-<img src="icons/mono-logo.png" alt="Mono" />
-
-<img src="icons/payoneer-logo.png" alt="Payoneer" />
-
-<img src="icons/liqpay-logo.png" alt="LiqPay" />
-
-</div>
-
-</section>
-
-
-
-<!-- Info Section -->
-
-<section class="impact-info-section">
-
-<h2>Privacy Policy</h2>
-
-<div class="links-section">
-
-<a href="/articles" class="info-link">Articles</a>
-
-<a href="/faq" class="info-link">Frequently Asked Questions</a>
-
-<a href="/terms-and-conditions" class="info-link">Terms and Conditions</a>
-
-<a href="/privacy-policy" class="info-link">Privacy Policy</a>
-
-<a href="/return-refund-policy" class="info-link">Return and Refund Policy</a>
-
-<a href="/cookie-policy" class="info-link">Cookie Policy</a>
-
-<a href="/shipping-policy" class="info-link">Shipping and Delivery Policy</a>
-
-<a href="/legal-notice" class="info-link">Legal Notice</a>
-
-<a href="/consumer-rights" class="info-link">Consumer Rights</a>
-
-<a href="/gdpr-compliance" class="info-link">GDPR Compliance</a>
-
-</div>
-
-
-
-<div class="social-media">
-
-<a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook" /></a>
-
-<a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
-
-</div>
-
-
-
-<div class="magic-phrase">
-
-<p>"The magic is within you, embrace the journey."</p>
-
-<img src="magic-logo.png" alt="Magic Logo" class="magic-logo" />
-
-</div>
-
-</section>
-
-
-
-<footer id="footerText">
-
-© 2025 Impact Lab. All rights reserved.
-
-</footer>
-
-
-
-<!-- Swiper JS -->
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-
-const swiper = new Swiper('.swiper-container', {
-
-loop: true,
-
-navigation: {
-
-nextEl: '.swiper-button-next',
-
-prevEl: '.swiper-button-prev',
-
-},
-
-pagination: {
-
-el: '.swiper-pagination',
-
-clickable: true,
-
-},
-
-autoplay: {
-
-delay: 4000,
-
-disableOnInteraction: false,
-
-},
-
-speed: 600,
-
-});
-
-
-
-// Toggle the dropdown for currency selector
-
-const currencyIcon = document.getElementById('currency-icon');
-
-const currencyDropdown = document.getElementById('currency-dropdown');
-
-
-
-currencyIcon.addEventListener('click', function () {
-
-currencyDropdown.classList.toggle('show');
-
-});
-
-
-
-// Update currency when a currency option is selected
-
-const currencyOptions = document.querySelectorAll('.currency-dropdown a');
-
-currencyOptions.forEach(option => {
-
-option.addEventListener('click', function (e) {
-
-e.preventDefault();
-
-const selectedCurrency = e.target.getAttribute('data-currency');
-
-console.log('Selected currency: ' + selectedCurrency);
-
-currencyDropdown.classList.remove('show');
-
-});
-
-});
-
-</script>
-
-
-
-<!-- Your existing JavaScript -->
-
-<script src="scripts.js"></script>
-
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact">
+      <a href="mailto:impactlab666@gmail.com">Send a message</a>
+    </div>
+    <div class="language-switcher">
+      <a href="#" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
+      <a href="#" data-lang="ua"><img src="https://flagcdn.com/w40/ua.png" alt="UA"></a>
+      <a href="#" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU"></a>
+      <a href="#" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="DE"></a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="middle-bar">
+    <a href="index.html" class="nav-item" title="Home"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#categories" class="catalog-button">Catalog</a>
+    <a href="#" class="nav-item" title="Search"><img src="icons/search.svg" alt="Search"></a>
+    <a href="#" class="nav-item" title="Menu"><img src="icons/menu.svg" alt="Menu"></a>
+    <a href="register.html" class="nav-item" title="Account"><img src="icons/user.svg" alt="User"></a>
+    <a href="tel:+1234567890" class="nav-item" title="Phone"><img src="icons/phone.svg" alt="Phone"></a>
+    <a href="cart.html" class="nav-item" title="Cart"><img src="icons/cart.svg" alt="Cart"></a>
+
+    <!-- Currency Icon (with dropdown) -->
+    <div class="currency-selector">
+      <img src="icon-currency.svg" alt="Currency" class="currency-icon" id="currency-icon">
+      <div class="currency-dropdown" id="currency-dropdown">
+        <a href="#" data-currency="UAH">₴ UAH</a>
+        <a href="#" data-currency="USD">$ USD</a>
+        <a href="#" data-currency="EUR">€ EUR</a>
+        <a href="#" data-currency="GBP">£ GBP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="impact-header">
+    <div class="logo-frame">
+      <img src="impactlab-logo.png" alt="Impact Lab Logo" />
+    </div>
+    <div class="header-image">
+      <img src="impactlabshop.png" alt="Impact Lab Shop Image" />
+    </div>
+    <h1 class="header-title">Elixir Essences: Top Perfumes Revealed</h1>
+  </header>
+
+  <!-- Swiper Slider -->
+  <section class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="perfum.jpg" alt="Perfume 1" />
+        <div class="caption">Black Magic</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="perfum1.jpg" alt="Perfume 2" />
+        <div class="caption">Impact</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="perfum2.jpg" alt="Perfume 3" />
+        <div class="caption">Love Potion</div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="category-section" id="categories">
+    <h2>Perfumed Spells & Magical Jewels</h2>
+    <a href="womens.html" class="category-button">
+      <img src="womanperfume.png" alt="Women's Perfumes" />
+      <span class="cat-name">Women's Perfumes</span>
+    </a>
+    <a href="mens.html" class="category-button">
+      <img src="menperfume.png" alt="Men's Perfumes" />
+      <span class="cat-name">Men's Perfumes</span>
+    </a>
+    <a href="unisex.html" class="category-button">
+      <img src="unisexperfume.png" alt="Unisex Perfumes" />
+      <span class="cat-name">Unisex Perfumes</span>
+    </a>
+    <a href="gifts.html" class="category-button">
+      <img src="magicgifts.png" alt="Magical Gifts" />
+      <span class="cat-name">Magical Gifts</span>
+    </a>
+    <a href="jewelry.html" class="category-button">
+      <img src="jewellery.png" alt="Jewelry" />
+      <span class="cat-name">Jewelry</span>
+    </a>
+  </section>
+
+  <!-- Shop Description -->
+  <section class="shop-description">
+    <h2>About the Shop</h2>
+    <p>
+      Welcome to Impact Lab. The place where you will find handcrafted alchemical perfumes.<br><br>
+      Our online shop features: eau de toilette, perfume and influence formulas with pheromones.
+      Our exquisite creations are designed to captivate the senses and enhance the appeal of confident women and men.
+      Each fragrance is a unique alchemical blend created with passion to evoke sensuality, confidence and irresistible charm.
+      Whether you're looking for the perfect gift or a personal treat, our perfumes are a magical essence of passion,
+      perfect for those who want to leave a lasting impression.
+    </p>
+  </section>
+
+  <!-- Payment Methods -->
+  <section class="payment-methods">
+    <h2>Payment Methods</h2>
+    <div class="payment-icons">
+      <img src="icons/visa-logo.png" alt="Visa">
+      <img src="icons/mastercard-logo.png" alt="MasterCard">
+      <img src="icons/stripe-logo.png" alt="Stripe">
+      <img src="icons/paypal-logo.png" alt="PayPal">
+      <img src="icons/revolut-logo.png" alt="Revolut">
+      <img src="icons/mono-logo.png" alt="Mono">
+      <img src="icons/payoneer-logo.png" alt="Payoneer">
+      <img src="icons/liqpay-logo.png" alt="LiqPay">
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="impact-info-section">
+    <h2>Privacy Policy</h2>
+    <div class="links-section">
+      <a href="/articles" class="info-link">Articles</a>
+      <a href="/faq" class="info-link">Frequently Asked Questions</a>
+      <a href="/terms-and-conditions" class="info-link">Terms and Conditions</a>
+      <a href="/privacy-policy" class="info-link">Privacy Policy</a>
+      <a href="/return-refund-policy" class="info-link">Return and Refund Policy</a>
+      <a href="/cookie-policy" class="info-link">Cookie Policy</a>
+      <a href="/shipping-policy" class="info-link">Shipping and Delivery Policy</a>
+      <a href="/legal-notice" class="info-link">Legal Notice</a>
+      <a href="/consumer-rights" class="info-link">Consumer Rights</a>
+      <a href="/gdpr-compliance" class="info-link">GDPR Compliance</a>
+    </div>
+
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank">
+        <img src="icons/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="icons/instagram.png" alt="Instagram">
+      </a>
+    </div>
+
+    <div class="magic-phrase">
+      <p>"The magic is within you, embrace the journey."</p>
+      <img src="magic-logo.png" alt="Magic Logo" class="magic-logo">
+    </div>
+  </section>
+
+  <footer id="footerText">
+    © 2025 Impact Lab. All rights reserved.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Init -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 600,
+    });
+
+    // Toggle the dropdown for currency selector
+    const currencyIcon = document.getElementById('currency-icon');
+    const currencyDropdown = document.getElementById('currency-dropdown');
+
+    currencyIcon.addEventListener('click', function () {
+      currencyDropdown.classList.toggle('show');
+    });
+
+    // Update currency when a currency option is selected
+    const currencyOptions = document.querySelectorAll('.currency-dropdown a');
+    currencyOptions.forEach(option => {
+      option.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selectedCurrency = e.target.getAttribute('data-currency');
+        console.log('Selected currency: ' + selectedCurrency);
+        currencyDropdown.classList.remove('show');
+      });
+    });
+  </script>
+
+  <!-- Your existing JS -->
+  <script src="scripts.js"></script>
 </body>
+</html>
 
-  </html>
+
+
+
+
+  
